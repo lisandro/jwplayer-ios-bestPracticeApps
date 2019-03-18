@@ -54,7 +54,7 @@ class VoicerViewController: JWRemoteCastPlayerViewController {
     
     func handleStart(command: String?, quantity: UInt?) {
         if self.keywordFrom(synonym: command!) == "seeking" {
-            self.player.seek(quantity!)
+            self.player.seek(Int(quantity!))
         } else if self.keywordFrom(synonym: command!) == "player" {
             self.player.play()
         } else {
