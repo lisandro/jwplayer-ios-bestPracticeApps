@@ -117,6 +117,7 @@
 		8AF5F6E71C9A612B00C0D5E0 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AF5F6E61C9A612B00C0D5E0 /* NotificationController.m */; };
 		8AF5F6E91C9A612B00C0D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5F6E81C9A612B00C0D5E0 /* Assets.xcassets */; };
 		8AF5F6ED1C9A612B00C0D5E0 /* JWRemoteController.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AF5F6CC1C9A612B00C0D5E0 /* JWRemoteController.app */; };
+		9D8C0B2A0CC0FBF03E841C7E /* libPods-JWConviva.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */; };
 		AB341B6EC61DFD6B46F068D6 /* libPods-JWBestPracticeApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE25B16DE011FFE47951517 /* libPods-JWBestPracticeApps.a */; };
 		B5308C1F1D836979007D2A1F /* SwiftTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5308C1E1D836979007D2A1F /* SwiftTest.swift */; };
 		B53A73071D92F79C00EB804F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A73061D92F79C00EB804F /* AppDelegate.swift */; };
@@ -148,6 +149,12 @@
 		B5BC26B21DAC20E500F32770 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26B11DAC20E500F32770 /* info.plist */; };
 		C24874D002C8E9721BA8E61F /* libPods-JWRemotePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BCA1345113D7AE624BEB2D /* libPods-JWRemotePlayer.a */; };
 		D37413B333297461C0FD0791 /* libPods-JWRemoteController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 787B849139DF8B66FA89FA5C /* libPods-JWRemoteController Extension.a */; };
+		F4EC778F223FD43F0008B8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC778E223FD43F0008B8DB /* AppDelegate.swift */; };
+		F4EC7791223FD43F0008B8DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC7790223FD43F0008B8DB /* ViewController.swift */; };
+		F4EC7794223FD43F0008B8DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EC7792223FD43F0008B8DB /* Main.storyboard */; };
+		F4EC7796223FD4410008B8DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4EC7795223FD4410008B8DB /* Assets.xcassets */; };
+		F4EC7799223FD4410008B8DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EC7797223FD4410008B8DB /* LaunchScreen.storyboard */; };
+		F4EC779F223FD6C60008B8DB /* AnalyticsObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC779E223FD6C60008B8DB /* AnalyticsObserver.swift */; };
 		F6841AEF9C8AEA3DED8AA298 /* libPods-JWRemoteCastPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 73D5AFFCD082D3F92A3671CF /* libPods-JWRemoteCastPlayer.a */; };
 		F7D9E4EAF6CE0AC1BAC24774 /* libPods-Voicer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ED976D25D4013BA5D0829D0A /* libPods-Voicer.a */; };
 		FD9F7946BEE377EE83454E7D /* libPods-JWAirPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5866385BBD927C92F367DB7C /* libPods-JWAirPlay.a */; };
@@ -298,6 +305,7 @@
 		75A9CECA1EB7767D6DA505E1 /* libPods-JWVoiceControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWVoiceControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7749A5E7085C50853FC4FD3F /* Pods-JWRemoteCastController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.debug.xcconfig"; sourceTree = "<group>"; };
 		787B849139DF8B66FA89FA5C /* libPods-JWRemoteController Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteController Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		790F59F80209F9DF6209FB91 /* Pods-JWConviva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva.debug.xcconfig"; sourceTree = "<group>"; };
 		7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFairPlayDrm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82812C92FE3B7F62F5CE4A85 /* libPods-SiriPlayerControllerUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SiriPlayerControllerUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		884998439C63B73C2EB23C8F /* Pods-SiriPlayerControllerUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriPlayerControllerUI.release.xcconfig"; path = "Pods/Target Support Files/Pods-SiriPlayerControllerUI/Pods-SiriPlayerControllerUI.release.xcconfig"; sourceTree = "<group>"; };
@@ -398,6 +406,7 @@
 		969799C36851B711451E6914 /* Pods-JWBestPracticeApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWBestPracticeApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps.release.xcconfig"; sourceTree = "<group>"; };
 		9EB18D2E0C98F9B2F6BD446A /* Pods-JWRemoteController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.debug.xcconfig"; sourceTree = "<group>"; };
 		A37E790C732ABB5BBCB8FC62 /* Pods-JWFairPlayDrm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWFairPlayDrm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm.debug.xcconfig"; sourceTree = "<group>"; };
+		ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWConviva.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE13619DC752730AA54E1307 /* Pods-JWRemoteCastController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA47BF6BEBC875452177758 /* Pods-JWRemoteCastController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.release.xcconfig"; sourceTree = "<group>"; };
 		AFFC2FBEFC64CED35CE549C5 /* Pods-SiriPlayerController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SiriPlayerController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SiriPlayerController/Pods-SiriPlayerController.debug.xcconfig"; sourceTree = "<group>"; };
@@ -430,7 +439,17 @@
 		D7032B38C013D2CF344515F5 /* Pods-JWRemotePlayer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemotePlayer.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer.release.xcconfig"; sourceTree = "<group>"; };
 		DE458D874713A4FEA898FC11 /* Pods-JWAirPlay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAirPlay.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay.release.xcconfig"; sourceTree = "<group>"; };
 		ED976D25D4013BA5D0829D0A /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EC778C223FD43F0008B8DB /* JWConviva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWConviva.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4EC778E223FD43F0008B8DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F4EC7790223FD43F0008B8DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4EC7793223FD43F0008B8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F4EC7795223FD4410008B8DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F4EC7798223FD4410008B8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F4EC779A223FD4410008B8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4EC779E223FD6C60008B8DB /* AnalyticsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsObserver.swift; sourceTree = "<group>"; };
+		F4EC77A0223FD86F0008B8DB /* JWConviva-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWConviva-Bridging-Header.h"; sourceTree = "<group>"; };
 		F6F521C80198C3CF424CC542 /* libPods-JWRemoteCastController Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastController Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva.release.xcconfig"; sourceTree = "<group>"; };
 		FC281FF062456D619081111F /* Pods-JWRemoteController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -545,6 +564,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4EC7789223FD43F0008B8DB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D8C0B2A0CC0FBF03E841C7E /* libPods-JWConviva.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -579,6 +606,8 @@
 				D59BC06D560A3A8E3DE9E3C3 /* Pods-VoicerExtension.release.xcconfig */,
 				A37E790C732ABB5BBCB8FC62 /* Pods-JWFairPlayDrm.debug.xcconfig */,
 				750AB9C59D746DEF6A70DCF9 /* Pods-JWFairPlayDrm.release.xcconfig */,
+				790F59F80209F9DF6209FB91 /* Pods-JWConviva.debug.xcconfig */,
+				FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -603,6 +632,7 @@
 				ED976D25D4013BA5D0829D0A /* libPods-Voicer.a */,
 				01A06EF1BFF97EDC16B19A95 /* libPods-VoicerExtension.a */,
 				7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */,
+				ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -690,6 +720,7 @@
 				B53A73051D92F79C00EB804F /* Voicer */,
 				B54F4F4A1D930BDC0026B7C7 /* VoicerExtension */,
 				8AB3E07E1D99B3F8002A3CA7 /* JWFairPlayDrm */,
+				F4EC778D223FD43F0008B8DB /* JWConviva */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				148A822693302715DF542B54 /* Pods */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
@@ -713,6 +744,7 @@
 				B53A73041D92F79C00EB804F /* Voicer.app */,
 				B54F4F491D930BDC0026B7C7 /* VoicerExtension.appex */,
 				8AB3E07D1D99B3F8002A3CA7 /* JWFairPlayDrm.app */,
+				F4EC778C223FD43F0008B8DB /* JWConviva.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -917,6 +949,21 @@
 			name = en.lproj;
 			sourceTree = "<group>";
 		};
+		F4EC778D223FD43F0008B8DB /* JWConviva */ = {
+			isa = PBXGroup;
+			children = (
+				F4EC778E223FD43F0008B8DB /* AppDelegate.swift */,
+				F4EC7790223FD43F0008B8DB /* ViewController.swift */,
+				F4EC779E223FD6C60008B8DB /* AnalyticsObserver.swift */,
+				F4EC7792223FD43F0008B8DB /* Main.storyboard */,
+				F4EC7795223FD4410008B8DB /* Assets.xcassets */,
+				F4EC7797223FD4410008B8DB /* LaunchScreen.storyboard */,
+				F4EC779A223FD4410008B8DB /* Info.plist */,
+				F4EC77A0223FD86F0008B8DB /* JWConviva-Bridging-Header.h */,
+			);
+			path = JWConviva;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -1033,7 +1080,6 @@
 				8A3734881D1DC2E70008FE59 /* Resources */,
 				8A3734AF1D1DC2E70008FE59 /* Embed App Extensions */,
 				CF9B3ABE814B0C3D19B478B0 /* Frameworks */,
-				B9CEAAC4CF36C303A8B0143E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1053,8 +1099,6 @@
 				8A3734921D1DC2E70008FE59 /* Sources */,
 				8A3734931D1DC2E70008FE59 /* Frameworks */,
 				8A3734941D1DC2E70008FE59 /* Resources */,
-				5719F25286ED1CDC29A85ACD /* [CP] Embed Pods Frameworks */,
-				DF3E9EFCDCA122CBBF5C14F3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1076,7 +1120,6 @@
 				8AF5F65B1C99F15400C0D5E0 /* Headers */,
 				8AF5F65C1C99F17A00C0D5E0 /* CopyFiles */,
 				913D57B68FE759D9DF023CCF /* [CP] Embed Pods Frameworks */,
-				BF7C3D6BA8E0B1BF4B4FB54B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1118,7 +1161,6 @@
 				8A729B281C98B5F2000F03A9 /* Resources */,
 				8A5BA8A71C9AFA370002231F /* Headers */,
 				9CA3482367C439F0CDBB6E4B /* [CP] Embed Pods Frameworks */,
-				5A4341540D0B52EDE34034E7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1181,7 +1223,6 @@
 				8AF5F6CA1C9A612B00C0D5E0 /* Resources */,
 				8AF5F6F11C9A612B00C0D5E0 /* Embed App Extensions */,
 				DE52F8BFBF4E79028A7DA29D /* Frameworks */,
-				5AC05EE046DAF3213B1AA9B1 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1201,8 +1242,6 @@
 				8AF5F6D41C9A612B00C0D5E0 /* Sources */,
 				8AF5F6D51C9A612B00C0D5E0 /* Frameworks */,
 				8AF5F6D61C9A612B00C0D5E0 /* Resources */,
-				2E6E72D37E1CAF711ACA2B22 /* [CP] Embed Pods Frameworks */,
-				957118E253D60D999AD92FA5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1281,8 +1320,6 @@
 				B54F4F451D930BDC0026B7C7 /* Sources */,
 				B54F4F461D930BDC0026B7C7 /* Frameworks */,
 				B54F4F471D930BDC0026B7C7 /* Resources */,
-				40B1C5A04E3B3D57C2324B42 /* [CP] Embed Pods Frameworks */,
-				F5F49146238CCB55500BAC5F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1293,13 +1330,32 @@
 			productReference = B54F4F491D930BDC0026B7C7 /* VoicerExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		F4EC778B223FD43F0008B8DB /* JWConviva */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4EC779D223FD4410008B8DB /* Build configuration list for PBXNativeTarget "JWConviva" */;
+			buildPhases = (
+				41B30782A9FA2F17CF2A02B6 /* [CP] Check Pods Manifest.lock */,
+				F4EC7788223FD43F0008B8DB /* Sources */,
+				F4EC7789223FD43F0008B8DB /* Frameworks */,
+				F4EC778A223FD43F0008B8DB /* Resources */,
+				644034D7DF4D536BEC8A62C3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JWConviva;
+			productName = JWConviva;
+			productReference = F4EC778C223FD43F0008B8DB /* JWConviva.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		8A729A6F1C98ACA8000F03A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0800;
+				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Karim Mourra";
 				TargetAttributes = {
@@ -1391,6 +1447,11 @@
 							};
 						};
 					};
+					F4EC778B223FD43F0008B8DB = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8A729A721C98ACA8000F03A9 /* Build configuration list for PBXProject "JWBestPracticeApps" */;
@@ -1420,6 +1481,7 @@
 				B53A73031D92F79C00EB804F /* Voicer */,
 				B54F4F481D930BDC0026B7C7 /* VoicerExtension */,
 				8AB3E07C1D99B3F8002A3CA7 /* JWFairPlayDrm */,
+				F4EC778B223FD43F0008B8DB /* JWConviva */,
 			);
 		};
 /* End PBXProject section */
@@ -1584,6 +1646,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F4EC778A223FD43F0008B8DB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EC7799223FD4410008B8DB /* LaunchScreen.storyboard in Resources */,
+				F4EC7796223FD4410008B8DB /* Assets.xcassets in Resources */,
+				F4EC7794223FD43F0008B8DB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1593,13 +1665,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWRemoteCastController-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0126D5445CF6C21674DF35C0 /* [CP] Embed Pods Frameworks */ = {
@@ -1608,9 +1683,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1623,9 +1701,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Voicer/Pods-Voicer-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1638,9 +1719,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.2/CastFrameworkAssets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1653,9 +1739,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1668,9 +1757,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.3/CastFrameworkAssets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1683,28 +1777,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWFairPlayDrm-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2E6E72D37E1CAF711ACA2B22 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3172047F5E4CDE730F1C8E36 /* [CP] Check Pods Manifest.lock */ = {
@@ -1713,13 +1795,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWRemotePlayer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		371E68D98909341D478FC1E6 /* [CP] Check Pods Manifest.lock */ = {
@@ -1728,13 +1813,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWAirPlay-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3914663E2EFC2A06D5627D4D /* [CP] Copy Pods Resources */ = {
@@ -1743,9 +1831,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Voicer/Pods-Voicer-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS10.0/CastFrameworkAssets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1758,28 +1851,38 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		40B1C5A04E3B3D57C2324B42 /* [CP] Embed Pods Frameworks */ = {
+		41B30782A9FA2F17CF2A02B6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
+			inputFileListPaths = (
 			);
-			name = "[CP] Embed Pods Frameworks";
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWConviva-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoicerExtension/Pods-VoicerExtension-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4C2993613FCFA059B56DA62B /* [CP] Check Pods Manifest.lock */ = {
@@ -1788,58 +1891,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Voicer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		5719F25286ED1CDC29A85ACD /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5A4341540D0B52EDE34034E7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5AC05EE046DAF3213B1AA9B1 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		5B8EB63E3022D951CF175410 /* [CP] Check Pods Manifest.lock */ = {
@@ -1848,13 +1909,38 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWRemoteController Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		644034D7DF4D536BEC8A62C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73C5A63A476C9A7364C34BE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -1863,13 +1949,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWBestPracticeApps-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		770E1BA7B7C214544BDA3C5E /* [CP] Copy Pods Resources */ = {
@@ -1878,9 +1967,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.2/CastFrameworkAssets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1893,13 +1987,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWRemoteCastPlayer-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		779035C0867212D9A6ADFDD0 /* [CP] Check Pods Manifest.lock */ = {
@@ -1908,13 +2005,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWRemoteCastController Extension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		913D57B68FE759D9DF023CCF /* [CP] Embed Pods Frameworks */ = {
@@ -1923,28 +2023,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		957118E253D60D999AD92FA5 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9CA3482367C439F0CDBB6E4B /* [CP] Embed Pods Frameworks */ = {
@@ -1953,43 +2041,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B9CEAAC4CF36C303A8B0143E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BF7C3D6BA8E0B1BF4B4FB54B /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C644EAE82B765E5CC4C8400E /* [CP] Copy Pods Resources */ = {
@@ -1998,9 +2059,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-resources.sh",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.3/CastFrameworkAssets.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2013,28 +2079,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWCasting-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		DF3E9EFCDCA122CBBF5C14F3 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		DF721C5C13BF36C4E082FF7F /* [CP] Check Pods Manifest.lock */ = {
@@ -2043,13 +2097,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWRemoteController-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F2AB95F88895DD1DD9341E66 /* [CP] Check Pods Manifest.lock */ = {
@@ -2058,28 +2115,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VoicerExtension-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		F5F49146238CCB55500BAC5F /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VoicerExtension/Pods-VoicerExtension-resources.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F9C88D4CDF49BB9AF8573501 /* [CP] Embed Pods Frameworks */ = {
@@ -2088,9 +2133,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -2223,6 +2271,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B54F4F4C1D930BDC0026B7C7 /* IntentHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4EC7788223FD43F0008B8DB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4EC7791223FD43F0008B8DB /* ViewController.swift in Sources */,
+				F4EC778F223FD43F0008B8DB /* AppDelegate.swift in Sources */,
+				F4EC779F223FD6C60008B8DB /* AnalyticsObserver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2396,6 +2454,22 @@
 				B5BC26A81D958BFF00F32770 /* en */,
 			);
 			name = AppIntentVocabulary.plist;
+			sourceTree = "<group>";
+		};
+		F4EC7792223FD43F0008B8DB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EC7793223FD43F0008B8DB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F4EC7797223FD4410008B8DB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4EC7798223FD4410008B8DB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -3035,6 +3109,79 @@
 			};
 			name = Release;
 		};
+		F4EC779B223FD4410008B8DB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 790F59F80209F9DF6209FB91 /* Pods-JWConviva.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWConviva/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jwplayer.com.JWConviva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "JWConviva/JWConviva-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F4EC779C223FD4410008B8DB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWConviva/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = jwplayer.com.JWConviva;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "JWConviva/JWConviva-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -3169,6 +3316,15 @@
 			buildConfigurations = (
 				B54F4F521D930BDC0026B7C7 /* Debug */,
 				B54F4F531D930BDC0026B7C7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4EC779D223FD4410008B8DB /* Build configuration list for PBXNativeTarget "JWConviva" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4EC779B223FD4410008B8DB /* Debug */,
+				F4EC779C223FD4410008B8DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
