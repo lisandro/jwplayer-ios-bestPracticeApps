@@ -107,7 +107,7 @@ class AnalyticsObserver: NSObject {
     
     func createVideoMetadataObject() -> CISContentMetadata? {
         contentMetaData = CISContentMetadata()
-        contentMetaData?.assetName = currentPlaylistItem?.title
+        contentMetaData?.assetName = currentPlaylistItem?.title ?? "None"
         contentMetaData?.streamUrl = currentPlaylistItem?.file
         contentMetaData?.applicationName = "Conviva_Demo"
         contentMetaData?.custom["tag1"] = "value1"

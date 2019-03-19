@@ -4,7 +4,7 @@
 # use_frameworks!
 
 def common_JW
-    pod 'JWPlayer-SDK', '~> 3.2.0'
+    pod 'JWPlayer-SDK', '~> 3.0'
 end
 
 target 'JWBestPracticeApps' do

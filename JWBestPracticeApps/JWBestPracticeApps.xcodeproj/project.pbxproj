@@ -144,6 +144,7 @@
 		B5BC26B21DAC20E500F32770 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26B11DAC20E500F32770 /* info.plist */; };
 		C24874D002C8E9721BA8E61F /* libPods-JWRemotePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BCA1345113D7AE624BEB2D /* libPods-JWRemotePlayer.a */; };
 		D37413B333297461C0FD0791 /* libPods-JWRemoteController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 787B849139DF8B66FA89FA5C /* libPods-JWRemoteController Extension.a */; };
+		F44B0E092240F14E00414BE3 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		F4EC778F223FD43F0008B8DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC778E223FD43F0008B8DB /* AppDelegate.swift */; };
 		F4EC7791223FD43F0008B8DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EC7790223FD43F0008B8DB /* ViewController.swift */; };
 		F4EC7794223FD43F0008B8DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4EC7792223FD43F0008B8DB /* Main.storyboard */; };
@@ -2254,6 +2255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44B0E092240F14E00414BE3 /* JWBasicVideoViewController.m in Sources */,
 				F4EC7791223FD43F0008B8DB /* ViewController.swift in Sources */,
 				F4EC778F223FD43F0008B8DB /* AppDelegate.swift in Sources */,
 				F4EC779F223FD6C60008B8DB /* AnalyticsObserver.swift in Sources */,
