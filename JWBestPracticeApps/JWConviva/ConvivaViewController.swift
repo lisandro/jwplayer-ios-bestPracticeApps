@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConvivaViewController.swift
 //  JWConviva
 //
 //  Created by Kateryna Obertynska on 3/18/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: JWBasicVideoViewController {
+class ConvivaViewController: JWBasicVideoViewController {
     
     var analyticsObserver: AnalyticsObserver?
     

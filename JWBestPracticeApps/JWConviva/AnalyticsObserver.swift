@@ -11,7 +11,7 @@ import AVFoundation
 import ConvivaSDK
 
 let TEST_CUSTOMER_KEY = "CUSTOMER_KEY"
-let TOUCHSTONE_SERVICE_URL = "https://optus-test.testonly.conviva.com/"
+let TOUCHSTONE_SERVICE_URL = "SERVICE_URL"
 
 class AnalyticsObserver: NSObject {
     
