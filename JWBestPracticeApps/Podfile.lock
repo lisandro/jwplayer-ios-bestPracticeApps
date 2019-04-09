@@ -1,20 +1,29 @@
 PODS:
+  - ConvivaSDK (2.141.2)
   - google-cast-sdk (2.10.0):
     - google-cast-sdk/Assets (= 2.10.0)
     - google-cast-sdk/Core (= 2.10.0)
   - google-cast-sdk/Assets (2.10.0):
     - google-cast-sdk/Core
   - google-cast-sdk/Core (2.10.0)
-  - JWPlayer-SDK (2.5.4)
+  - JWPlayer-SDK (3.2.4)
 
 DEPENDENCIES:
+  - ConvivaSDK
   - google-cast-sdk (<= 2.10.0.4070)
-  - JWPlayer-SDK (~> 2.0)
+  - JWPlayer-SDK (~> 3.0)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ConvivaSDK
+    - google-cast-sdk
+    - JWPlayer-SDK
 
 SPEC CHECKSUMS:
+  ConvivaSDK: 0e308a9f0c1653a6e5dd4f452bbd5e46552b4c78
   google-cast-sdk: 1911d498a11a8fbb7a91ce0e0f50cf0d4fe6e3b6
-  JWPlayer-SDK: aeb7acd5f35f46b020c429e59a7ec38dc3b6fe0c
+  JWPlayer-SDK: 38a87a96dc9ccc356e76801fe14de749cf26e75a
 
-PODFILE CHECKSUM: 3117f4990c49fb992fd47996ac47ff0edfe3a737
+PODFILE CHECKSUM: 5977f3af8655ae763a1c2505dceafee82bd9e00b
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.5.3

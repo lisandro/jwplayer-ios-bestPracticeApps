@@ -15,12 +15,14 @@ class JWFairPlayDrmViewController: JWBasicVideoViewController, JWDrmDataSource, 
         self.player.drmDataSource = self
     }
     
-    override func onReady() {
-        self.player.load(encryptedFile)
+    override func onReady(_ event: JWEvent!) {
+        let item = JWPlaylistItem()
+        item.file = encryptedFile
+        self.player.load([item])
     }
     
     func fetchAppIdentifier(forRequest loadingRequestURL: URL!, for encryption: JWEncryption, withCompletion completion: ((Data?) -> Void)!) {
-        if encryption == JWFairPlay {
+        if encryption == JWEncryptionFairPlay {
             let request = NSMutableURLRequest.init()
             request.url = NSURL.init(string: "http://fps.ezdrm.com/demo/video/eleisure.cer") as URL?
             request.httpMethod = "GET"
@@ -35,16 +37,16 @@ class JWFairPlayDrmViewController: JWBasicVideoViewController, JWDrmDataSource, 
     }
     
     func fetchContentIdentifier(forRequest loadingRequestURL: URL!, for encryption: JWEncryption, withCompletion completion: ((Data?) -> Void)!) {
-        if encryption == JWFairPlay {
+        if encryption == JWEncryptionFairPlay {
             var assetId = loadingRequestURL.path
-            assetId = assetId.substring(from: assetId.index(after: assetId.characters.index(of: ";")!))
+            assetId = assetId.substring(from: assetId.index(after: assetId.index(of: ";")!))
             let asssetIdData = NSData.init(bytes: (assetId.cString(using: String.Encoding.utf8))!, length: (assetId.lengthOfBytes(using: String.Encoding.utf8)))
             completion(asssetIdData as Data)
         }
     }
     
     func fetchContentKey(withRequest requestBytes: Data!, for encryption: JWEncryption, withCompletion completion: ((Data?, Date?, String?) -> Void)!) {
-        if encryption == JWFairPlay {
+        if encryption == JWEncryptionFairPlay {
             let currentTime = NSTimeIntervalSince1970 * 1000
             let keyServerAddress = String.init(format: "http://fps.ezdrm.com/api/licenses/09cc0377-6dd4-40cb-b09d-b582236e70fe?p1=\(currentTime)")
             let ksmURL = NSURL.init(string: keyServerAddress)
