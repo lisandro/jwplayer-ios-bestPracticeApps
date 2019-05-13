@@ -13,4 +13,6 @@
 
 @property (nonatomic) JWPlayerController *player;
 
+- (JWConfig *)createConfig;
+
 @end
