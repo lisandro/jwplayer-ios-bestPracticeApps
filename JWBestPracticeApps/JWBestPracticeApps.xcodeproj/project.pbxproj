@@ -125,6 +125,10 @@
 		B50DDEF4228A19CF000F62B0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50DDEF2228A19CF000F62B0 /* LaunchScreen.storyboard */; };
 		B50DDEF7228A19CF000F62B0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B50DDEF6228A19CF000F62B0 /* main.m */; };
 		B50DDEFD228A1ACB000F62B0 /* JWFriendlyObstructionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B50DDEFC228A1ACB000F62B0 /* JWFriendlyObstructionViewController.m */; };
+		B50DDEFE228A1E6C000F62B0 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
+		B50DDF00228A1E7E000F62B0 /* JWBasicVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A729B5C1C99ABD2000F03A9 /* JWBasicVideoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B50DDF01228A1E8E000F62B0 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B50DDEE7228A19CF000F62B0 /* AppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B50DDF02228A1E8E000F62B0 /* JWFriendlyObstructionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B50DDEFB228A1ACB000F62B0 /* JWFriendlyObstructionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A73071D92F79C00EB804F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A73061D92F79C00EB804F /* AppDelegate.swift */; };
 		B53A730C1D92F79C00EB804F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A730A1D92F79C00EB804F /* Main.storyboard */; };
 		B53A730E1D92F79C00EB804F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53A730D1D92F79C00EB804F /* Assets.xcassets */; };
@@ -1048,6 +1052,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B50DDEFF228A1E71000F62B0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B50DDF00228A1E7E000F62B0 /* JWBasicVideoViewController.h in Headers */,
+				B50DDF01228A1E8E000F62B0 /* AppDelegate.h in Headers */,
+				B50DDF02228A1E8E000F62B0 /* JWFriendlyObstructionViewController.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B5308C111D83624C007D2A1F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1276,6 +1290,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B50DDEFA228A19CF000F62B0 /* Build configuration list for PBXNativeTarget "JWFriendlyObstructions" */;
 			buildPhases = (
+				B50DDEFF228A1E71000F62B0 /* Headers */,
 				B50DDEE1228A19CE000F62B0 /* Sources */,
 				B50DDEE2228A19CE000F62B0 /* Frameworks */,
 				B50DDEE3228A19CE000F62B0 /* Resources */,
@@ -2295,6 +2310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50DDEFE228A1E6C000F62B0 /* JWBasicVideoViewController.m in Sources */,
 				B50DDEFD228A1ACB000F62B0 /* JWFriendlyObstructionViewController.m in Sources */,
 				B50DDEF7228A19CF000F62B0 /* main.m in Sources */,
 				B50DDEE9228A19CF000F62B0 /* AppDelegate.m in Sources */,

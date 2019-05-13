@@ -81,5 +81,11 @@ target 'JWConviva' do
 
 end
 
+target 'JWFriendlyObstructions' do
+
+    common_JW
+
+end
+
 workspace 'JWBestPracticeApps'
 
