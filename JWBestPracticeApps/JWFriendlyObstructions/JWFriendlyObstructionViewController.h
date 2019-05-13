@@ -6,7 +6,7 @@
 //  Copyright © 2019 Karim Mourra. All rights reserved.
 //
 
-#import <JWBestPracticeApps/JWBestPracticeApps.h>
+#import "JWBasicVideoViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

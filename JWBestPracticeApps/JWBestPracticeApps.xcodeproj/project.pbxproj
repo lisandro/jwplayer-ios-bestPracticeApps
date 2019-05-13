@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		03F7161471F9D3F882B5C20B /* libPods-JWCasting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B46F999BDD3032B9BCB1F4 /* libPods-JWCasting.a */; };
+		109D156D77972B418F43AF83 /* libPods-JWFriendlyObstructions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 489D53AC10868C8B3398C2D8 /* libPods-JWFriendlyObstructions.a */; };
 		2F6660756A2BC13A41B87E12 /* libPods-JWRemoteCastController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F521C80198C3CF424CC542 /* libPods-JWRemoteCastController Extension.a */; };
 		5BFDE0F3954AAFFAC1F38A76 /* libPods-JWRemoteController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C53086B079689F858B02A42A /* libPods-JWRemoteController.a */; };
 		5C3FFB15941ABE636744FD6B /* libPods-JWRemoteCastController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0952719B40B38A7563CAD16F /* libPods-JWRemoteCastController.a */; };
@@ -303,8 +304,10 @@
 		3BB8C7391F58D5A50C6A715C /* Pods-Voicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voicer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Voicer/Pods-Voicer.debug.xcconfig"; sourceTree = "<group>"; };
 		43033E540B089A5B3BCDBCC6 /* Pods-JWBestPracticeApps.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWBestPracticeApps.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps.debug.xcconfig"; sourceTree = "<group>"; };
 		469A6375B85247D4516142AE /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		489D53AC10868C8B3398C2D8 /* libPods-JWFriendlyObstructions.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFriendlyObstructions.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		56A46499C09525FA3C058938 /* Pods-JWAirPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAirPlay.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		5866385BBD927C92F367DB7C /* libPods-JWAirPlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWAirPlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CC0D846E5356F1F01105F33 /* Pods-JWFriendlyObstructions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWFriendlyObstructions.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions.debug.xcconfig"; sourceTree = "<group>"; };
 		73D5AFFCD082D3F92A3671CF /* libPods-JWRemoteCastPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastPlayer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		750AB9C59D746DEF6A70DCF9 /* Pods-JWFairPlayDrm.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWFairPlayDrm.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm.release.xcconfig"; sourceTree = "<group>"; };
 		75A9CECA1EB7767D6DA505E1 /* libPods-JWVoiceControl.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWVoiceControl.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -460,6 +463,7 @@
 		F6F521C80198C3CF424CC542 /* libPods-JWRemoteCastController Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastController Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva.release.xcconfig"; sourceTree = "<group>"; };
 		FC281FF062456D619081111F /* Pods-JWRemoteController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.release.xcconfig"; sourceTree = "<group>"; };
+		FE0265C7D9B1E611FCD50F02 /* Pods-JWFriendlyObstructions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWFriendlyObstructions.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -531,6 +535,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				109D156D77972B418F43AF83 /* libPods-JWFriendlyObstructions.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +625,8 @@
 				750AB9C59D746DEF6A70DCF9 /* Pods-JWFairPlayDrm.release.xcconfig */,
 				790F59F80209F9DF6209FB91 /* Pods-JWConviva.debug.xcconfig */,
 				FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */,
+				5CC0D846E5356F1F01105F33 /* Pods-JWFriendlyObstructions.debug.xcconfig */,
+				FE0265C7D9B1E611FCD50F02 /* Pods-JWFriendlyObstructions.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -645,6 +652,7 @@
 				01A06EF1BFF97EDC16B19A95 /* libPods-VoicerExtension.a */,
 				7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */,
 				ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */,
+				489D53AC10868C8B3398C2D8 /* libPods-JWFriendlyObstructions.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1290,10 +1298,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B50DDEFA228A19CF000F62B0 /* Build configuration list for PBXNativeTarget "JWFriendlyObstructions" */;
 			buildPhases = (
+				CC3596BA4B3628FE7C03C448 /* [CP] Check Pods Manifest.lock */,
 				B50DDEFF228A1E71000F62B0 /* Headers */,
 				B50DDEE1228A19CE000F62B0 /* Sources */,
 				B50DDEE2228A19CE000F62B0 /* Frameworks */,
 				B50DDEE3228A19CE000F62B0 /* Resources */,
+				E78B41C5530B0F8B50563B83 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -1752,7 +1762,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1761,7 +1771,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		027B88E4A19EB1EC7D0A855E /* [CP] Embed Pods Frameworks */ = {
@@ -1770,7 +1780,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Voicer/Pods-Voicer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-Voicer/Pods-Voicer-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1779,7 +1789,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Voicer/Pods-Voicer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Voicer/Pods-Voicer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		037B8FCEBE5268BFA2AACFB2 /* [CP] Copy Pods Resources */ = {
@@ -1788,18 +1798,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-JWCasting/Pods-JWCasting-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.2/CastFrameworkAssets.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWCasting/Pods-JWCasting-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		03C65EC9F6744AC2F0CDD3E4 /* [CP] Embed Pods Frameworks */ = {
@@ -1808,7 +1818,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWCasting/Pods-JWCasting-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1817,7 +1827,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWCasting/Pods-JWCasting-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		0C44A21A84A7D89E1FF7409B /* [CP] Copy Pods Resources */ = {
@@ -1826,18 +1836,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.3/CastFrameworkAssets.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		100F27D4EFE6A74C8C50154F /* [CP] Check Pods Manifest.lock */ = {
@@ -1900,18 +1910,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Voicer/Pods-Voicer-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-Voicer/Pods-Voicer-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS10.0/CastFrameworkAssets.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Voicer/Pods-Voicer-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Voicer/Pods-Voicer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		3A9524839AB253EE4FBCE6E5 /* [CP] Embed Pods Frameworks */ = {
@@ -1920,7 +1930,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -1929,7 +1939,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		41B30782A9FA2F17CF2A02B6 /* [CP] Check Pods Manifest.lock */ = {
@@ -1998,7 +2008,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -2009,7 +2019,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		73C5A63A476C9A7364C34BE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -2036,18 +2046,18 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.2/CastFrameworkAssets.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		777AA6ACB02E60E836EC594F /* [CP] Check Pods Manifest.lock */ = {
@@ -2092,7 +2102,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -2101,7 +2111,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9CA3482367C439F0CDBB6E4B /* [CP] Embed Pods Frameworks */ = {
@@ -2110,7 +2120,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -2119,7 +2129,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C644EAE82B765E5CC4C8400E /* [CP] Copy Pods Resources */ = {
@@ -2128,18 +2138,40 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-resources.sh",
-				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
+				"${PODS_ROOT}/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/google-cast-sdk-iOS9.3/CastFrameworkAssets.bundle",
+				"${PODS_ROOT}/google-cast-sdk/GoogleCastSDK-2.10.0-Release/GoogleCast.framework/GoogleCastResources.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/CastFrameworkAssets.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleCastResources.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC3596BA4B3628FE7C03C448 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JWFriendlyObstructions-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D8C5D0DDCB9F57712020D253 /* [CP] Check Pods Manifest.lock */ = {
@@ -2178,6 +2210,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E78B41C5530B0F8B50563B83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		F2AB95F88895DD1DD9341E66 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2202,7 +2256,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -2211,7 +2265,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3041,6 +3095,7 @@
 		};
 		B50DDEF8228A19CF000F62B0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CC0D846E5356F1F01105F33 /* Pods-JWFriendlyObstructions.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -3074,6 +3129,7 @@
 		};
 		B50DDEF9228A19CF000F62B0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE0265C7D9B1E611FCD50F02 /* Pods-JWFriendlyObstructions.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
