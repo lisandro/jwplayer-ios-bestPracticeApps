@@ -2220,12 +2220,14 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
