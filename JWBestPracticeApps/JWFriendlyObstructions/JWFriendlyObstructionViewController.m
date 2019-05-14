@@ -51,12 +51,14 @@
 - (void)addCustomControl
 {
     self.playbackToggle = [UIButton new];
-    CGPoint playerCenter = self.player.view.center;
+    UIView *playerView = self.player.view;
+    CGFloat x = playerView.frame.size.width / 2;
+    CGFloat y = playerView.frame.size.height / 2;
     self.playbackToggle.frame = CGRectMake(0, 0, 100, 100);
+    self.playbackToggle.center = CGPointMake(x, y);
     [self.playbackToggle addTarget:self action:NSSelectorFromString(@"togglePlayback") forControlEvents:UIControlEventTouchDown];
     [self setPlayIcon];
-    [self.player.view addSubview:self.playbackToggle];
-    self.playbackToggle.center = playerCenter;
+    [playerView addSubview:self.playbackToggle];
 }
 
 - (void)togglePlayback
