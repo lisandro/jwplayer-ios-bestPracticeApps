@@ -130,6 +130,8 @@
 		B50DDF00228A1E7E000F62B0 /* JWBasicVideoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A729B5C1C99ABD2000F03A9 /* JWBasicVideoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B50DDF01228A1E8E000F62B0 /* AppDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B50DDEE7228A19CF000F62B0 /* AppDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B50DDF02228A1E8E000F62B0 /* JWFriendlyObstructionViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B50DDEFB228A1ACB000F62B0 /* JWFriendlyObstructionViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B50DDF05228B160C000F62B0 /* pause-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B50DDF03228B160B000F62B0 /* pause-button.png */; };
+		B50DDF06228B160C000F62B0 /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = B50DDF04228B160C000F62B0 /* play-button.png */; };
 		B53A73071D92F79C00EB804F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53A73061D92F79C00EB804F /* AppDelegate.swift */; };
 		B53A730C1D92F79C00EB804F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53A730A1D92F79C00EB804F /* Main.storyboard */; };
 		B53A730E1D92F79C00EB804F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B53A730D1D92F79C00EB804F /* Assets.xcassets */; };
@@ -422,10 +424,11 @@
 		B50DDEEE228A19CF000F62B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B50DDEF0228A19CF000F62B0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B50DDEF3228A19CF000F62B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		B50DDEF5228A19CF000F62B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B50DDEF6228A19CF000F62B0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B50DDEFB228A1ACB000F62B0 /* JWFriendlyObstructionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWFriendlyObstructionViewController.h; sourceTree = "<group>"; };
 		B50DDEFC228A1ACB000F62B0 /* JWFriendlyObstructionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWFriendlyObstructionViewController.m; sourceTree = "<group>"; };
+		B50DDF03228B160B000F62B0 /* pause-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-button.png"; path = "JWRemoteController/pause-button.png"; sourceTree = SOURCE_ROOT; };
+		B50DDF04228B160C000F62B0 /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button.png"; path = "JWRemoteController/play-button.png"; sourceTree = SOURCE_ROOT; };
 		B53A0DF21D8355CF00893252 /* JWVoiceControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWVoiceControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53A73041D92F79C00EB804F /* Voicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53A73061D92F79C00EB804F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -947,7 +950,8 @@
 				B50DDEED228A19CF000F62B0 /* Main.storyboard */,
 				B50DDEF0228A19CF000F62B0 /* Assets.xcassets */,
 				B50DDEF2228A19CF000F62B0 /* LaunchScreen.storyboard */,
-				B50DDEF5228A19CF000F62B0 /* Info.plist */,
+				B50DDF03228B160B000F62B0 /* pause-button.png */,
+				B50DDF04228B160C000F62B0 /* play-button.png */,
 				B50DDEF6228A19CF000F62B0 /* main.m */,
 			);
 			path = JWFriendlyObstructions;
@@ -1682,8 +1686,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B50DDF06228B160C000F62B0 /* play-button.png in Resources */,
 				B50DDEF4228A19CF000F62B0 /* LaunchScreen.storyboard in Resources */,
 				B50DDEF1228A19CF000F62B0 /* Assets.xcassets in Resources */,
+				B50DDF05228B160C000F62B0 /* pause-button.png in Resources */,
 				B50DDEEF228A19CF000F62B0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -3118,7 +3124,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = JWFriendlyObstructions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
@@ -3152,7 +3158,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				INFOPLIST_FILE = JWFriendlyObstructions/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;

@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JWFriendlyObstructionViewController : JWBasicVideoViewController
+@interface JWFriendlyObstructionViewController : JWBasicVideoViewController <JWPlayerDelegate>
 
 @end
 
