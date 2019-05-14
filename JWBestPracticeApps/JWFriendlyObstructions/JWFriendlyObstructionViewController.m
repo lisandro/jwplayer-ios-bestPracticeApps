@@ -16,6 +16,10 @@
 @interface JWFriendlyObstructionViewController ()
 
 @property (nonatomic) UIButton *playbackToggle;
+@property (nonatomic) UIImage *playIcon;
+@property (nonatomic) UIImage *pauseIcon;
+
+@property (nonatomic) BOOL playingAd;
 
 @end
 
@@ -24,14 +28,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.player.delegate = self;
-    self.playbackToggle = [UIButton new];
-    self.playbackToggle.frame = CGRectMake(100, 100, 100, 100);
-    [self.playbackToggle setImage:[UIImage imageNamed:playIconName] forState:UIControlStateNormal];
-    //[[UIImageView alloc]initWithImage:[UIImage imageNamed:playIconName]];
-    [self.player.view addSubview:self.playbackToggle];
-    
+    self.playIcon = [UIImage imageNamed:playIconName];
+    self.pauseIcon = [UIImage imageNamed:pauseIconName];
+    [self addCustomControl];
     [self.player.experimentalAPI registerFriendlyAdObstruction:self.playbackToggle];
-    
 }
 
 - (JWConfig *)createConfig
@@ -41,7 +41,7 @@
     
     JWAdConfig *advertising = [JWAdConfig new];
     advertising.client = JWAdClientGoogima;
-    advertising.schedule = @[[JWAdBreak adBreakWithTag:sampleAdTag offset:@"10"]];
+    advertising.schedule = @[[JWAdBreak adBreakWithTag:sampleAdTag offset:@"pre"]];
     
     config.advertising = advertising;
     
@@ -50,34 +50,85 @@
 
 - (void)addCustomControl
 {
-    
+    self.playbackToggle = [UIButton new];
+    CGPoint playerCenter = self.player.view.center;
+    self.playbackToggle.frame = CGRectMake(0, 0, 100, 100);
+    [self.playbackToggle addTarget:self action:NSSelectorFromString(@"togglePlayback") forControlEvents:UIControlEventTouchDown];
+    [self setPlayIcon];
+    [self.player.view addSubview:self.playbackToggle];
+    self.playbackToggle.center = playerCenter;
 }
 
-- (void)registerFriendlyObstruction
+- (void)togglePlayback
 {
-    
+    JWPlayerState state = self.player.state;
+    if (state == JWPlayerStatePlaying || state == JWPlayerStateBuffering) {
+        [self pausePlayback];
+    } else {
+        [self resumePlayback];
+    }
 }
 
 #pragma Mark - Player Delegate methods
 
 - (void)onPlay:(JWEvent<JWStateChangeEvent> *)event
 {
-    
+    [self setPauseIcon];
 }
 
 - (void)onPause:(JWEvent<JWStateChangeEvent> *)event
 {
-    
+    [self setPlayIcon];
 }
 
 - (void)onAdPlay:(JWAdEvent<JWAdStateChangeEvent> *)event
 {
-    
+    [self setPauseIcon];
 }
 
 - (void)onAdPause:(JWAdEvent<JWAdStateChangeEvent> *)event
 {
-    
+    [self setPlayIcon];
+}
+
+- (void)onAdImpression:(JWAdEvent<JWAdImpressionEvent> *)event
+{
+    self.playingAd = YES;
+}
+
+- (void)onAdComplete:(JWAdEvent<JWAdDetailEvent> *)event
+{
+    self.playingAd = NO;
+}
+
+#pragma Mark - Helpers
+
+- (void)setPlayIcon
+{
+    [self.playbackToggle setImage:self.playIcon forState:UIControlStateNormal];
+}
+
+- (void)setPauseIcon
+{
+    [self.playbackToggle setImage:self.pauseIcon forState:UIControlStateNormal];
+}
+
+- (void)pausePlayback
+{
+    if (self.playingAd) {
+        [self.player pauseAd:YES];
+    } else {
+        [self.player pause];
+    }
+}
+
+- (void)resumePlayback
+{
+    if (self.playingAd) {
+        [self.player pauseAd:NO];
+    } else {
+        [self.player play];
+    }
 }
 
 @end
