@@ -29,17 +29,23 @@
 
 - (void)createPlayer
 {
-    JWConfig* config = [[JWConfig alloc]initWithContentUrl:videoFile];
-    config.image = posterImage;
-    config.size = CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
-    config.autostart = YES;
-    config.repeat = YES;
     
+    JWConfig *config = [self createConfig];
     self.player = [[JWPlayerController alloc]initWithConfig:config];
     self.player.forceLandscapeOnFullScreen = YES;
     self.player.forceFullScreenOnLandscape = YES;
     self.player.view.center = self.view.center;
     self.player.delegate = self;
+}
+
+- (JWConfig *)createConfig
+{
+    JWConfig* config = [[JWConfig alloc]initWithContentUrl:videoFile];
+    config.image = posterImage;
+    config.size = CGSizeMake(self.view.frame.size.width, self.view.frame.size.width);
+    config.autostart = YES;
+    config.repeat = YES;
+    return config;
 }
 
 @end

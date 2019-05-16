@@ -7,6 +7,14 @@ def common_JW
     pod 'JWPlayer-SDK', '~> 3.0'
 end
 
+def common_Cast
+    pod 'google-cast-sdk', '4.3.5'
+end
+
+def common_Google_IMA
+    pod 'GoogleAds-IMA-iOS-SDK', '3.8.1'
+end
+
 target 'JWBestPracticeApps' do
 
     common_JW
@@ -16,7 +24,7 @@ end
 target 'JWCasting' do
 
     common_JW
-    pod 'google-cast-sdk', '<= 2.10.0.4070'
+    common_Cast
 
 end
 
@@ -29,7 +37,7 @@ end
 target 'JWRemotePlayer' do
 
     common_JW
-    pod 'google-cast-sdk', '<= 2.10.0.4070'
+    common_Cast
 
 end
 
@@ -44,7 +52,7 @@ end
 target 'JWRemoteCastPlayer' do
 
     common_JW
-    pod 'google-cast-sdk', '<= 2.10.0.4070'
+    common_Cast
 
 end
 
@@ -59,7 +67,7 @@ end
 target 'Voicer' do
 
     common_JW
-    pod 'google-cast-sdk', '<= 2.10.0.4070'
+    common_Cast
 
 end
 
@@ -70,7 +78,7 @@ end
 target 'JWFairPlayDrm' do
 
     common_JW
-    pod 'google-cast-sdk', '<= 2.10.0.4070'
+    common_Cast
 
 end
 
@@ -78,6 +86,13 @@ target 'JWConviva' do
 
     pod 'ConvivaSDK'
     common_JW
+
+end
+
+target 'JWFriendlyObstructions' do
+
+    common_JW
+    common_Google_IMA
 
 end
 
