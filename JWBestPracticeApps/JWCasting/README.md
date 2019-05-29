@@ -16,4 +16,5 @@ Please note that Google Cast support is still in beta. The JW Player SDK support
 
 Per Google's [Cast Discovery documentation](https://developers.google.com/cast/docs/discovery), Youtube and Netflix should not be used to test discovery:
 > Do not use the Netflix or YouTube apps to test discovery, as these use some specialized discovery mechanisms.
+
 Instead, we recommend using Google's Cast sample app https://github.com/googlecast/CastHelloVideo-ios
