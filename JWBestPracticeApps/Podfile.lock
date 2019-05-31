@@ -6,8 +6,8 @@ PODS:
   - google-cast-sdk/Core (4.3.5):
     - Protobuf (~> 3.0)
   - GoogleAds-IMA-iOS-SDK (3.8.1)
-  - JWPlayer-SDK (3.5.0)
-  - Protobuf (3.7.0)
+  - JWPlayer-SDK (3.5.1)
+  - Protobuf (3.8.0)
 
 DEPENDENCIES:
   - ConvivaSDK
@@ -27,8 +27,8 @@ SPEC CHECKSUMS:
   ConvivaSDK: 0e308a9f0c1653a6e5dd4f452bbd5e46552b4c78
   google-cast-sdk: 462e10c781ea8ad480d2e16200bb8584ef067e07
   GoogleAds-IMA-iOS-SDK: 9659b8999443366d2d159413c189e55d88734b78
-  JWPlayer-SDK: fdab1bcac6741e20ec221815e4a9afa411e0364c
-  Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
+  JWPlayer-SDK: 065ec7dfbb1314fe9a52380bbb925ab1f78bbf0c
+  Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
 
 PODFILE CHECKSUM: ce027ac4874793ad1902fd9df406186a755ef304
 
