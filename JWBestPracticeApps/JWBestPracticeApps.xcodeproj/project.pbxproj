@@ -10,10 +10,19 @@
 		03F7161471F9D3F882B5C20B /* libPods-JWCasting.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 18B46F999BDD3032B9BCB1F4 /* libPods-JWCasting.a */; };
 		109D156D77972B418F43AF83 /* libPods-JWFriendlyObstructions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 489D53AC10868C8B3398C2D8 /* libPods-JWFriendlyObstructions.a */; };
 		2F6660756A2BC13A41B87E12 /* libPods-JWRemoteCastController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F6F521C80198C3CF424CC542 /* libPods-JWRemoteCastController Extension.a */; };
+		3D184D115927DE5E0988FBAE /* libPods-FeedTableViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03B58EA95729A9B5EEA9C26C /* libPods-FeedTableViewController.a */; };
 		5BFDE0F3954AAFFAC1F38A76 /* libPods-JWRemoteController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C53086B079689F858B02A42A /* libPods-JWRemoteController.a */; };
 		5C3FFB15941ABE636744FD6B /* libPods-JWRemoteCastController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0952719B40B38A7563CAD16F /* libPods-JWRemoteCastController.a */; };
 		5FC336DC91B9503D34A48A27 /* libPods-VoicerExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A06EF1BFF97EDC16B19A95 /* libPods-VoicerExtension.a */; };
 		6A3FDDF5A53F2DEFB671A1BF /* libPods-JWFairPlayDrm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */; };
+		7988D9512304717E0043CE80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D9502304717E0043CE80 /* AppDelegate.swift */; };
+		7988D9562304717E0043CE80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7988D9542304717E0043CE80 /* Main.storyboard */; };
+		7988D9582304717F0043CE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7988D9572304717F0043CE80 /* Assets.xcassets */; };
+		7988D95B2304717F0043CE80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7988D9592304717F0043CE80 /* LaunchScreen.storyboard */; };
+		7988D962230472800043CE80 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D960230472800043CE80 /* FeedItemCell.swift */; };
+		7988D963230472800043CE80 /* FeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7988D961230472800043CE80 /* FeedItemCell.xib */; };
+		7988D965230482B70043CE80 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D964230482B70043CE80 /* FeedTableViewController.swift */; };
+		7988D968230487F20043CE80 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7988D967230487F20043CE80 /* Feed.plist */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -294,11 +303,14 @@
 
 /* Begin PBXFileReference section */
 		01A06EF1BFF97EDC16B19A95 /* libPods-VoicerExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VoicerExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03B58EA95729A9B5EEA9C26C /* libPods-FeedTableViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FeedTableViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		05D9449F562C9B71FFCC02D0 /* Pods-JWCasting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWCasting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWCasting/Pods-JWCasting.debug.xcconfig"; sourceTree = "<group>"; };
 		0811EFC620D82350FF7B1946 /* libPods-SiriPlayerController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SiriPlayerController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0952719B40B38A7563CAD16F /* libPods-JWRemoteCastController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		11A199DDB685E2180A964D5C /* libPods-JWSiriVideoExtension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWSiriVideoExtension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B46F999BDD3032B9BCB1F4 /* libPods-JWCasting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWCasting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AB4929A423E0E17CCB4B34A /* Pods-FeedTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		1EFC270397F27CD0DBB81093 /* Pods-PlayerTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerTableViewController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PlayerTableViewController/Pods-PlayerTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		22C2C3C040DFF795E877393C /* Pods-JWRemotePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemotePlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer.debug.xcconfig"; sourceTree = "<group>"; };
 		25CB234896380D6434A8A9B2 /* Pods-JWRemoteController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.release.xcconfig"; sourceTree = "<group>"; };
 		33F770C1ED73AB810248CB9C /* Pods-JWRemoteCastPlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastPlayer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastPlayer/Pods-JWRemoteCastPlayer.debug.xcconfig"; sourceTree = "<group>"; };
@@ -316,6 +328,16 @@
 		7749A5E7085C50853FC4FD3F /* Pods-JWRemoteCastController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.debug.xcconfig"; sourceTree = "<group>"; };
 		787B849139DF8B66FA89FA5C /* libPods-JWRemoteController Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteController Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F59F80209F9DF6209FB91 /* Pods-JWConviva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva.debug.xcconfig"; sourceTree = "<group>"; };
+		7988D94E2304717E0043CE80 /* FeedTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7988D9502304717E0043CE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7988D9552304717E0043CE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7988D9572304717F0043CE80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7988D95A2304717F0043CE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7988D960230472800043CE80 /* FeedItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
+		7988D961230472800043CE80 /* FeedItemCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedItemCell.xib; sourceTree = "<group>"; };
+		7988D964230482B70043CE80 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
+		7988D966230486500043CE80 /* FeedTableViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedTableViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		7988D967230487F20043CE80 /* Feed.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Feed.plist; sourceTree = "<group>"; };
 		7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFairPlayDrm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82812C92FE3B7F62F5CE4A85 /* libPods-SiriPlayerControllerUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SiriPlayerControllerUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWRemoteCastPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,6 +437,7 @@
 		969799C36851B711451E6914 /* Pods-JWBestPracticeApps.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWBestPracticeApps.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWBestPracticeApps/Pods-JWBestPracticeApps.release.xcconfig"; sourceTree = "<group>"; };
 		9EB18D2E0C98F9B2F6BD446A /* Pods-JWRemoteController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.debug.xcconfig"; sourceTree = "<group>"; };
 		A37E790C732ABB5BBCB8FC62 /* Pods-JWFairPlayDrm.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWFairPlayDrm.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWFairPlayDrm/Pods-JWFairPlayDrm.debug.xcconfig"; sourceTree = "<group>"; };
+		A64ACCD0879254EA4CE90F1F /* Pods-PlayerTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlayerTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlayerTableViewController/Pods-PlayerTableViewController.release.xcconfig"; sourceTree = "<group>"; };
 		ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWConviva.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE13619DC752730AA54E1307 /* Pods-JWRemoteCastController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		AFA47BF6BEBC875452177758 /* Pods-JWRemoteCastController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.release.xcconfig"; sourceTree = "<group>"; };
@@ -463,6 +486,7 @@
 		F4EC7798223FD4410008B8DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F4EC779E223FD6C60008B8DB /* AnalyticsObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnalyticsObserver.swift; sourceTree = "<group>"; };
 		F4EC77A0223FD86F0008B8DB /* JWConviva-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JWConviva-Bridging-Header.h"; sourceTree = "<group>"; };
+		F5480B4E4A96BE5DA005CDDB /* Pods-FeedTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.release.xcconfig"; path = "Pods/Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.release.xcconfig"; sourceTree = "<group>"; };
 		F6F521C80198C3CF424CC542 /* libPods-JWRemoteCastController Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteCastController Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva.release.xcconfig"; sourceTree = "<group>"; };
 		FC281FF062456D619081111F /* Pods-JWRemoteController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -470,6 +494,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7988D94B2304717E0043CE80 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D184D115927DE5E0988FBAE /* libPods-FeedTableViewController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346D1D1DC2A80008FE59 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -630,6 +662,8 @@
 				FB751D5DA78CD134A0E59994 /* Pods-JWConviva.release.xcconfig */,
 				5CC0D846E5356F1F01105F33 /* Pods-JWFriendlyObstructions.debug.xcconfig */,
 				FE0265C7D9B1E611FCD50F02 /* Pods-JWFriendlyObstructions.release.xcconfig */,
+				1AB4929A423E0E17CCB4B34A /* Pods-FeedTableViewController.debug.xcconfig */,
+				F5480B4E4A96BE5DA005CDDB /* Pods-FeedTableViewController.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -656,8 +690,25 @@
 				7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */,
 				ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */,
 				489D53AC10868C8B3398C2D8 /* libPods-JWFriendlyObstructions.a */,
+				03B58EA95729A9B5EEA9C26C /* libPods-FeedTableViewController.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7988D94F2304717E0043CE80 /* FeedTableViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7988D9502304717E0043CE80 /* AppDelegate.swift */,
+				7988D9542304717E0043CE80 /* Main.storyboard */,
+				7988D9572304717F0043CE80 /* Assets.xcassets */,
+				7988D9592304717F0043CE80 /* LaunchScreen.storyboard */,
+				7988D960230472800043CE80 /* FeedItemCell.swift */,
+				7988D961230472800043CE80 /* FeedItemCell.xib */,
+				7988D964230482B70043CE80 /* FeedTableViewController.swift */,
+				7988D966230486500043CE80 /* FeedTableViewController-Bridging-Header.h */,
+				7988D967230487F20043CE80 /* Feed.plist */,
+			);
+			path = FeedTableViewController;
 			sourceTree = "<group>";
 		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -745,6 +796,7 @@
 				8AB3E07E1D99B3F8002A3CA7 /* JWFairPlayDrm */,
 				F4EC778D223FD43F0008B8DB /* JWConviva */,
 				B50DDEE6228A19CF000F62B0 /* JWFriendlyObstructions */,
+				7988D94F2304717E0043CE80 /* FeedTableViewController */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				148A822693302715DF542B54 /* Pods */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
@@ -770,6 +822,7 @@
 				8AB3E07D1D99B3F8002A3CA7 /* JWFairPlayDrm.app */,
 				F4EC778C223FD43F0008B8DB /* JWConviva.app */,
 				B50DDEE5228A19CE000F62B0 /* JWFriendlyObstructions.app */,
+				7988D94E2304717E0043CE80 /* FeedTableViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1095,6 +1148,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		7988D94D2304717E0043CE80 /* FeedTableViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7988D95F2304717F0043CE80 /* Build configuration list for PBXNativeTarget "FeedTableViewController" */;
+			buildPhases = (
+				D5398AA697AC2BD57D5DFADC /* [CP] Check Pods Manifest.lock */,
+				7988D94A2304717E0043CE80 /* Sources */,
+				7988D94B2304717E0043CE80 /* Frameworks */,
+				7988D94C2304717E0043CE80 /* Resources */,
+				4B0CC3070AC83B34CC9F8ADF /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FeedTableViewController;
+			productName = TableViewPlayer;
+			productReference = 7988D94E2304717E0043CE80 /* FeedTableViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3734861D1DC2A80008FE59 /* Build configuration list for PBXNativeTarget "JWRemoteCastPlayer" */;
@@ -1421,10 +1493,20 @@
 		8A729A6F1C98ACA8000F03A9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1010;
+				LastSwiftUpdateCheck = 1030;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Karim Mourra";
 				TargetAttributes = {
+					7988D94D2304717E0043CE80 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = 8Q5DXDTPWT;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					8A37346F1D1DC2A80008FE59 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -1555,11 +1637,24 @@
 				8AB3E07C1D99B3F8002A3CA7 /* JWFairPlayDrm */,
 				F4EC778B223FD43F0008B8DB /* JWConviva */,
 				B50DDEE4228A19CE000F62B0 /* JWFriendlyObstructions */,
+				7988D94D2304717E0043CE80 /* FeedTableViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7988D94C2304717E0043CE80 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7988D95B2304717F0043CE80 /* LaunchScreen.storyboard in Resources */,
+				7988D968230487F20043CE80 /* Feed.plist in Resources */,
+				7988D9582304717F0043CE80 /* Assets.xcassets in Resources */,
+				7988D963230472800043CE80 /* FeedItemCell.xib in Resources */,
+				7988D9562304717E0043CE80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346E1D1DC2A80008FE59 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1970,6 +2065,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4B0CC3070AC83B34CC9F8ADF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		4C2993613FCFA059B56DA62B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2011,15 +2124,11 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JWConviva/Pods-JWConviva-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 			);
@@ -2180,6 +2289,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		D5398AA697AC2BD57D5DFADC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FeedTableViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D8C5D0DDCB9F57712020D253 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2221,16 +2352,12 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-JWFriendlyObstructions/Pods-JWFriendlyObstructions-frameworks.sh",
 				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
 				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
@@ -2279,6 +2406,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		7988D94A2304717E0043CE80 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7988D962230472800043CE80 /* FeedItemCell.swift in Sources */,
+				7988D9512304717E0043CE80 /* AppDelegate.swift in Sources */,
+				7988D965230482B70043CE80 /* FeedTableViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346C1D1DC2A80008FE59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2461,6 +2598,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		7988D9542304717E0043CE80 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7988D9552304717E0043CE80 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7988D9592304717F0043CE80 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7988D95A2304717F0043CE80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		8A37347B1D1DC2A80008FE59 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2632,6 +2785,79 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7988D95D2304717F0043CE80 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1AB4929A423E0E17CCB4B34A /* Pods-FeedTableViewController.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.FeedTableViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "FeedTableViewController/FeedTableViewController-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7988D95E2304717F0043CE80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F5480B4E4A96BE5DA005CDDB /* Pods-FeedTableViewController.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.FeedTableViewController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FeedTableViewController/FeedTableViewController-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		8A3734841D1DC2A80008FE59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 33F770C1ED73AB810248CB9C /* Pods-JWRemoteCastPlayer.debug.xcconfig */;
@@ -3409,6 +3635,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7988D95F2304717F0043CE80 /* Build configuration list for PBXNativeTarget "FeedTableViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7988D95D2304717F0043CE80 /* Debug */,
+				7988D95E2304717F0043CE80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8A3734861D1DC2A80008FE59 /* Build configuration list for PBXNativeTarget "JWRemoteCastPlayer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
