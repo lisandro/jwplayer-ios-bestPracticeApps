@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var selectedIndex = 0
-    // Array with tuples (Title, URL, AdTag)
+    // Array with tuples (Title, URL)
     var feed: [(String, String)] = []
     var player: JWPlayerController? = nil
     
@@ -36,20 +36,21 @@ class ViewController: UIViewController {
         // Load feed array
         feed = [("Video", "https://samplescdn.origin.mediaservices.windows.net/e0e820ec-f6a2-4ea2-afe3-1eed4e06ab2c/AzureMediaServices_Overview.ism/manifest(format=m3u8-aapl-v3)"),
                 ("Scrubbale stream", "https://playertest.longtailvideo.com/hls/hockey/new_master.m3u8"),
-                ("Live", "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8"),("Video (Ad)", "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8")]
+                ("Live", "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8")]
         
         // Get a default item from array
         let item = feed[selectedIndex]
         // Instance a JWConfig object to load the video
-        let config = JWConfig.init(contentUrl: item.1)
-        config.title = item.0
-        config.displayTitle = false
-        // Hide JWPlayer's controls to use own native contorls
-        config.controls = false
-        
         // Instance a JWPlayerController to manage the video playback
-        if let player = JWPlayerController.init(config: config, delegate: self),
+        if let config = JWConfig.init(contentUrl: item.1),
+            let player = JWPlayerController.init(config: config, delegate: self),
             let playerView = player.view {
+            config.title = item.0
+            config.displayTitle = false
+            // Hide JWPlayer's controls to use own native contorls
+            config.controls = false
+            
+            // Add player view into container view and constraint it to parent view
             containerView.addSubview(playerView)
             containerView.sendSubviewToBack(playerView)
             playerView.constraintToSuperview()
@@ -301,17 +302,18 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         let item = feed[selectedIndex]
         // Instance a JWConfig object to load the selected video
         // in the current player
-        let config = JWConfig.init(contentURL: item.1)
-        config.title = item.0
-        config.controls = false
-        config.displayTitle = false
-        // Stop the player and load the new video
-        player.stop()
-        player.load([JWPlaylistItem(config: config)])
-        
-        // Reset player UI (playback button, time slider and time label) and play the video
-        resetPlayerUI()
-        player.play()
+        if let config = JWConfig.init(contentURL: item.1) {
+            config.title = item.0
+            config.controls = false
+            config.displayTitle = false
+            // Stop the player and load the new video
+            player.stop()
+            player.load([JWPlaylistItem(config: config)])
+            
+            // Reset player UI (playback button, time slider and time label) and play the video
+            resetPlayerUI()
+            player.play()
+        }
         
         // Reload table to update the selected row
         tableView.reloadData()

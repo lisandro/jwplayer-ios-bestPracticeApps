@@ -124,6 +124,7 @@
 		8AF5F6E91C9A612B00C0D5E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8AF5F6E81C9A612B00C0D5E0 /* Assets.xcassets */; };
 		8AF5F6ED1C9A612B00C0D5E0 /* JWRemoteController.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 8AF5F6CC1C9A612B00C0D5E0 /* JWRemoteController.app */; };
 		9D8C0B2A0CC0FBF03E841C7E /* libPods-JWConviva.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ACA763056F9C67F57D966EC6 /* libPods-JWConviva.a */; };
+		A60B1E9A82C317F892F1974C /* libPods-NativeControls.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F65D7264F4C81E9830A996C /* libPods-NativeControls.a */; };
 		AB341B6EC61DFD6B46F068D6 /* libPods-JWBestPracticeApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE25B16DE011FFE47951517 /* libPods-JWBestPracticeApps.a */; };
 		B50DDEE9228A19CF000F62B0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B50DDEE8228A19CF000F62B0 /* AppDelegate.m */; };
 		B50DDEEF228A19CF000F62B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B50DDEED228A19CF000F62B0 /* Main.storyboard */; };
@@ -495,6 +496,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A60B1E9A82C317F892F1974C /* libPods-NativeControls.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1159,9 +1161,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79C15C4D2315766300494F26 /* Build configuration list for PBXNativeTarget "NativeControls" */;
 			buildPhases = (
+				5B126B670E44DA125C82D999 /* [CP] Check Pods Manifest.lock */,
 				79C15C3A2315766200494F26 /* Sources */,
 				79C15C3B2315766200494F26 /* Frameworks */,
 				79C15C3C2315766200494F26 /* Resources */,
+				5CA558402D1A618BB51D0B5A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -2085,6 +2089,28 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5B126B670E44DA125C82D999 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NativeControls-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		5B8EB63E3022D951CF175410 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2101,6 +2127,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CA558402D1A618BB51D0B5A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NativeControls/Pods-NativeControls-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NativeControls/Pods-NativeControls-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		644034D7DF4D536BEC8A62C3 /* [CP] Embed Pods Frameworks */ = {
@@ -2764,6 +2808,7 @@
 /* Begin XCBuildConfiguration section */
 		79C15C4E2315766300494F26 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CD2F659507C43C3DFB9FC66 /* Pods-NativeControls.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -2799,6 +2844,7 @@
 		};
 		79C15C4F2315766300494F26 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 680530048EF38298E523E501 /* Pods-NativeControls.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ANALYZER_NONNULL = YES;
