@@ -96,5 +96,11 @@ target 'JWFriendlyObstructions' do
 
 end
 
+target 'NativeControls' do
+  
+  common_JW
+  
+end
+
 workspace 'JWBestPracticeApps'
 
