@@ -9,6 +9,6 @@
 #ifndef NativeControls_Bridging_Header_h
 #define NativeControls_Bridging_Header_h
 
-#import <JWPlayer_IOS_SDK/JWPlayerController.h>
+#import "JWBasicVideoViewController.h"
 
 #endif /* NativeControls_Bridging_Header_h */

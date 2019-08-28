@@ -11,9 +11,8 @@ import UIKit
 let LIVEString = "LIVE"
 let DefaultTimeString = "00:00"
 
-class ViewController: UIViewController {
+class ViewController: JWBasicVideoViewController {
     
-    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var controlsView: UIView!
     @IBOutlet weak var replayButton: UIButton!
     @IBOutlet weak var playbackButton: UIButton!
@@ -22,43 +21,29 @@ class ViewController: UIViewController {
     @IBOutlet weak var fullscreenButton: UIButton!
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var timeSlider: UISlider!
-    @IBOutlet weak var indicatorView: UIActivityIndicatorView!
-    @IBOutlet weak var tableView: UITableView!
     
-    var selectedIndex = 0
+    let indicatorView = UIActivityIndicatorView(style: .whiteLarge)
+    
     // Array with tuples (Title, URL)
     var feed: [(String, String)] = []
-    var player: JWPlayerController? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Load feed array
-        feed = [("Video", "https://samplescdn.origin.mediaservices.windows.net/e0e820ec-f6a2-4ea2-afe3-1eed4e06ab2c/AzureMediaServices_Overview.ism/manifest(format=m3u8-aapl-v3)"),
-                ("Scrubbale stream", "https://playertest.longtailvideo.com/hls/hockey/new_master.m3u8"),
-                ("Live", "https://playertest.longtailvideo.com/adaptive/wowzaid3/playlist.m3u8")]
-        
-        // Get a default item from array
-        let item = feed[selectedIndex]
-        // Instance a JWConfig object to load the video
-        // Instance a JWPlayerController to manage the video playback
-        if let config = JWConfig.init(contentUrl: item.1),
-            let player = JWPlayerController.init(config: config, delegate: self),
-            let playerView = player.view {
-            config.title = item.0
-            config.displayTitle = false
-            // Hide JWPlayer's controls to use own native contorls
-            config.controls = false
+        // Verify instance of JWPlayerController
+        if let player = self.player {
+            // Hide JWPlayer's controls to use your own native contorls
+            player.config.controls = false
             
-            // Add player view into container view and constraint it to parent view
-            containerView.addSubview(playerView)
-            containerView.sendSubviewToBack(playerView)
-            playerView.constraintToSuperview()
-            
+            // Add an observer for JWPlayerStateChangedNotification
             NotificationCenter.default.addObserver(self, selector: #selector(stateChangedNotification(_:)), name: NSNotification.Name(rawValue: JWPlayerStateChangedNotification), object: nil)
-            
-            self.player = player
         }
+        
+        // Setup indicator view
+        indicatorView.color = UIColor(red: 234/255, green: 52/255, blue: 76/255, alpha: 1)
+        player.view.addSubview(indicatorView)
+        player.view.bringSubviewToFront(indicatorView)
+        indicatorView.constraintToCenter()
         
         // Set button images
         playbackButton.setImage(UIImage.init(named: "icons8-play-100"), for: .normal)
@@ -69,6 +54,11 @@ class ViewController: UIViewController {
         audioButton.setImage(UIImage.init(named: "icons8-mute-100"), for: .selected)
         fullscreenButton.setImage(UIImage.init(named: "icons8-full-screen-100"), for: .normal)
         fullscreenButton.setImage(UIImage.init(named: "icons8-normal-screen-100"), for: .selected)
+    }
+    
+    deinit {
+        // Remove observers in this view controller
+        NotificationCenter.default.removeObserver(self)
     }
     
 // MARK: - Internal methods
@@ -198,22 +188,18 @@ class ViewController: UIViewController {
             
             // In all cases where the old state is .buffering
             // the indicator view will stop animating and show the controls view
-            if oldState == .buffering {
+            if oldState == .buffering ||
+                newState == .complete {
                 self.indicatorView.stopAnimating()
             }
         }
     }
     
-}
-
-
 // MARK: - JWPlayerDelegate implementation
-
-extension ViewController: JWPlayerDelegate {
     
-    func onTime(_ event: JWEvent & JWTimeEvent) {
+    override func onTime(_ event: JWEvent & JWTimeEvent) {
         guard let player = self.player else { return }
-       
+        
         if player.duration > 0 {
             // Enable controls used for normal streaming
             timeSlider.isEnabled = true
@@ -247,7 +233,7 @@ extension ViewController: JWPlayerDelegate {
         }
     }
     
-    func onFullscreen(_ event: JWEvent & JWFullscreenEvent) {
+    override func onFullscreen(_ event: JWEvent & JWFullscreenEvent) {
         if event.fullscreen {
             // Check for the current key window view in fullscreen mode
             if let fullscreenView = UIApplication.shared.keyWindow {
@@ -256,67 +242,22 @@ extension ViewController: JWPlayerDelegate {
                 controlsView.removeFromSuperview()
                 fullscreenView.addSubview(controlsView)
                 controlsView.constraintToFlexibleBottom()
+                // Same happens with the indicator view
+                indicatorView.removeFromSuperview()
+                fullscreenView.addSubview(indicatorView)
+                indicatorView.constraintToCenter()
             }
         } else {
             // Once the fullscreen mode is deactivated
             // the controls view should be removed from the fullscreen window view
             controlsView.removeFromSuperview()
-            containerView.addSubview(controlsView)
+            view.addSubview(controlsView)
             controlsView.constraintToFlexibleBottom()
+            // Same happens with the indicator view
+            indicatorView.removeFromSuperview()
+            player.view.addSubview(indicatorView)
+            indicatorView.constraintToCenter()
         }
-    }
-    
-}
-
-
-// MARK: - UITableViewDelegate & DataSource implementation
-// This is a brief implementation of TableViewController to show the video list
-
-extension ViewController: UITableViewDelegate, UITableViewDataSource {
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return feed.count > 0 ? 1 : 0
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return feed.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SimpleCell", for: indexPath)
-        cell.textLabel?.text = feed[indexPath.row].0
-        cell.accessoryType = indexPath.row == selectedIndex ? .checkmark : .none
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Deselect row
-        tableView.deselectRow(at: indexPath, animated: true)
-        
-        if selectedIndex == indexPath.row { return }
-        guard let player = self.player else { return }
-        
-        // Update selectedIndex to show checkmark icon in selected row
-        selectedIndex = indexPath.row
-        // Get tuple with the video info
-        let item = feed[selectedIndex]
-        // Instance a JWConfig object to load the selected video
-        // in the current player
-        if let config = JWConfig.init(contentURL: item.1) {
-            config.title = item.0
-            config.controls = false
-            config.displayTitle = false
-            // Stop the player and load the new video
-            player.stop()
-            player.load([JWPlaylistItem(config: config)])
-            
-            // Reset player UI (playback button, time slider and time label) and play the video
-            resetPlayerUI()
-            player.play()
-        }
-        
-        // Reload table to update the selected row
-        tableView.reloadData()
     }
     
 }
@@ -333,8 +274,23 @@ extension UIView {
                                                                    metrics: nil,
                                                                    views: ["thisView": self])
         
-        let verticalConstraints   = NSLayoutConstraint.constraints(withVisualFormat: "V:|[thisView]|",
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[thisView]|",
                                                                    options: [],
+                                                                   metrics: nil,
+                                                                   views: ["thisView": self])
+        
+        NSLayoutConstraint.activate(horizontalConstraints + verticalConstraints)
+    }
+    
+    public func constraintToCenter() {
+        translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "H:|[thisView]|",
+                                                                   options: [.alignAllCenterX],
+                                                                   metrics: nil,
+                                                                   views: ["thisView": self])
+        
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:|[thisView]|",
+                                                                   options: [.alignAllCenterY],
                                                                    metrics: nil,
                                                                    views: ["thisView": self])
         
@@ -348,8 +304,8 @@ extension UIView {
                                                                    metrics: nil,
                                                                    views: ["thisView" : self])
         
-        let verticalConstraints   = NSLayoutConstraint.constraints(withVisualFormat: "V:[thisView]|",
-                                                                   options: [],
+        let verticalConstraints = NSLayoutConstraint.constraints(withVisualFormat: "V:[thisView]|",
+                                                                   options: [.alignAllBottom],
                                                                    metrics: nil,
                                                                    views: ["thisView" : self])
 
