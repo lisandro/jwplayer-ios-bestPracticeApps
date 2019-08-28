@@ -14,6 +14,7 @@
 		5C3FFB15941ABE636744FD6B /* libPods-JWRemoteCastController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0952719B40B38A7563CAD16F /* libPods-JWRemoteCastController.a */; };
 		5FC336DC91B9503D34A48A27 /* libPods-VoicerExtension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 01A06EF1BFF97EDC16B19A95 /* libPods-VoicerExtension.a */; };
 		6A3FDDF5A53F2DEFB671A1BF /* libPods-JWFairPlayDrm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */; };
+		7926802D231728B800ABD7FC /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		79C15C412315766200494F26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C15C402315766200494F26 /* AppDelegate.swift */; };
 		79C15C432315766200494F26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C15C422315766200494F26 /* ViewController.swift */; };
 		79C15C462315766200494F26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79C15C442315766200494F26 /* Main.storyboard */; };
@@ -325,11 +326,6 @@
 		7749A5E7085C50853FC4FD3F /* Pods-JWRemoteCastController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWRemoteCastController/Pods-JWRemoteCastController.debug.xcconfig"; sourceTree = "<group>"; };
 		787B849139DF8B66FA89FA5C /* libPods-JWRemoteController Extension.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteController Extension.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		790F59F80209F9DF6209FB91 /* Pods-JWConviva.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWConviva.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JWConviva/Pods-JWConviva.debug.xcconfig"; sourceTree = "<group>"; };
-		791522A5230DB3F300E14314 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		791522A7230DB3F300E14314 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		791522AA230DB3F300E14314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		791522AC230DB3F500E14314 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		791522AF230DB3F500E14314 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		791522B7230DBD3D00E14314 /* NativeControls-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NativeControls-Bridging-Header.h"; sourceTree = "<group>"; };
 		79C15C3E2315766200494F26 /* NativeControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79C15C402315766200494F26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -337,7 +333,6 @@
 		79C15C452315766200494F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		79C15C472315766300494F26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79C15C4A2315766300494F26 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79C15C4C2315766300494F26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A82FE764E14945D77A25969 /* libPods-JWFairPlayDrm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFairPlayDrm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82812C92FE3B7F62F5CE4A85 /* libPods-SiriPlayerControllerUI.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SiriPlayerControllerUI.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWRemoteCastPlayer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -693,19 +688,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		791522A4230DB3F300E14314 /* NativeControls */ = {
-			isa = PBXGroup;
-			children = (
-				791522A5230DB3F300E14314 /* AppDelegate.swift */,
-				791522A7230DB3F300E14314 /* ViewController.swift */,
-				791522A9230DB3F300E14314 /* Main.storyboard */,
-				791522AC230DB3F500E14314 /* Assets.xcassets */,
-				791522AE230DB3F500E14314 /* LaunchScreen.storyboard */,
-				791522B7230DBD3D00E14314 /* NativeControls-Bridging-Header.h */,
-			);
-			path = NativeControls;
-			sourceTree = "<group>";
-		};
 		79C15C3F2315766200494F26 /* NativeControls */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,7 +696,7 @@
 				79C15C442315766200494F26 /* Main.storyboard */,
 				79C15C472315766300494F26 /* Assets.xcassets */,
 				79C15C492315766300494F26 /* LaunchScreen.storyboard */,
-				79C15C4C2315766300494F26 /* Info.plist */,
+				791522B7230DBD3D00E14314 /* NativeControls-Bridging-Header.h */,
 			);
 			path = NativeControls;
 			sourceTree = "<group>";
@@ -804,7 +786,6 @@
 				8AB3E07E1D99B3F8002A3CA7 /* JWFairPlayDrm */,
 				F4EC778D223FD43F0008B8DB /* JWConviva */,
 				B50DDEE6228A19CF000F62B0 /* JWFriendlyObstructions */,
-				791522A4230DB3F300E14314 /* NativeControls */,
 				79C15C3F2315766200494F26 /* NativeControls */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				148A822693302715DF542B54 /* Pods */,
@@ -2417,6 +2398,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79C15C432315766200494F26 /* ViewController.swift in Sources */,
+				7926802D231728B800ABD7FC /* JWBasicVideoViewController.m in Sources */,
 				79C15C412315766200494F26 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2603,22 +2585,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		791522A9230DB3F300E14314 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				791522AA230DB3F300E14314 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		791522AE230DB3F500E14314 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				791522AF230DB3F500E14314 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		79C15C442315766200494F26 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
