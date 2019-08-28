@@ -13,7 +13,6 @@ let FeedItemCellIdentifier: String = "FeedItemCell"
 
 class FeedItemCell: UITableViewCell {
     
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
     override var reuseIdentifier: String? {

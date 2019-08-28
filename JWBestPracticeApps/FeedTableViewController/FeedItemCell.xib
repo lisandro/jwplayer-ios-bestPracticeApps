@@ -19,31 +19,22 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="299.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xmh-kG-GOA">
-                        <rect key="frame" x="20" y="8" width="338" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L6O-La-Q5Z">
-                        <rect key="frame" x="0.0" y="37" width="378" height="262.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="378" height="299.5"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="xmh-kG-GOA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="3Zw-Do-ZCc"/>
                     <constraint firstAttribute="bottom" secondItem="L6O-La-Q5Z" secondAttribute="bottom" id="D3f-Tn-3xH"/>
                     <constraint firstAttribute="trailing" secondItem="L6O-La-Q5Z" secondAttribute="trailing" id="MGA-Uj-Bmf"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xmh-kG-GOA" secondAttribute="trailing" id="Qwz-6l-PeN"/>
-                    <constraint firstItem="L6O-La-Q5Z" firstAttribute="top" secondItem="xmh-kG-GOA" secondAttribute="bottom" constant="8" id="TN6-d5-GiG"/>
                     <constraint firstItem="L6O-La-Q5Z" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ad3-IN-f4l"/>
-                    <constraint firstItem="xmh-kG-GOA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eHP-Kf-rfO"/>
+                    <constraint firstItem="L6O-La-Q5Z" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="vij-im-WoT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
                 <outlet property="containerView" destination="L6O-La-Q5Z" id="wxU-N6-zRK"/>
-                <outlet property="titleLabel" destination="xmh-kG-GOA" id="JcE-9U-73J"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="160.04464285714286"/>
         </tableViewCell>

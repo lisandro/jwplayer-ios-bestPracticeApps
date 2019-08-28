@@ -15,6 +15,7 @@ class FeedTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Register the custom cell view
         self.tableView.register(UINib.init(nibName: FeedItemCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: FeedItemCellIdentifier)
         
         fetchFeed()
@@ -26,12 +27,12 @@ class FeedTableViewController: UITableViewController {
             return
         }
         
+        // Populate the feed array with video players
         for itemInfo in feedInfo {
-            let config = JWConfig.init(contentUrl: itemInfo["url"])
-            config?.title = itemInfo["title"]
-            config?.displayTitle = false
-            if let controller = JWPlayerController.init(config: config) {
-                feed.append(controller)
+            if let config = JWConfig.init(contentUrl: itemInfo["url"]),
+                let player = JWPlayerController.init(config: config) {
+                config.title = itemInfo["title"]
+                feed.append(player)
             }
         }
     }
@@ -53,9 +54,10 @@ class FeedTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedItemCellIdentifier, for: indexPath) as! FeedItemCell
         
+        // Get player from the feed array
         let player = feed[indexPath.row]
         
-        cell.titleLabel.text = player.config.title
+        // Add player view to the container view of the cell
         if let playerView = player.view {
             cell.containerView.addSubview(playerView)
             playerView.constraintToSuperview()
