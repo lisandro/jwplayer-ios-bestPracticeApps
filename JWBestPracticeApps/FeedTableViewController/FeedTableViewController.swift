@@ -74,13 +74,13 @@ class FeedTableViewController: UITableViewController {
         // Map rows as indexes
         let visibleRows = visibleIndexPaths.map({ return $0.row })
         // Check for non-visible players inside the feed
-        let nonVisiblePlayers = feed.enumerated().filter { (offset: Int, element: JWPlayerController) -> Bool in
-            return !visibleRows.contains(offset) && element.state == JWPlayerState.playing
+        let nonVisiblePlayers = feed.enumerated().filter { (offset: Int, player: JWPlayerController) -> Bool in
+            return !visibleRows.contains(offset) && player.state == JWPlayerState.playing
         }
         // Iterate non-visible players to pause the video and remove the previous view from cell
-        nonVisiblePlayers.forEach { (offset: Int, element: JWPlayerController) in
-            element.pause()
-            element.view.removeFromSuperview()
+        nonVisiblePlayers.forEach { (_, player: JWPlayerController) in
+            player.pause()
+            player.view.removeFromSuperview()
         }
     }
     
