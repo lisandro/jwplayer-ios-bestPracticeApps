@@ -171,6 +171,7 @@
 		B5BC26A91D958BFF00F32770 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26A71D958BFF00F32770 /* AppIntentVocabulary.plist */; };
 		B5BC26B21DAC20E500F32770 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26B11DAC20E500F32770 /* info.plist */; };
 		C13716CBFBD2EF342EA7DC83 /* libPods-JWBestPracticeApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */; };
+		C3FCDF396365267CFDDD66CA /* libPods-BasicVideoViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */; };
 		DD78E95E5958215D5053AEB0 /* libPods-JWRemotePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0C54926510AB9F4F09374 /* libPods-JWRemotePlayer.a */; };
 		EB4B37EC8E40658E71983CDB /* libPods-JWRemoteCastController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BED0908290A1C60AFBC5C /* libPods-JWRemoteCastController Extension.a */; };
 		F44B0E092240F14E00414BE3 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
@@ -314,7 +315,9 @@
 		111A53DD951754479483FFB6 /* libPods-JWAirPlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWAirPlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		143ED7FE2BE9C38ABBCF14BB /* Pods-JWCasting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWCasting.release.xcconfig"; path = "Target Support Files/Pods-JWCasting/Pods-JWCasting.release.xcconfig"; sourceTree = "<group>"; };
 		17DF653D17CE72FBBE256FD8 /* libPods-JWCasting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWCasting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDA9C423F815F7BA9B2A3EB /* Pods-BasicVideoViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicVideoViewController.release.xcconfig"; path = "Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController.release.xcconfig"; sourceTree = "<group>"; };
 		1C594E3DFE758735A73160A9 /* Pods-JWRemotePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemotePlayer.debug.xcconfig"; path = "Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicVideoViewController.debug.xcconfig"; path = "Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		282FAA8D01A4F638EF920270 /* Pods-JWAirPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAirPlay.debug.xcconfig"; path = "Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		2EAAD561A6E20B3D7DA378BA /* libPods-JWFairPlayDrm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFairPlayDrm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6AD99A58F7227B7941CDC4 /* Pods-JWRemoteCastController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -483,6 +486,7 @@
 		D61FCFCF572B03B4F7F0E2BD /* Pods-VoicerExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicerExtension.debug.xcconfig"; path = "Target Support Files/Pods-VoicerExtension/Pods-VoicerExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6939FD85E49626B97F3751 /* Pods-Voicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voicer.debug.xcconfig"; path = "Target Support Files/Pods-Voicer/Pods-Voicer.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFC4C3291FA6600375E85C1 /* Pods-FeedTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicVideoViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED75868A3C309D3E04F2C1C0 /* Pods-JWRemoteCastController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		F262415913389DE545421F1A /* Pods-JWRemoteController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.release.xcconfig"; sourceTree = "<group>"; };
 		F4EC778C223FD43F0008B8DB /* JWConviva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWConviva.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -500,6 +504,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		393144FA57EBA15A9191B04F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FCDF396365267CFDDD66CA /* libPods-BasicVideoViewController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7988D94B2304717E0043CE80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -656,6 +668,7 @@
 				8FB0C54926510AB9F4F09374 /* libPods-JWRemotePlayer.a */,
 				804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */,
 				07937315AF7025E0211FC774 /* libPods-VoicerExtension.a */,
+				E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -1055,8 +1068,9 @@
 				CF9AF200715252D70A8A6823 /* Pods-Voicer.release.xcconfig */,
 				D61FCFCF572B03B4F7F0E2BD /* Pods-VoicerExtension.debug.xcconfig */,
 				D100732D98416FDBC8C3253D /* Pods-VoicerExtension.release.xcconfig */,
+				20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */,
+				1BDA9C423F815F7BA9B2A3EB /* Pods-BasicVideoViewController.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1183,6 +1197,25 @@
 			name = FeedTableViewController;
 			productName = TableViewPlayer;
 			productReference = 7988D94E2304717E0043CE80 /* FeedTableViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79AADBB4231DB01100E8B48D /* BasicVideoViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79AADBC4231DB01200E8B48D /* Build configuration list for PBXNativeTarget "BasicVideoViewController" */;
+			buildPhases = (
+				E387EA03370BE130F8EAAE07 /* [CP] Check Pods Manifest.lock */,
+				79AADBB1231DB01100E8B48D /* Sources */,
+				79AADBB3231DB01100E8B48D /* Resources */,
+				393144FA57EBA15A9191B04F /* Frameworks */,
+				E1979D12B71C098EC94D3FD6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicVideoViewController;
+			productName = BasicVideoViewController;
+			productReference = 79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -2439,6 +2472,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E1979D12B71C098EC94D3FD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E387EA03370BE130F8EAAE07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicVideoViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E54F07309D3E0A098D434A36 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2958,6 +3031,33 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "FeedTableViewController/FeedTableViewController-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79AADBD6231EC38700E8B48D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.BasicVideoViewController;
+				PRODUCT_NAME = BasicVideoViewController;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		79AADBD7231EC38700E8B48D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDA9C423F815F7BA9B2A3EB /* Pods-BasicVideoViewController.release.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.BasicVideoViewController;
+				PRODUCT_NAME = BasicVideoViewController;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3750,8 +3850,8 @@
 		79AADBC4231DB01200E8B48D /* Build configuration list for PBXNativeTarget "BasicVideoViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79AADBD2231DD60300E8B48D /* Debug */,
-				79AADBD3231DD60300E8B48D /* Release */,
+				79AADBD6231EC38700E8B48D /* Debug */,
+				79AADBD7231EC38700E8B48D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
