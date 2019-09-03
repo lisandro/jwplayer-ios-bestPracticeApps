@@ -1,19 +1,19 @@
 PODS:
-  - ConvivaSDK (2.141.2)
+  - ConvivaSDK (2.141.4)
   - google-cast-sdk (4.3.5):
     - google-cast-sdk/Core (= 4.3.5)
     - Protobuf (~> 3.0)
   - google-cast-sdk/Core (4.3.5):
     - Protobuf (~> 3.0)
-  - GoogleAds-IMA-iOS-SDK (3.8.1)
-  - JWPlayer-SDK (3.5.1)
-  - Protobuf (3.8.0)
+  - GoogleAds-IMA-iOS-SDK (3.9.2)
+  - JWPlayer-SDK (3.6.1)
+  - Protobuf (3.9.0)
 
 DEPENDENCIES:
   - ConvivaSDK
   - google-cast-sdk (= 4.3.5)
-  - GoogleAds-IMA-iOS-SDK (= 3.8.1)
-  - JWPlayer-SDK (~> 3.0)
+  - GoogleAds-IMA-iOS-SDK (~> 3.9.0)
+  - JWPlayer-SDK (~> 3.6.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -24,12 +24,12 @@ SPEC REPOS:
     - Protobuf
 
 SPEC CHECKSUMS:
-  ConvivaSDK: 0e308a9f0c1653a6e5dd4f452bbd5e46552b4c78
+  ConvivaSDK: 06ea6c73cf07479d32a44b7068bd8796d1b903c6
   google-cast-sdk: 462e10c781ea8ad480d2e16200bb8584ef067e07
-  GoogleAds-IMA-iOS-SDK: 9659b8999443366d2d159413c189e55d88734b78
-  JWPlayer-SDK: 065ec7dfbb1314fe9a52380bbb925ab1f78bbf0c
-  Protobuf: 3f617b9a6e73605565086864c9bc26b2bf2dd5a3
+  GoogleAds-IMA-iOS-SDK: 005e7670c266ee28ad72d730309f396ad7f440a0
+  JWPlayer-SDK: 23169dc5ebbf9e0f35ef470b4634f5fc85394596
+  Protobuf: 1097ca58584c8d9be81bfbf2c5ff5975648dd87a
 
-PODFILE CHECKSUM: ea821560f7568572309535395390a0a452ddc415
+PODFILE CHECKSUM: dbc914ca41453e8771f78200163a74ed4afc264d
 
 COCOAPODS: 1.7.5
