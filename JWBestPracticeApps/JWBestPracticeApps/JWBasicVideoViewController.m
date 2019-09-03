@@ -29,7 +29,6 @@
 
 - (void)createPlayer
 {
-    
     JWConfig *config = [self createConfig];
     self.player = [[JWPlayerController alloc]initWithConfig:config];
     self.player.forceLandscapeOnFullScreen = YES;

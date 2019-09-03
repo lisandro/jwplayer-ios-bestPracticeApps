@@ -14,17 +14,17 @@ import AVFoundation
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         self.enableBackgroundAudio()
         return true
     }
     
     func enableBackgroundAudio() -> Void {
         let audioSession = AVAudioSession.sharedInstance()
-        try? audioSession.setCategory(AVAudioSessionCategoryPlayback)
+        try? audioSession.setCategory(.playback)
         do {
-            try audioSession.setCategory(AVAudioSessionCategoryPlayback)
+            try audioSession.setCategory(.playback)
         } catch {
             print("failure")
         }
@@ -36,9 +36,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
+    // Calling the block restorationHandler is optional and is only needed when specific objects are capable of continuing the activity.
+    // See more: https://developer.apple.com/documentation/uikit/uiapplicationdelegate/1623072-application
+    private func application(_ application: UIApplication, continue userActivity: NSUserActivity, restorationHandler: @escaping ([Any]?) -> Void) -> Bool {
         let navigationController = application.keyWindow?.rootViewController as! UINavigationController
-        let currentVoicerViewController = navigationController.childViewControllers[0] as? VoicerViewController
+        let currentVoicerViewController = navigationController.children[0] as? VoicerViewController
         let userIntent = userActivity.interaction?.intent
         currentVoicerViewController?.handle(intent: userIntent!)
         return true

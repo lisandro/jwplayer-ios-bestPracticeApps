@@ -88,34 +88,26 @@ class VoicerViewController: JWRemoteCastPlayerViewController {
     }
     
     func castTo(deviceName: String) {
-        let castingDevice = self.obtainCastingDevice(name: deviceName)
-        if castingDevice != nil {
+        if let castingDevice = self.obtainCastingDevice(name: deviceName) {
             self.castController.connect(to: castingDevice)
         }
     }
     
     func obtainCastingDevice(name: String) -> JWCastingDevice? {
-        for device in self.castController.availableDevices {
-            let castDevice = device as! JWCastingDevice
-            if castDevice.name == name {
-                return castDevice
-            }
-        }
-        return nil
+        return self.castController.availableDevices.filter { (castingDevice) -> Bool in
+            return castingDevice.name.elementsEqual(name)
+            }.first
     }
     
     // MARK: Cast Delegate Methods
     
-    override func onCastingDevicesAvailable(_ devices: [JWCastingDevice]!) {
+    override func onCastingDevicesAvailable(_ devices: [JWCastingDevice]) {
         super.onCastingDevicesAvailable(devices)
         self.prepareCastingDevices()
     }
     
     func prepareCastingDevices() {
-        var castingDevices = [String]()
-        for device in self.castController.availableDevices {
-            castingDevices.append((device as! JWCastingDevice).name)
-        }
+        let castingDevices = self.castController.availableDevices.compactMap { return $0.name }
         if castingDevices.count > 0 {
             self.userDefaults?.set(castingDevices, forKey: "castingDevices")
             self.userDefaults?.synchronize()

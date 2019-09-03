@@ -51,6 +51,10 @@ class AnalyticsObserver: NSObject {
                                                object: nil)
     }
     
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     @objc func accessLogChanged(_ notification: Notification) {
         if let event: AVPlayerItemAccessLogEvent = currentItem?.accessLog()?.events.last {
             psmVideoInstance?.setBitrateKbps!(Int(event.indicatedBitrate / 1000))
@@ -119,24 +123,22 @@ class AnalyticsObserver: NSObject {
     }
     
     func cleanupVideoPsm() {
-        if (client != nil && psmVideoInstance != nil) {
-            client!.releasePlayerStateManager(psmVideoInstance)
-            psmVideoInstance = nil
-        }
+        guard let client = self.client, let psmVideoInstance = self.psmVideoInstance else { return }
+        client.releasePlayerStateManager(psmVideoInstance)
+        self.psmVideoInstance = nil
     }
     
     func attachVideoPlayer() {
-        if (client != nil) {
+        guard let client = self.client else { return }
             
-            if (psmVideoInstance == nil) {
-                psmVideoInstance = client!.getPlayerStateManager()
-                psmVideoInstance?.setPlayerVersion!(JWPlayerController.sdkVersion())
-                psmVideoInstance?.setPlayerType!("JWPlayer")
-            }
-            
-            if (psmVideoInstance != nil && videoSessionID != NO_SESSION_KEY && !client!.isPlayerAttached(videoSessionID)){
-                client!.attachPlayer(videoSessionID, playerStateManager: psmVideoInstance)
-            }
+        if (psmVideoInstance == nil) {
+            psmVideoInstance = client.getPlayerStateManager()
+            psmVideoInstance?.setPlayerVersion!(JWPlayerController.sdkVersion())
+            psmVideoInstance?.setPlayerType!("JWPlayer")
+        }
+        
+        if (psmVideoInstance != nil && videoSessionID != NO_SESSION_KEY && !client.isPlayerAttached(videoSessionID)) {
+            client.attachPlayer(videoSessionID, playerStateManager: psmVideoInstance)
         }
     }
     
@@ -204,18 +206,16 @@ extension AnalyticsObserver: JWAVPlayerAnalyticsDelegate {
 
 // MARK: - JWPlayerDelegate
 extension AnalyticsObserver: JWPlayerDelegate {
-    
-    func onSeek(_ event: (JWEvent & JWSeekEvent)!) {
-        if let offset = event?.offset {
-            psmVideoInstance?.setSeekStart!(Int64(offset))
-        }
+    func onSeek(_ event: JWEvent & JWSeekEvent) {
+        let offset = Int64(event.offset)
+        psmVideoInstance?.setSeekStart?(offset)
     }
     
     func onSeeked() {
         psmVideoInstance?.setSeekEnd!(Int64(player.position))
     }
     
-    func onPlaylistItem(_ event: (JWEvent & JWPlaylistItemEvent)!) {
+    func onPlaylistItem(_ event: JWEvent & JWPlaylistItemEvent) {
         if currentPlaylistItem != event.item {
             detachVideoPlayer()
             cleanupVideoSession()
@@ -223,15 +223,15 @@ extension AnalyticsObserver: JWPlayerDelegate {
         }
     }
     
-    func onBuffer(_ event: (JWEvent & JWBufferEvent)!) {
+    func onBuffer(_ event: JWEvent & JWBufferEvent) {
         psmVideoInstance?.setPlayerState!(PlayerState.CONVIVA_BUFFERING)
     }
     
-    func onPlay(_ event: (JWEvent & JWStateChangeEvent)!) {
+    func onPlay(_ event: JWEvent & JWStateChangeEvent) {
         psmVideoInstance?.setPlayerState!(PlayerState.CONVIVA_PLAYING)
     }
     
-    func onPause(_ event: (JWEvent & JWStateChangeEvent)!) {
+    func onPause(_ event: JWEvent & JWStateChangeEvent) {
         psmVideoInstance?.setPlayerState!(PlayerState.CONVIVA_PAUSED)
     }
     
@@ -239,16 +239,16 @@ extension AnalyticsObserver: JWPlayerDelegate {
         psmVideoInstance?.setPlayerState!(PlayerState.CONVIVA_STOPPED)
     }
     
-    func onError(_ event: (JWEvent & JWErrorEvent)!) {
+    func onError(_ event: JWEvent & JWErrorEvent) {
         client!.reportError(videoSessionID, errorMessage: event.error.localizedDescription, errorSeverity: .ERROR_FATAL)
     }
     
-    func onSetupError(_ event: (JWEvent & JWErrorEvent)!) {
+    func onSetupError(_ event: JWEvent & JWErrorEvent) {
         client!.reportError(videoSessionID, errorMessage: event.error.localizedDescription, errorSeverity: .ERROR_FATAL)
     }
     
     // MARK: - Advertizing
-    func onAdImpression(_ event: (JWAdEvent & JWAdImpressionEvent)!) {
+    func onAdImpression(_ event: JWAdEvent & JWAdImpressionEvent) {
         
         var adPos: AdPosition!
         switch event.adPosition.lowercased() {
@@ -267,7 +267,7 @@ extension AnalyticsObserver: JWPlayerDelegate {
         client?.adStart(videoSessionID, adStream: .ADSTREAM_SEPARATE, adPlayer: .ADPLAYER_CONTENT, adPosition: adPos)
     }
     
-    func onAdComplete(_ event: (JWAdEvent & JWAdDetailEvent)!) {
+    func onAdComplete(_ event: JWAdEvent & JWAdDetailEvent) {
         client?.adEnd(videoSessionID)
     }
 }
