@@ -23,6 +23,11 @@
 		7988D963230472800043CE80 /* FeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7988D961230472800043CE80 /* FeedItemCell.xib */; };
 		7988D965230482B70043CE80 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D964230482B70043CE80 /* FeedTableViewController.swift */; };
 		7988D968230487F20043CE80 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7988D967230487F20043CE80 /* Feed.plist */; };
+		79AADBB8231DB01100E8B48D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AADBB7231DB01100E8B48D /* AppDelegate.swift */; };
+		79AADBBA231DB01100E8B48D /* BasicVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */; };
+		79AADBBD231DB01100E8B48D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBBB231DB01100E8B48D /* Main.storyboard */; };
+		79AADBBF231DB01200E8B48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBBE231DB01200E8B48D /* Assets.xcassets */; };
+		79AADBC2231DB01200E8B48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */; };
 		79B858A2888A20797F6B11DF /* libPods-JWAirPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 111A53DD951754479483FFB6 /* libPods-JWAirPlay.a */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
@@ -331,6 +336,13 @@
 		7988D964230482B70043CE80 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		7988D966230486500043CE80 /* FeedTableViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedTableViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		7988D967230487F20043CE80 /* Feed.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Feed.plist; sourceTree = "<group>"; };
+		79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicVideoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79AADBB7231DB01100E8B48D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVideoViewController.swift; sourceTree = "<group>"; };
+		79AADBBC231DB01100E8B48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79AADBBE231DB01200E8B48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79AADBC1231DB01200E8B48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79AADBC7231DB41C00E8B48D /* BasicVideoViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicVideoViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWBestPracticeApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -664,6 +676,19 @@
 			path = FeedTableViewController;
 			sourceTree = "<group>";
 		};
+		79AADBB6231DB01100E8B48D /* BasicVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79AADBB7231DB01100E8B48D /* AppDelegate.swift */,
+				79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */,
+				79AADBBB231DB01100E8B48D /* Main.storyboard */,
+				79AADBBE231DB01200E8B48D /* Assets.xcassets */,
+				79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */,
+				79AADBC7231DB41C00E8B48D /* BasicVideoViewController-Bridging-Header.h */,
+			);
+			path = BasicVideoViewController;
+			sourceTree = "<group>";
+		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +775,7 @@
 				F4EC778D223FD43F0008B8DB /* JWConviva */,
 				B50DDEE6228A19CF000F62B0 /* JWFriendlyObstructions */,
 				7988D94F2304717E0043CE80 /* FeedTableViewController */,
+				79AADBB6231DB01100E8B48D /* BasicVideoViewController */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -776,6 +802,7 @@
 				F4EC778C223FD43F0008B8DB /* JWConviva.app */,
 				B50DDEE5228A19CE000F62B0 /* JWFriendlyObstructions.app */,
 				7988D94E2304717E0043CE80 /* FeedTableViewController.app */,
+				79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1531,6 +1558,7 @@
 					8A729B621C99B4A0000F03A9 = {
 						CreatedOnToolsVersion = 7.2;
 						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
 					};
 					8AB3E07C1D99B3F8002A3CA7 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1629,6 +1657,7 @@
 				F4EC778B223FD43F0008B8DB /* JWConviva */,
 				B50DDEE4228A19CE000F62B0 /* JWFriendlyObstructions */,
 				7988D94D2304717E0043CE80 /* FeedTableViewController */,
+				79AADBB4231DB01100E8B48D /* BasicVideoViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -1643,6 +1672,16 @@
 				7988D9582304717F0043CE80 /* Assets.xcassets in Resources */,
 				7988D963230472800043CE80 /* FeedItemCell.xib in Resources */,
 				7988D9562304717E0043CE80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79AADBB3231DB01100E8B48D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79AADBC2231DB01200E8B48D /* LaunchScreen.storyboard in Resources */,
+				79AADBBF231DB01200E8B48D /* Assets.xcassets in Resources */,
+				79AADBBD231DB01100E8B48D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2455,6 +2494,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79AADBB1231DB01100E8B48D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79AADBBA231DB01100E8B48D /* BasicVideoViewController.swift in Sources */,
+				79AADBB8231DB01100E8B48D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346C1D1DC2A80008FE59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2649,6 +2697,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				7988D95A2304717F0043CE80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		79AADBBB231DB01100E8B48D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79AADBBC231DB01100E8B48D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79AADBC1231DB01200E8B48D /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -3679,6 +3743,15 @@
 			buildConfigurations = (
 				7988D95D2304717F0043CE80 /* Debug */,
 				7988D95E2304717F0043CE80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79AADBC4231DB01200E8B48D /* Build configuration list for PBXNativeTarget "BasicVideoViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79AADBD2231DD60300E8B48D /* Debug */,
+				79AADBD3231DD60300E8B48D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
