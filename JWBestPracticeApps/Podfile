@@ -96,6 +96,12 @@ target 'JWFriendlyObstructions' do
 
 end
 
+target 'FeedTableViewController' do
+  
+  common_JW
+  
+end
+
 target 'NativeControls' do
   
   common_JW
