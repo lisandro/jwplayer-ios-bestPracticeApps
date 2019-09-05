@@ -1489,6 +1489,7 @@
 				TargetAttributes = {
 					79C15C3D2315766200494F26 = {
 						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -2793,6 +2794,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
@@ -2829,6 +2831,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;

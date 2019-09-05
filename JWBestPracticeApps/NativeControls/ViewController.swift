@@ -37,13 +37,15 @@ class ViewController: JWBasicVideoViewController {
             
             // Add an observer for JWPlayerStateChangedNotification
             NotificationCenter.default.addObserver(self, selector: #selector(stateChangedNotification(_:)), name: NSNotification.Name(rawValue: JWPlayerStateChangedNotification), object: nil)
+            
+            if let playerView = player.view {
+                // Setup indicator view
+                indicatorView.color = UIColor(red: 234/255, green: 52/255, blue: 76/255, alpha: 1)
+                playerView.addSubview(indicatorView)
+                playerView.bringSubviewToFront(indicatorView)
+                indicatorView.constraintToCenter()
+            }
         }
-        
-        // Setup indicator view
-        indicatorView.color = UIColor(red: 234/255, green: 52/255, blue: 76/255, alpha: 1)
-        player.view.addSubview(indicatorView)
-        player.view.bringSubviewToFront(indicatorView)
-        indicatorView.constraintToCenter()
         
         // Set button images
         playbackButton.setImage(UIImage.init(named: "icons8-play-100"), for: .normal)
@@ -186,7 +188,7 @@ class ViewController: JWBasicVideoViewController {
                 self.indicatorView.startAnimating()
             }
             
-            // In all cases where the old state is .buffering
+            // In all cases where the old state is .buffering or .complete
             // the indicator view will stop animating and show the controls view
             if oldState == .buffering ||
                 newState == .complete {
@@ -234,6 +236,8 @@ class ViewController: JWBasicVideoViewController {
     }
     
     override func onFullscreen(_ event: JWEvent & JWFullscreenEvent) {
+        guard let player = self.player else { return }
+        
         if event.fullscreen {
             // Check for the current key window view in fullscreen mode
             if let fullscreenView = UIApplication.shared.keyWindow {
@@ -253,10 +257,13 @@ class ViewController: JWBasicVideoViewController {
             controlsView.removeFromSuperview()
             view.addSubview(controlsView)
             controlsView.constraintToFlexibleBottom()
-            // Same happens with the indicator view
-            indicatorView.removeFromSuperview()
-            player.view.addSubview(indicatorView)
-            indicatorView.constraintToCenter()
+            
+            if let playerView = player.view {
+                // Same happens with the indicator view
+                indicatorView.removeFromSuperview()
+                playerView.addSubview(indicatorView)
+                indicatorView.constraintToCenter()
+            }
         }
     }
     
