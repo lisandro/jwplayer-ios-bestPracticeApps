@@ -24,6 +24,12 @@
 		7988D965230482B70043CE80 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D964230482B70043CE80 /* FeedTableViewController.swift */; };
 		7988D968230487F20043CE80 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7988D967230487F20043CE80 /* Feed.plist */; };
 		79B858A2888A20797F6B11DF /* libPods-JWAirPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 111A53DD951754479483FFB6 /* libPods-JWAirPlay.a */; };
+		79CAAD302321D0FC002FFA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */; };
+		79CAAD322321D0FC002FFA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAAD312321D0FC002FFA23 /* ViewController.swift */; };
+		79CAAD352321D0FC002FFA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD332321D0FC002FFA23 /* Main.storyboard */; };
+		79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD362321D0FD002FFA23 /* Assets.xcassets */; };
+		79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */; };
+		79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -331,6 +337,13 @@
 		7988D964230482B70043CE80 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		7988D966230486500043CE80 /* FeedTableViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedTableViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		7988D967230487F20043CE80 /* Feed.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Feed.plist; sourceTree = "<group>"; };
+		79CAAD2D2321D0FC002FFA23 /* NativeControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79CAAD312321D0FC002FFA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79CAAD342321D0FC002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79CAAD362321D0FD002FFA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79CAAD392321D0FD002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79CAAD3B2321D0FD002FFA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWBestPracticeApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -493,6 +506,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				47595BB3E8D0E95FABB1E764 /* libPods-FeedTableViewController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79CAAD2A2321D0FC002FFA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,6 +684,19 @@
 			path = FeedTableViewController;
 			sourceTree = "<group>";
 		};
+		79CAAD2E2321D0FC002FFA23 /* NativeControls */ = {
+			isa = PBXGroup;
+			children = (
+				79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */,
+				79CAAD312321D0FC002FFA23 /* ViewController.swift */,
+				79CAAD332321D0FC002FFA23 /* Main.storyboard */,
+				79CAAD362321D0FD002FFA23 /* Assets.xcassets */,
+				79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */,
+				79CAAD3B2321D0FD002FFA23 /* Info.plist */,
+			);
+			path = NativeControls;
+			sourceTree = "<group>";
+		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -750,6 +783,7 @@
 				F4EC778D223FD43F0008B8DB /* JWConviva */,
 				B50DDEE6228A19CF000F62B0 /* JWFriendlyObstructions */,
 				7988D94F2304717E0043CE80 /* FeedTableViewController */,
+				79CAAD2E2321D0FC002FFA23 /* NativeControls */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -776,6 +810,7 @@
 				F4EC778C223FD43F0008B8DB /* JWConviva.app */,
 				B50DDEE5228A19CE000F62B0 /* JWFriendlyObstructions.app */,
 				7988D94E2304717E0043CE80 /* FeedTableViewController.app */,
+				79CAAD2D2321D0FC002FFA23 /* NativeControls.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1029,7 +1064,6 @@
 				D61FCFCF572B03B4F7F0E2BD /* Pods-VoicerExtension.debug.xcconfig */,
 				D100732D98416FDBC8C3253D /* Pods-VoicerExtension.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -1156,6 +1190,23 @@
 			name = FeedTableViewController;
 			productName = TableViewPlayer;
 			productReference = 7988D94E2304717E0043CE80 /* FeedTableViewController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		79CAAD2C2321D0FC002FFA23 /* NativeControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79CAAD3E2321D0FD002FFA23 /* Build configuration list for PBXNativeTarget "NativeControls" */;
+			buildPhases = (
+				79CAAD292321D0FC002FFA23 /* Sources */,
+				79CAAD2A2321D0FC002FFA23 /* Frameworks */,
+				79CAAD2B2321D0FC002FFA23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NativeControls;
+			productName = NativeControls;
+			productReference = 79CAAD2D2321D0FC002FFA23 /* NativeControls.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -1498,6 +1549,11 @@
 							};
 						};
 					};
+					79CAAD2C2321D0FC002FFA23 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
+					};
 					8A37346F1D1DC2A80008FE59 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -1629,6 +1685,7 @@
 				F4EC778B223FD43F0008B8DB /* JWConviva */,
 				B50DDEE4228A19CE000F62B0 /* JWFriendlyObstructions */,
 				7988D94D2304717E0043CE80 /* FeedTableViewController */,
+				79CAAD2C2321D0FC002FFA23 /* NativeControls */,
 			);
 		};
 /* End PBXProject section */
@@ -1643,6 +1700,16 @@
 				7988D9582304717F0043CE80 /* Assets.xcassets in Resources */,
 				7988D963230472800043CE80 /* FeedItemCell.xib in Resources */,
 				7988D9562304717E0043CE80 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79CAAD2B2321D0FC002FFA23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */,
+				79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */,
+				79CAAD352321D0FC002FFA23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2455,6 +2522,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79CAAD292321D0FC002FFA23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79CAAD322321D0FC002FFA23 /* ViewController.swift in Sources */,
+				79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */,
+				79CAAD302321D0FC002FFA23 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8A37346C1D1DC2A80008FE59 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2649,6 +2726,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				7988D95A2304717F0043CE80 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		79CAAD332321D0FC002FFA23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79CAAD342321D0FC002FFA23 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79CAAD392321D0FD002FFA23 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -2848,7 +2941,7 @@
 				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -2886,12 +2979,83 @@
 				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.FeedTableViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FeedTableViewController/FeedTableViewController-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79CAAD3C2321D0FD002FFA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.NativeControls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeControls/NativeControls-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79CAAD3D2321D0FD002FFA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.NativeControls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeControls/NativeControls-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3679,6 +3843,15 @@
 			buildConfigurations = (
 				7988D95D2304717F0043CE80 /* Debug */,
 				7988D95E2304717F0043CE80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79CAAD3E2321D0FD002FFA23 /* Build configuration list for PBXNativeTarget "NativeControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79CAAD3C2321D0FD002FFA23 /* Debug */,
+				79CAAD3D2321D0FD002FFA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
