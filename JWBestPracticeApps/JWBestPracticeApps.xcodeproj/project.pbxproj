@@ -29,6 +29,12 @@
 		79AADBBF231DB01200E8B48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBBE231DB01200E8B48D /* Assets.xcassets */; };
 		79AADBC2231DB01200E8B48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */; };
 		79B858A2888A20797F6B11DF /* libPods-JWAirPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 111A53DD951754479483FFB6 /* libPods-JWAirPlay.a */; };
+		79CAAD302321D0FC002FFA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */; };
+		79CAAD322321D0FC002FFA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAAD312321D0FC002FFA23 /* ViewController.swift */; };
+		79CAAD352321D0FC002FFA23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD332321D0FC002FFA23 /* Main.storyboard */; };
+		79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD362321D0FD002FFA23 /* Assets.xcassets */; };
+		79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */; };
+		79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -159,7 +165,6 @@
 		B53A731E1D92FB9700EB804F /* JWCastingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B861C99CD8B000F03A9 /* JWCastingViewController.m */; };
 		B53A731F1D92FBA600EB804F /* JWRemotePlayerViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A729B7A1C99B576000F03A9 /* JWRemotePlayerViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B53A73201D92FBB200EB804F /* JWRemotePlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B7B1C99B576000F03A9 /* JWRemotePlayerViewController.m */; };
-		B54424B31D9060A700719197 /* JWSiriVideoExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = B54424AC1D9060A700719197 /* JWSiriVideoExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		B54F4F3E1D930A9C0026B7C7 /* cast_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B881C99D278000F03A9 /* cast_off.png */; };
 		B54F4F3F1D930A9F0026B7C7 /* cast_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B891C99D278000F03A9 /* cast_on.png */; };
 		B54F4F401D930AA60026B7C7 /* cast_connecting0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B8A1C99D278000F03A9 /* cast_connecting0.png */; };
@@ -212,13 +217,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8AF5F6CB1C9A612B00C0D5E0;
 			remoteInfo = JWRemoteController;
-		};
-		B54424B11D9060A700719197 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 8A729A6F1C98ACA8000F03A9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B54424AB1D9060A700719197;
-			remoteInfo = JWSiriVideoExtension;
 		};
 		B54F4F4E1D930BDC0026B7C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -283,17 +281,6 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B54424B71D9060A700719197 /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				B54424B31D9060A700719197 /* JWSiriVideoExtension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B54F4F541D930BDC0026B7C7 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -346,6 +333,13 @@
 		79AADBBE231DB01200E8B48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79AADBC1231DB01200E8B48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79AADBC7231DB41C00E8B48D /* BasicVideoViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicVideoViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		79CAAD2D2321D0FC002FFA23 /* NativeControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79CAAD312321D0FC002FFA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79CAAD342321D0FC002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79CAAD362321D0FD002FFA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79CAAD392321D0FD002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79CAAD3B2321D0FD002FFA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWBestPracticeApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -459,14 +453,12 @@
 		B50DDEFC228A1ACB000F62B0 /* JWFriendlyObstructionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWFriendlyObstructionViewController.m; sourceTree = "<group>"; };
 		B50DDF03228B160B000F62B0 /* pause-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pause-button.png"; path = "JWRemoteController/pause-button.png"; sourceTree = SOURCE_ROOT; };
 		B50DDF04228B160C000F62B0 /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "play-button.png"; path = "JWRemoteController/play-button.png"; sourceTree = SOURCE_ROOT; };
-		B53A0DF21D8355CF00893252 /* JWVoiceControl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWVoiceControl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53A73041D92F79C00EB804F /* Voicer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Voicer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53A73061D92F79C00EB804F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53A730B1D92F79C00EB804F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B53A730D1D92F79C00EB804F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B53A73101D92F79C00EB804F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B53A73161D92F87D00EB804F /* Voicer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Voicer.entitlements; sourceTree = "<group>"; };
-		B54424AC1D9060A700719197 /* JWSiriVideoExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = JWSiriVideoExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54F4F431D930B4D0026B7C7 /* VoicerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoicerViewController.swift; sourceTree = "<group>"; };
 		B54F4F491D930BDC0026B7C7 /* VoicerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = VoicerExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		B54F4F4B1D930BDC0026B7C7 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -517,6 +509,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				47595BB3E8D0E95FABB1E764 /* libPods-FeedTableViewController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79CAAD2A2321D0FC002FFA23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,25 +591,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B53A0DEF1D8355CF00893252 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B53A73011D92F79C00EB804F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				9643BB2EDB37F37CD2D7B687 /* libPods-Voicer.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B54424A91D9060A700719197 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -700,6 +685,19 @@
 				79AADBC7231DB41C00E8B48D /* BasicVideoViewController-Bridging-Header.h */,
 			);
 			path = BasicVideoViewController;
+            sourceTree = "<group>";
+		};
+		79CAAD2E2321D0FC002FFA23 /* NativeControls */ = {
+			isa = PBXGroup;
+			children = (
+				79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */,
+				79CAAD312321D0FC002FFA23 /* ViewController.swift */,
+				79CAAD332321D0FC002FFA23 /* Main.storyboard */,
+				79CAAD362321D0FD002FFA23 /* Assets.xcassets */,
+				79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */,
+				79CAAD3B2321D0FD002FFA23 /* Info.plist */,
+			);
+			path = NativeControls;
 			sourceTree = "<group>";
 		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -789,6 +787,7 @@
 				B50DDEE6228A19CF000F62B0 /* JWFriendlyObstructions */,
 				7988D94F2304717E0043CE80 /* FeedTableViewController */,
 				79AADBB6231DB01100E8B48D /* BasicVideoViewController */,
+				79CAAD2E2321D0FC002FFA23 /* NativeControls */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -807,8 +806,6 @@
 				8A3734701D1DC2A80008FE59 /* JWRemoteCastPlayer.app */,
 				8A37348A1D1DC2E70008FE59 /* JWRemoteCastController.app */,
 				8A3734961D1DC2E70008FE59 /* JWRemoteCastController Extension.appex */,
-				B53A0DF21D8355CF00893252 /* JWVoiceControl.app */,
-				B54424AC1D9060A700719197 /* JWSiriVideoExtension.appex */,
 				B53A73041D92F79C00EB804F /* Voicer.app */,
 				B54F4F491D930BDC0026B7C7 /* VoicerExtension.appex */,
 				8AB3E07D1D99B3F8002A3CA7 /* JWFairPlayDrm.app */,
@@ -816,6 +813,7 @@
 				B50DDEE5228A19CE000F62B0 /* JWFriendlyObstructions.app */,
 				7988D94E2304717E0043CE80 /* FeedTableViewController.app */,
 				79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */,
+				79CAAD2D2321D0FC002FFA23 /* NativeControls.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1159,13 +1157,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B5308C111D83624C007D2A1F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B53A73171D92F8C300EB804F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1208,14 +1199,31 @@
 				79AADBB3231DB01100E8B48D /* Resources */,
 				393144FA57EBA15A9191B04F /* Frameworks */,
 				E1979D12B71C098EC94D3FD6 /* [CP] Embed Pods Frameworks */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = BasicVideoViewController;
+            productName = BasicVideoViewController;
+            productReference = 79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */;
+            productType = "com.apple.product-type.application";
+        };
+		79CAAD2C2321D0FC002FFA23 /* NativeControls */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79CAAD3E2321D0FD002FFA23 /* Build configuration list for PBXNativeTarget "NativeControls" */;
+			buildPhases = (
+				79CAAD292321D0FC002FFA23 /* Sources */,
+				79CAAD2A2321D0FC002FFA23 /* Frameworks */,
+				79CAAD2B2321D0FC002FFA23 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BasicVideoViewController;
-			productName = BasicVideoViewController;
-			productReference = 79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */;
+			name = NativeControls;
+			productName = NativeControls;
+			productReference = 79CAAD2D2321D0FC002FFA23 /* NativeControls.app */;
 			productType = "com.apple.product-type.application";
 		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
@@ -1441,26 +1449,6 @@
 			productReference = B50DDEE5228A19CE000F62B0 /* JWFriendlyObstructions.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B53A0DF11D8355CF00893252 /* JWVoiceControl */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B53A0E031D8355CF00893252 /* Build configuration list for PBXNativeTarget "JWVoiceControl" */;
-			buildPhases = (
-				B53A0DEE1D8355CF00893252 /* Sources */,
-				B53A0DEF1D8355CF00893252 /* Frameworks */,
-				B53A0DF01D8355CF00893252 /* Resources */,
-				B5308C111D83624C007D2A1F /* Headers */,
-				B54424B71D9060A700719197 /* Embed App Extensions */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B54424B21D9060A700719197 /* PBXTargetDependency */,
-			);
-			name = JWVoiceControl;
-			productName = JWVoiceControl;
-			productReference = B53A0DF21D8355CF00893252 /* JWVoiceControl.app */;
-			productType = "com.apple.product-type.application";
-		};
 		B53A73031D92F79C00EB804F /* Voicer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B53A73151D92F79C00EB804F /* Build configuration list for PBXNativeTarget "Voicer" */;
@@ -1483,23 +1471,6 @@
 			productName = Voicer;
 			productReference = B53A73041D92F79C00EB804F /* Voicer.app */;
 			productType = "com.apple.product-type.application";
-		};
-		B54424AB1D9060A700719197 /* JWSiriVideoExtension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B54424B61D9060A700719197 /* Build configuration list for PBXNativeTarget "JWSiriVideoExtension" */;
-			buildPhases = (
-				B54424A81D9060A700719197 /* Sources */,
-				B54424A91D9060A700719197 /* Frameworks */,
-				B54424AA1D9060A700719197 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = JWSiriVideoExtension;
-			productName = JWSiriVideoExtension;
-			productReference = B54424AC1D9060A700719197 /* JWSiriVideoExtension.appex */;
-			productType = "com.apple.product-type.app-extension";
 		};
 		B54F4F481D930BDC0026B7C7 /* VoicerExtension */ = {
 			isa = PBXNativeTarget;
@@ -1550,7 +1521,7 @@
 				TargetAttributes = {
 					7988D94D2304717E0043CE80 = {
 						CreatedOnToolsVersion = 10.3;
-						DevelopmentTeam = 8Q5DXDTPWT;
+						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1559,7 +1530,14 @@
 						};
 					};
 					79AADBB4231DB01100E8B48D = {
+                        CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = WX87M56X5N;
+                        ProvisioningStyle = Automatic;
+                    };
+					79CAAD2C2321D0FC002FFA23 = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
 					};
 					8A37346F1D1DC2A80008FE59 = {
 						CreatedOnToolsVersion = 7.3;
@@ -1614,16 +1592,6 @@
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 					};
-					B53A0DF11D8355CF00893252 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = WX87M56X5N;
-						ProvisioningStyle = Automatic;
-						SystemCapabilities = {
-							com.apple.Siri = {
-								enabled = 1;
-							};
-						};
-					};
 					B53A73031D92F79C00EB804F = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = WX87M56X5N;
@@ -1639,11 +1607,6 @@
 								enabled = 1;
 							};
 						};
-					};
-					B54424AB1D9060A700719197 = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = WX87M56X5N;
-						ProvisioningStyle = Automatic;
 					};
 					B54F4F481D930BDC0026B7C7 = {
 						CreatedOnToolsVersion = 8.0;
@@ -1685,8 +1648,6 @@
 				8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */,
 				8A3734891D1DC2E70008FE59 /* JWRemoteCastController */,
 				8A3734951D1DC2E70008FE59 /* JWRemoteCastController Extension */,
-				B53A0DF11D8355CF00893252 /* JWVoiceControl */,
-				B54424AB1D9060A700719197 /* JWSiriVideoExtension */,
 				B53A73031D92F79C00EB804F /* Voicer */,
 				B54F4F481D930BDC0026B7C7 /* VoicerExtension */,
 				8AB3E07C1D99B3F8002A3CA7 /* JWFairPlayDrm */,
@@ -1694,6 +1655,7 @@
 				B50DDEE4228A19CE000F62B0 /* JWFriendlyObstructions */,
 				7988D94D2304717E0043CE80 /* FeedTableViewController */,
 				79AADBB4231DB01100E8B48D /* BasicVideoViewController */,
+				79CAAD2C2321D0FC002FFA23 /* NativeControls */,
 			);
 		};
 /* End PBXProject section */
@@ -1718,6 +1680,16 @@
 				79AADBC2231DB01200E8B48D /* LaunchScreen.storyboard in Resources */,
 				79AADBBF231DB01200E8B48D /* Assets.xcassets in Resources */,
 				79AADBBD231DB01100E8B48D /* Main.storyboard in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+		79CAAD2B2321D0FC002FFA23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */,
+				79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */,
+				79CAAD352321D0FC002FFA23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1855,13 +1827,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B53A0DF01D8355CF00893252 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B53A73021D92F79C00EB804F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -1875,13 +1840,6 @@
 				B54F4F411D930AA90026B7C7 /* cast_connecting1.png in Resources */,
 				B54F4F3F1D930A9F0026B7C7 /* cast_on.png in Resources */,
 				B53A730C1D92F79C00EB804F /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B54424AA1D9060A700719197 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2576,6 +2534,16 @@
 			files = (
 				79AADBBA231DB01100E8B48D /* BasicVideoViewController.swift in Sources */,
 				79AADBB8231DB01100E8B48D /* AppDelegate.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
+		79CAAD292321D0FC002FFA23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79CAAD322321D0FC002FFA23 /* ViewController.swift in Sources */,
+				79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */,
+				79CAAD302321D0FC002FFA23 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2679,13 +2647,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B53A0DEE1D8355CF00893252 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		B53A73001D92F79C00EB804F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2696,13 +2657,6 @@
 				B53A731B1D92FB5400EB804F /* JWBasicVideoViewController.m in Sources */,
 				B53A73071D92F79C00EB804F /* AppDelegate.swift in Sources */,
 				B53A731E1D92FB9700EB804F /* JWCastingViewController.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B54424A81D9060A700719197 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2748,11 +2702,6 @@
 			target = 8AF5F6CB1C9A612B00C0D5E0 /* JWRemoteController */;
 			targetProxy = 8AF5F6EB1C9A612B00C0D5E0 /* PBXContainerItemProxy */;
 		};
-		B54424B21D9060A700719197 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B54424AB1D9060A700719197 /* JWSiriVideoExtension */;
-			targetProxy = B54424B11D9060A700719197 /* PBXContainerItemProxy */;
-		};
 		B54F4F4F1D930BDC0026B7C7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = B54F4F481D930BDC0026B7C7 /* VoicerExtension */;
@@ -2781,6 +2730,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				79AADBBC231DB01100E8B48D /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
+		79CAAD332321D0FC002FFA23 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79CAAD342321D0FC002FFA23 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -2789,6 +2746,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				79AADBC1231DB01200E8B48D /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
+		79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79CAAD392321D0FD002FFA23 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -2988,7 +2953,7 @@
 				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -2997,7 +2962,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "FeedTableViewController/FeedTableViewController-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3026,12 +2990,82 @@
 				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_FAST_MATH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.FeedTableViewController;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "FeedTableViewController/FeedTableViewController-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79CAAD3C2321D0FD002FFA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.NativeControls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeControls/NativeControls-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		79CAAD3D2321D0FD002FFA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.NativeControls;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NativeControls/NativeControls-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -3212,13 +3246,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3257,13 +3292,14 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -3286,9 +3322,6 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWBestPracticeApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3309,8 +3342,6 @@
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWBestPracticeApps;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -3390,6 +3421,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3399,7 +3431,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWRemotePlayer;
+				PRODUCT_MODULE_NAME = JWPlayer.JWRemotePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -3409,6 +3443,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WX87M56X5N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -3418,7 +3453,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWRemotePlayer;
+				PRODUCT_MODULE_NAME = JWPlayer.JWRemotePlayer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
@@ -3435,10 +3472,10 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWFairPlayDrm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3455,9 +3492,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWFairPlayDrm;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
 				SWIFT_OBJC_INTERFACE_HEADER_NAME = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -3602,53 +3639,6 @@
 			};
 			name = Release;
 		};
-		B53A0E011D8355CF00893252 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_ENTITLEMENTS = JWVoiceControl/JWVoiceControl.entitlements;
-				DEVELOPMENT_TEAM = WX87M56X5N;
-				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWVoiceControl;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B53A0E021D8355CF00893252 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				CODE_SIGN_ENTITLEMENTS = JWVoiceControl/JWVoiceControl.entitlements;
-				DEVELOPMENT_TEAM = WX87M56X5N;
-				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				OTHER_LDFLAGS = "$(inherited)";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWVoiceControl;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_INCLUDE_PATHS = "";
-				SWIFT_OBJC_BRIDGING_HEADER = "JWBestPracticeApps/JWBestPracticeApps-Bridging-Header.h";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
 		B53A73131D92F79C00EB804F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DB6939FD85E49626B97F3751 /* Pods-Voicer.debug.xcconfig */;
@@ -3667,7 +3657,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3687,43 +3676,6 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		B54424B41D9060A700719197 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = WX87M56X5N;
-				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWVoiceControl.JWSiriVideoExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Debug;
-		};
-		B54424B51D9060A700719197 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_SUSPICIOUS_MOVES = YES;
-				DEVELOPMENT_TEAM = WX87M56X5N;
-				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.JWVoiceControl.JWSiriVideoExtension;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -3743,8 +3695,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -3763,7 +3715,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Voicer.VoicerExtension;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};
@@ -3800,7 +3752,6 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = "JWConviva/JWConviva-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -3835,7 +3786,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jwplayer.com.JWConviva;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "JWConviva/JWConviva-Bridging-Header.h";
-				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -3857,6 +3807,15 @@
 			buildConfigurations = (
 				79AADBD6231EC38700E8B48D /* Debug */,
 				79AADBD7231EC38700E8B48D /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
+		79CAAD3E2321D0FD002FFA23 /* Build configuration list for PBXNativeTarget "NativeControls" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79CAAD3C2321D0FD002FFA23 /* Debug */,
+				79CAAD3D2321D0FD002FFA23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3969,29 +3928,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B53A0E031D8355CF00893252 /* Build configuration list for PBXNativeTarget "JWVoiceControl" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B53A0E011D8355CF00893252 /* Debug */,
-				B53A0E021D8355CF00893252 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		B53A73151D92F79C00EB804F /* Build configuration list for PBXNativeTarget "Voicer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B53A73131D92F79C00EB804F /* Debug */,
 				B53A73141D92F79C00EB804F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B54424B61D9060A700719197 /* Build configuration list for PBXNativeTarget "JWSiriVideoExtension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B54424B41D9060A700719197 /* Debug */,
-				B54424B51D9060A700719197 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

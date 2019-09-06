@@ -24,6 +24,8 @@ Each target adds a level of complexity to the base target, JWBestPracticeApps, w
 
 - The target named Voicer provides the code necessary to control the player's playback and casting with voice control using Siri.
 
+- The target named NativeControls provides the code necessary to use your own custom controls and control the player playback even on full screen mode.
+
 ### Initial Setup for JWBestPracticeApps:
 
 #### Via CocoaPods
