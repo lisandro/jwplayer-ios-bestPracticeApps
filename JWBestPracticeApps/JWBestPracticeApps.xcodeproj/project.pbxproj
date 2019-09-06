@@ -1558,6 +1558,9 @@
 							};
 						};
 					};
+					79AADBB4231DB01100E8B48D = {
+						DevelopmentTeam = WX87M56X5N;
+					};
 					8A37346F1D1DC2A80008FE59 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -3039,6 +3042,7 @@
 			baseConfigurationReference = 20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */;
 			buildSettings = {
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
@@ -3054,6 +3058,7 @@
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.BasicVideoViewController;
 				PRODUCT_NAME = BasicVideoViewController;

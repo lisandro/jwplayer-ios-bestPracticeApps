@@ -36,7 +36,7 @@ class BasicVideoViewController: UIViewController {
 // MARK: Internal methods
 
     func createPlayer() {
-        if let player = JWPlayerController(config: createConfig(), delegate: self as? JWPlayerDelegate) {
+        if let player = JWPlayerController(config: createConfig(), delegate: self) {
             // Force fullscreen on landscape and vice versa
             player.forceFullScreenOnLandscape = true
             player.forceLandscapeOnFullScreen = true
@@ -53,5 +53,11 @@ class BasicVideoViewController: UIViewController {
         return config;
     }
 
+}
+
+// MARK: JWPlayerDelegate implementation
+
+extension BasicVideoViewController: JWPlayerDelegate {
+    // Optionally implement methods to track the JWPlayerController behavior
 }
 
