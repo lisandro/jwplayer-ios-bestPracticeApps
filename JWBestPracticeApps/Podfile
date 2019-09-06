@@ -34,6 +34,13 @@ target 'JWCasting' do
 
 end
 
+target 'Casting' do
+  
+  common_JW
+  common_Cast
+  
+end
+
 target 'JWAirPlay' do
 
     common_JW

@@ -1,0 +1,174 @@
+//
+//  CastingViewController.swift
+//  Casting
+//
+//  Created by David Almaguer on 9/3/19.
+//  Copyright © 2019 Karim Mourra. All rights reserved.
+//
+
+import UIKit
+import GoogleCast
+
+class CastingViewController: BasicVideoViewController {
+    
+    var avilableDevices: [JWCastingDevice] = []
+    var castController: JWCastController? = nil
+    
+    var castingButton: UIButton? = nil
+    var barButtonItem: UIBarButtonItem? = nil
+    
+    var casting = false
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Setup JWCastController object
+        setupCastController()
+    }
+    
+    func setupCastController() {
+        if let player = self.player {
+            let castController = JWCastController(player: player)
+            castController.chromeCastReceiverAppID = kGCKDefaultMediaReceiverApplicationID
+            castController.delegate = self
+            castController.scanForDevices()
+            self.castController = castController
+        }
+    }
+    
+    func setupCastingButton() {
+        let buttonFrame = CGRect(x: 0, y: 0, width: 22, height: 22)
+        let castingButton = UIButton(frame: buttonFrame)
+        castingButton.addTarget(self, action: #selector(castButtonTapped(sender:)), for: .touchUpInside)
+        prepareCastingButtonWithAnimation(castingButton)
+        let barButtonItem = UIBarButtonItem(customView: castingButton)
+        self.navigationItem.rightBarButtonItem = barButtonItem
+        
+        self.castingButton = castingButton
+        self.barButtonItem = barButtonItem
+        
+        setCastingStatus(false)
+    }
+    
+    func prepareCastingButtonWithAnimation(_ button: UIButton) {
+        let connectingImages = [UIImage(named: "cast_connecting0")?.withRenderingMode(.alwaysTemplate),
+                                UIImage(named: "cast_connecting1")?.withRenderingMode(.alwaysTemplate),
+                                UIImage(named: "cast_connecting2")?.withRenderingMode(.alwaysTemplate),
+                                UIImage(named: "cast_connecting1")?.withRenderingMode(.alwaysTemplate)]
+        // Compact map to avoid nil UIImage objects
+        button.imageView?.animationImages = connectingImages.compactMap {$0}
+        button.imageView?.animationDuration = 2
+    }
+    
+    
+// pragma MARK: - Casting Status Helpers
+    
+    func startConnectingAnimation() {
+        castingButton?.tintColor = UIColor.white
+        castingButton?.imageView?.startAnimating()
+    }
+    
+    func stopConnectingAnimation(connected: Bool) {
+        castingButton?.imageView?.stopAnimating()
+        let castingImage = connected ? "cast_on" : "cast_off"
+        castingButton?.imageView?.image = UIImage(named: castingImage)?.withRenderingMode(.alwaysTemplate)
+        castingButton?.tintColor = UIColor.blue
+    }
+    
+    func setCastingStatus(_ casting: Bool) {
+        self.casting = casting
+        castingButton?.tintColor = casting ? UIColor.green : UIColor.blue
+    }
+    
+    @objc func castButtonTapped(sender: UIButton) {
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        if let device = castController?.connectedDevice {
+            alertController.title = device.name
+            alertController.message = "Select an action"
+            
+            let disconnetAction = UIAlertAction(title: "Disconnect", style: .destructive) { [weak self] (action) in
+                guard let self = self else { return }
+                if self.casting {
+                    alertController.addAction(UIAlertAction(title: "Stop casting", style: .default, handler: { [weak self] (action) in
+                        guard let self = self else { return }
+                        self.castController?.stopCasting()
+                    }))
+                } else {
+                    alertController.addAction(UIAlertAction(title: "Cast", style: .default, handler: { [weak self] (action) in
+                        guard let self = self else { return }
+                        self.castController?.cast()
+                    }))
+                }
+            }
+            alertController.addAction(disconnetAction)
+        } else {
+            alertController.title = "Connect to"
+            self.castController?.availableDevices.forEach({ (castingDevice) in
+                let deviceSelection = UIAlertAction.init(title: castingDevice.name, style: .default, handler: { [weak self] (action) in
+                    guard let self = self else { return }
+                    self.castController?.connect(to: castingDevice)
+                    self.startConnectingAnimation()
+                })
+                alertController.addAction(deviceSelection)
+            })
+        }
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
+        alertController.addAction(cancelAction)
+        present(alertController, animated: true, completion: nil)
+    }
+
+}
+
+
+// MARK: JWCastingDelegate implementation
+
+extension CastingViewController: JWCastingDelegate {
+    
+    func onCastingDevicesAvailable(_ devices: [JWCastingDevice]) {
+        self.avilableDevices = devices
+        if !devices.isEmpty && barButtonItem == nil {
+            self.setupCastingButton()
+            self.stopConnectingAnimation(connected: false)
+        } else {
+            self.navigationItem.rightBarButtonItem = nil
+        }
+    }
+    
+    func onConnected(to device: JWCastingDevice) {
+        self.stopConnectingAnimation(connected: true)
+    }
+    
+    func onDisconnected(fromCastingDevice error: Error?) {
+        if let error = error { print("Casting error: ", error) }
+        self.stopConnectingAnimation(connected: false)
+    }
+    
+    func onConnectionTemporarilySuspended() {
+        self.startConnectingAnimation()
+    }
+    
+    func onConnectionRecovered() {
+        self.stopConnectingAnimation(connected: true)
+    }
+    
+    func onConnectionFailed(_ error: Error) {
+        print("Casting error: ", error)
+        self.stopConnectingAnimation(connected: false)
+    }
+    
+    func onCasting() {
+        setCastingStatus(true)
+    }
+    
+    func onCastingEnded(_ error: Error?) {
+        if let error = error { print("Casting error: ", error) }
+        self.setCastingStatus(false)
+    }
+    
+    func onCastingFailed(_ error: Error) {
+        print("Casting error: ", error)
+        self.setCastingStatus(false)
+    }
+    
+    
+}

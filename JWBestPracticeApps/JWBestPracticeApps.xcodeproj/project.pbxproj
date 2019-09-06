@@ -15,6 +15,17 @@
 		561FBDC9C3F85957621D06E5 /* libPods-JWFairPlayDrm.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EAAD561A6E20B3D7DA378BA /* libPods-JWFairPlayDrm.a */; };
 		5D0EA20F3C710D39FFB42B46 /* libPods-JWFriendlyObstructions.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C7DD1EFB4D03D4722EA6EAD7 /* libPods-JWFriendlyObstructions.a */; };
 		75A61086E881BEA59DCFCF51 /* libPods-JWRemoteCastPlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 456C13E5F37B81C27CDF6B32 /* libPods-JWRemoteCastPlayer.a */; };
+		793AA642231ED916006CA8FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793AA641231ED916006CA8FF /* AppDelegate.swift */; };
+		793AA644231ED916006CA8FF /* CastingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793AA643231ED916006CA8FF /* CastingViewController.swift */; };
+		793AA647231ED916006CA8FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793AA645231ED916006CA8FF /* Main.storyboard */; };
+		793AA649231ED917006CA8FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 793AA648231ED917006CA8FF /* Assets.xcassets */; };
+		793AA64C231ED917006CA8FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 793AA64A231ED917006CA8FF /* LaunchScreen.storyboard */; };
+		793AA651231ED936006CA8FF /* cast_off.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B881C99D278000F03A9 /* cast_off.png */; };
+		793AA652231ED936006CA8FF /* cast_on.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B891C99D278000F03A9 /* cast_on.png */; };
+		793AA653231ED936006CA8FF /* cast_connecting0.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B8A1C99D278000F03A9 /* cast_connecting0.png */; };
+		793AA654231ED936006CA8FF /* cast_connecting1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B8B1C99D278000F03A9 /* cast_connecting1.png */; };
+		793AA655231ED936006CA8FF /* cast_connecting2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A729B8C1C99D278000F03A9 /* cast_connecting2.png */; };
+		793AA656231ED970006CA8FF /* BasicVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */; };
 		7988D9512304717E0043CE80 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D9502304717E0043CE80 /* AppDelegate.swift */; };
 		7988D9562304717E0043CE80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7988D9542304717E0043CE80 /* Main.storyboard */; };
 		7988D9582304717F0043CE80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7988D9572304717F0043CE80 /* Assets.xcassets */; };
@@ -316,6 +327,12 @@
 		6960B809E87D90EBF1ADFC17 /* libPods-JWRemoteController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWRemoteController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EB03385796BF497EAF7D828 /* libPods-JWConviva.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWConviva.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72FEF8173D5FA39FEAB8F788 /* Pods-FeedTableViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.debug.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.debug.xcconfig"; sourceTree = "<group>"; };
+		793AA63F231ED916006CA8FF /* Casting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Casting.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		793AA641231ED916006CA8FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		793AA643231ED916006CA8FF /* CastingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingViewController.swift; sourceTree = "<group>"; };
+		793AA646231ED916006CA8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		793AA648231ED917006CA8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		793AA64B231ED917006CA8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7988D94E2304717E0043CE80 /* FeedTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7988D9502304717E0043CE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7988D9552304717E0043CE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -658,6 +675,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		793AA640231ED916006CA8FF /* Casting */ = {
+			isa = PBXGroup;
+			children = (
+				793AA641231ED916006CA8FF /* AppDelegate.swift */,
+				793AA643231ED916006CA8FF /* CastingViewController.swift */,
+				793AA645231ED916006CA8FF /* Main.storyboard */,
+				793AA648231ED917006CA8FF /* Assets.xcassets */,
+				793AA64A231ED917006CA8FF /* LaunchScreen.storyboard */,
+			);
+			path = Casting;
+			sourceTree = "<group>";
+		};
 		7988D94F2304717E0043CE80 /* FeedTableViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -788,6 +817,7 @@
 				7988D94F2304717E0043CE80 /* FeedTableViewController */,
 				79AADBB6231DB01100E8B48D /* BasicVideoViewController */,
 				79CAAD2E2321D0FC002FFA23 /* NativeControls */,
+				793AA640231ED916006CA8FF /* Casting */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -814,6 +844,7 @@
 				7988D94E2304717E0043CE80 /* FeedTableViewController.app */,
 				79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */,
 				79CAAD2D2321D0FC002FFA23 /* NativeControls.app */,
+				793AA63F231ED916006CA8FF /* Casting.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1171,6 +1202,22 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		793AA63E231ED916006CA8FF /* Casting */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 793AA650231ED917006CA8FF /* Build configuration list for PBXNativeTarget "Casting" */;
+			buildPhases = (
+				793AA63B231ED916006CA8FF /* Sources */,
+				793AA63D231ED916006CA8FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Casting;
+			productName = Casting;
+			productReference = 793AA63F231ED916006CA8FF /* Casting.app */;
+			productType = "com.apple.product-type.application";
+		};
 		7988D94D2304717E0043CE80 /* FeedTableViewController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7988D95F2304717F0043CE80 /* Build configuration list for PBXNativeTarget "FeedTableViewController" */;
@@ -1519,6 +1566,11 @@
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Karim Mourra";
 				TargetAttributes = {
+					793AA63E231ED916006CA8FF = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
+					};
 					7988D94D2304717E0043CE80 = {
 						CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -1656,11 +1708,27 @@
 				7988D94D2304717E0043CE80 /* FeedTableViewController */,
 				79AADBB4231DB01100E8B48D /* BasicVideoViewController */,
 				79CAAD2C2321D0FC002FFA23 /* NativeControls */,
+				793AA63E231ED916006CA8FF /* Casting */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		793AA63D231ED916006CA8FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793AA651231ED936006CA8FF /* cast_off.png in Resources */,
+				793AA653231ED936006CA8FF /* cast_connecting0.png in Resources */,
+				793AA64C231ED917006CA8FF /* LaunchScreen.storyboard in Resources */,
+				793AA655231ED936006CA8FF /* cast_connecting2.png in Resources */,
+				793AA649231ED917006CA8FF /* Assets.xcassets in Resources */,
+				793AA654231ED936006CA8FF /* cast_connecting1.png in Resources */,
+				793AA652231ED936006CA8FF /* cast_on.png in Resources */,
+				793AA647231ED916006CA8FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7988D94C2304717E0043CE80 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2518,6 +2586,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		793AA63B231ED916006CA8FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				793AA656231ED970006CA8FF /* BasicVideoViewController.swift in Sources */,
+				793AA644231ED916006CA8FF /* CastingViewController.swift in Sources */,
+				793AA642231ED916006CA8FF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7988D94A2304717E0043CE80 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2710,6 +2788,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		793AA645231ED916006CA8FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				793AA646231ED916006CA8FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		793AA64A231ED917006CA8FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				793AA64B231ED917006CA8FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		7988D9542304717E0043CE80 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2950,7 +3044,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -2987,7 +3081,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8Q5DXDTPWT;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
@@ -3096,6 +3190,31 @@
 				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
 				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.BasicVideoViewController;
 				PRODUCT_NAME = BasicVideoViewController;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		79CAAD4423232788002FFA23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Casting;
+				PRODUCT_NAME = Casting;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		79CAAD4523232788002FFA23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Casting;
+				PRODUCT_NAME = Casting;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
@@ -3793,6 +3912,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		793AA650231ED917006CA8FF /* Build configuration list for PBXNativeTarget "Casting" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79CAAD4423232788002FFA23 /* Debug */,
+				79CAAD4523232788002FFA23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		7988D95F2304717F0043CE80 /* Build configuration list for PBXNativeTarget "FeedTableViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
