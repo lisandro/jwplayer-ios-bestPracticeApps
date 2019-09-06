@@ -4,7 +4,7 @@
 # use_frameworks!
 
 def common_JW
-    pod 'JWPlayer-SDK', '~> 3.0'
+    pod 'JWPlayer-SDK', '~> 3.6.0'
 end
 
 def common_Cast
@@ -12,7 +12,7 @@ def common_Cast
 end
 
 def common_Google_IMA
-    pod 'GoogleAds-IMA-iOS-SDK', '3.8.1'
+    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.9.0'
 end
 
 target 'JWBestPracticeApps' do

@@ -11,7 +11,7 @@
 #import "JWRemoteTerminologyHelper.h"
 
 
-@interface JWRemotePlayerViewController : JWCastingViewController <WCSessionDelegate, JWCastingDelegate>
+@interface JWRemotePlayerViewController : JWCastingViewController <WCSessionDelegate>
 
 @property (nonatomic) WCSession *session;
 
