@@ -23,6 +23,11 @@
 		7988D963230472800043CE80 /* FeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7988D961230472800043CE80 /* FeedItemCell.xib */; };
 		7988D965230482B70043CE80 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988D964230482B70043CE80 /* FeedTableViewController.swift */; };
 		7988D968230487F20043CE80 /* Feed.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7988D967230487F20043CE80 /* Feed.plist */; };
+		79AADBB8231DB01100E8B48D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AADBB7231DB01100E8B48D /* AppDelegate.swift */; };
+		79AADBBA231DB01100E8B48D /* BasicVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */; };
+		79AADBBD231DB01100E8B48D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBBB231DB01100E8B48D /* Main.storyboard */; };
+		79AADBBF231DB01200E8B48D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBBE231DB01200E8B48D /* Assets.xcassets */; };
+		79AADBC2231DB01200E8B48D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */; };
 		79B858A2888A20797F6B11DF /* libPods-JWAirPlay.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 111A53DD951754479483FFB6 /* libPods-JWAirPlay.a */; };
 		79CAAD302321D0FC002FFA23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */; };
 		79CAAD322321D0FC002FFA23 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CAAD312321D0FC002FFA23 /* ViewController.swift */; };
@@ -171,6 +176,7 @@
 		B5BC26A91D958BFF00F32770 /* AppIntentVocabulary.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26A71D958BFF00F32770 /* AppIntentVocabulary.plist */; };
 		B5BC26B21DAC20E500F32770 /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B5BC26B11DAC20E500F32770 /* info.plist */; };
 		C13716CBFBD2EF342EA7DC83 /* libPods-JWBestPracticeApps.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */; };
+		C3FCDF396365267CFDDD66CA /* libPods-BasicVideoViewController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */; };
 		DD78E95E5958215D5053AEB0 /* libPods-JWRemotePlayer.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FB0C54926510AB9F4F09374 /* libPods-JWRemotePlayer.a */; };
 		EB4B37EC8E40658E71983CDB /* libPods-JWRemoteCastController Extension.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BC8BED0908290A1C60AFBC5C /* libPods-JWRemoteCastController Extension.a */; };
 		F44B0E092240F14E00414BE3 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
@@ -296,7 +302,9 @@
 		111A53DD951754479483FFB6 /* libPods-JWAirPlay.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWAirPlay.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		143ED7FE2BE9C38ABBCF14BB /* Pods-JWCasting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWCasting.release.xcconfig"; path = "Target Support Files/Pods-JWCasting/Pods-JWCasting.release.xcconfig"; sourceTree = "<group>"; };
 		17DF653D17CE72FBBE256FD8 /* libPods-JWCasting.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWCasting.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1BDA9C423F815F7BA9B2A3EB /* Pods-BasicVideoViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicVideoViewController.release.xcconfig"; path = "Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController.release.xcconfig"; sourceTree = "<group>"; };
 		1C594E3DFE758735A73160A9 /* Pods-JWRemotePlayer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemotePlayer.debug.xcconfig"; path = "Target Support Files/Pods-JWRemotePlayer/Pods-JWRemotePlayer.debug.xcconfig"; sourceTree = "<group>"; };
+		20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicVideoViewController.debug.xcconfig"; path = "Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController.debug.xcconfig"; sourceTree = "<group>"; };
 		282FAA8D01A4F638EF920270 /* Pods-JWAirPlay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWAirPlay.debug.xcconfig"; path = "Target Support Files/Pods-JWAirPlay/Pods-JWAirPlay.debug.xcconfig"; sourceTree = "<group>"; };
 		2EAAD561A6E20B3D7DA378BA /* libPods-JWFairPlayDrm.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWFairPlayDrm.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E6AD99A58F7227B7941CDC4 /* Pods-JWRemoteCastController Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -318,6 +326,13 @@
 		7988D964230482B70043CE80 /* FeedTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		7988D966230486500043CE80 /* FeedTableViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FeedTableViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		7988D967230487F20043CE80 /* Feed.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Feed.plist; sourceTree = "<group>"; };
+		79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BasicVideoViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79AADBB7231DB01100E8B48D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicVideoViewController.swift; sourceTree = "<group>"; };
+		79AADBBC231DB01100E8B48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79AADBBE231DB01200E8B48D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79AADBC1231DB01200E8B48D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79AADBC7231DB41C00E8B48D /* BasicVideoViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BasicVideoViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		79CAAD2D2321D0FC002FFA23 /* NativeControls.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NativeControls.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79CAAD2F2321D0FC002FFA23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79CAAD312321D0FC002FFA23 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -463,6 +478,7 @@
 		D61FCFCF572B03B4F7F0E2BD /* Pods-VoicerExtension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VoicerExtension.debug.xcconfig"; path = "Target Support Files/Pods-VoicerExtension/Pods-VoicerExtension.debug.xcconfig"; sourceTree = "<group>"; };
 		DB6939FD85E49626B97F3751 /* Pods-Voicer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Voicer.debug.xcconfig"; path = "Target Support Files/Pods-Voicer/Pods-Voicer.debug.xcconfig"; sourceTree = "<group>"; };
 		DBFC4C3291FA6600375E85C1 /* Pods-FeedTableViewController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewController.release.xcconfig"; path = "Target Support Files/Pods-FeedTableViewController/Pods-FeedTableViewController.release.xcconfig"; sourceTree = "<group>"; };
+		E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BasicVideoViewController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED75868A3C309D3E04F2C1C0 /* Pods-JWRemoteCastController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteCastController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteCastController Extension/Pods-JWRemoteCastController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		F262415913389DE545421F1A /* Pods-JWRemoteController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController.release.xcconfig"; path = "Target Support Files/Pods-JWRemoteController/Pods-JWRemoteController.release.xcconfig"; sourceTree = "<group>"; };
 		F4EC778C223FD43F0008B8DB /* JWConviva.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWConviva.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -480,6 +496,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		393144FA57EBA15A9191B04F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C3FCDF396365267CFDDD66CA /* libPods-BasicVideoViewController.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7988D94B2304717E0043CE80 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -629,6 +653,7 @@
 				8FB0C54926510AB9F4F09374 /* libPods-JWRemotePlayer.a */,
 				804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */,
 				07937315AF7025E0211FC774 /* libPods-VoicerExtension.a */,
+				E13EF4956176DC291C53FA20 /* libPods-BasicVideoViewController.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -648,6 +673,19 @@
 			);
 			path = FeedTableViewController;
 			sourceTree = "<group>";
+		};
+		79AADBB6231DB01100E8B48D /* BasicVideoViewController */ = {
+			isa = PBXGroup;
+			children = (
+				79AADBB7231DB01100E8B48D /* AppDelegate.swift */,
+				79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */,
+				79AADBBB231DB01100E8B48D /* Main.storyboard */,
+				79AADBBE231DB01200E8B48D /* Assets.xcassets */,
+				79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */,
+				79AADBC7231DB41C00E8B48D /* BasicVideoViewController-Bridging-Header.h */,
+			);
+			path = BasicVideoViewController;
+            sourceTree = "<group>";
 		};
 		79CAAD2E2321D0FC002FFA23 /* NativeControls */ = {
 			isa = PBXGroup;
@@ -748,6 +786,7 @@
 				F4EC778D223FD43F0008B8DB /* JWConviva */,
 				B50DDEE6228A19CF000F62B0 /* JWFriendlyObstructions */,
 				7988D94F2304717E0043CE80 /* FeedTableViewController */,
+				79AADBB6231DB01100E8B48D /* BasicVideoViewController */,
 				79CAAD2E2321D0FC002FFA23 /* NativeControls */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
@@ -773,6 +812,7 @@
 				F4EC778C223FD43F0008B8DB /* JWConviva.app */,
 				B50DDEE5228A19CE000F62B0 /* JWFriendlyObstructions.app */,
 				7988D94E2304717E0043CE80 /* FeedTableViewController.app */,
+				79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */,
 				79CAAD2D2321D0FC002FFA23 /* NativeControls.app */,
 			);
 			name = Products;
@@ -1026,6 +1066,8 @@
 				CF9AF200715252D70A8A6823 /* Pods-Voicer.release.xcconfig */,
 				D61FCFCF572B03B4F7F0E2BD /* Pods-VoicerExtension.debug.xcconfig */,
 				D100732D98416FDBC8C3253D /* Pods-VoicerExtension.release.xcconfig */,
+				20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */,
+				1BDA9C423F815F7BA9B2A3EB /* Pods-BasicVideoViewController.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -1148,6 +1190,25 @@
 			productReference = 7988D94E2304717E0043CE80 /* FeedTableViewController.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79AADBB4231DB01100E8B48D /* BasicVideoViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79AADBC4231DB01200E8B48D /* Build configuration list for PBXNativeTarget "BasicVideoViewController" */;
+			buildPhases = (
+				E387EA03370BE130F8EAAE07 /* [CP] Check Pods Manifest.lock */,
+				79AADBB1231DB01100E8B48D /* Sources */,
+				79AADBB3231DB01100E8B48D /* Resources */,
+				393144FA57EBA15A9191B04F /* Frameworks */,
+				E1979D12B71C098EC94D3FD6 /* [CP] Embed Pods Frameworks */,
+            );
+            buildRules = (
+            );
+            dependencies = (
+            );
+            name = BasicVideoViewController;
+            productName = BasicVideoViewController;
+            productReference = 79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */;
+            productType = "com.apple.product-type.application";
+        };
 		79CAAD2C2321D0FC002FFA23 /* NativeControls */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79CAAD3E2321D0FD002FFA23 /* Build configuration list for PBXNativeTarget "NativeControls" */;
@@ -1460,7 +1521,7 @@
 				TargetAttributes = {
 					7988D94D2304717E0043CE80 = {
 						CreatedOnToolsVersion = 10.3;
-						DevelopmentTeam = 8Q5DXDTPWT;
+						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -1468,6 +1529,11 @@
 							};
 						};
 					};
+					79AADBB4231DB01100E8B48D = {
+                        CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
+                        ProvisioningStyle = Automatic;
+                    };
 					79CAAD2C2321D0FC002FFA23 = {
 						CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -1588,6 +1654,7 @@
 				F4EC778B223FD43F0008B8DB /* JWConviva */,
 				B50DDEE4228A19CE000F62B0 /* JWFriendlyObstructions */,
 				7988D94D2304717E0043CE80 /* FeedTableViewController */,
+				79AADBB4231DB01100E8B48D /* BasicVideoViewController */,
 				79CAAD2C2321D0FC002FFA23 /* NativeControls */,
 			);
 		};
@@ -1606,6 +1673,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79AADBB3231DB01100E8B48D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79AADBC2231DB01200E8B48D /* LaunchScreen.storyboard in Resources */,
+				79AADBBF231DB01200E8B48D /* Assets.xcassets in Resources */,
+				79AADBBD231DB01100E8B48D /* Main.storyboard in Resources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 		79CAAD2B2321D0FC002FFA23 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2356,6 +2433,46 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		E1979D12B71C098EC94D3FD6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController-frameworks.sh",
+				"${PODS_ROOT}/JWPlayer-SDK/JWPlayer_iOS_SDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JWPlayer_iOS_SDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BasicVideoViewController/Pods-BasicVideoViewController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E387EA03370BE130F8EAAE07 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BasicVideoViewController-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E54F07309D3E0A098D434A36 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -2411,6 +2528,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		79AADBB1231DB01100E8B48D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				79AADBBA231DB01100E8B48D /* BasicVideoViewController.swift in Sources */,
+				79AADBB8231DB01100E8B48D /* AppDelegate.swift in Sources */,
+            );
+            runOnlyForDeploymentPostprocessing = 0;
+        };
 		79CAAD292321D0FC002FFA23 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2600,6 +2726,14 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		79AADBBB231DB01100E8B48D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79AADBBC231DB01100E8B48D /* Base */,
+            );
+            name = Main.storyboard;
+            sourceTree = "<group>";
+        };
 		79CAAD332321D0FC002FFA23 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2608,6 +2742,14 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+		79AADBC0231DB01200E8B48D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79AADBC1231DB01200E8B48D /* Base */,
+            );
+            name = LaunchScreen.storyboard;
+            sourceTree = "<group>";
+        };
 		79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -2926,6 +3068,35 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "NativeControls/NativeControls-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		79AADBD6231EC38700E8B48D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 20C50DE3833B8FAE53F03BBB /* Pods-BasicVideoViewController.debug.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.BasicVideoViewController;
+				PRODUCT_NAME = BasicVideoViewController;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		79AADBD7231EC38700E8B48D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BDA9C423F815F7BA9B2A3EB /* Pods-BasicVideoViewController.release.xcconfig */;
+			buildSettings = {
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WX87M56X5N;
+				INFOPLIST_FILE = "$(SRCROOT)/JWBestPracticeApps/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.BasicVideoViewController;
+				PRODUCT_NAME = BasicVideoViewController;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -3631,6 +3802,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		79AADBC4231DB01200E8B48D /* Build configuration list for PBXNativeTarget "BasicVideoViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79AADBD6231EC38700E8B48D /* Debug */,
+				79AADBD7231EC38700E8B48D /* Release */,
+            );
+            defaultConfigurationIsVisible = 0;
+            defaultConfigurationName = Release;
+        };
 		79CAAD3E2321D0FD002FFA23 /* Build configuration list for PBXNativeTarget "NativeControls" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

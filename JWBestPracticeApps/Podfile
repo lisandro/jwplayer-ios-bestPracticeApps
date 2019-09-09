@@ -21,6 +21,12 @@ target 'JWBestPracticeApps' do
 
 end
 
+target 'BasicVideoViewController' do
+  
+  common_JW
+  
+end
+
 target 'JWCasting' do
 
     common_JW
