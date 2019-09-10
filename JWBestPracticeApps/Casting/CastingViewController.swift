@@ -22,6 +22,8 @@ class CastingViewController: BasicVideoViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.barTintColor = UIColor.gray
+        
         // Setup JWCastController object
         setupCastController()
     }
@@ -41,8 +43,12 @@ class CastingViewController: BasicVideoViewController {
         let castingButton = UIButton(frame: buttonFrame)
         castingButton.addTarget(self, action: #selector(castButtonTapped(sender:)), for: .touchUpInside)
         prepareCastingButtonWithAnimation(castingButton)
+        
         let barButtonItem = UIBarButtonItem(customView: castingButton)
         self.navigationItem.rightBarButtonItem = barButtonItem
+        
+        castingButton.heightAnchor.constraint(equalToConstant: 22).isActive = true
+        castingButton.widthAnchor.constraint(equalToConstant: 22).isActive = true
         
         self.castingButton = castingButton
         self.barButtonItem = barButtonItem
@@ -71,7 +77,7 @@ class CastingViewController: BasicVideoViewController {
     func stopConnectingAnimation(connected: Bool) {
         castingButton?.imageView?.stopAnimating()
         let castingImage = connected ? "cast_on" : "cast_off"
-        castingButton?.imageView?.image = UIImage(named: castingImage)?.withRenderingMode(.alwaysTemplate)
+        castingButton?.setImage(UIImage(named: castingImage)?.withRenderingMode(.alwaysTemplate), for: .normal)
         castingButton?.tintColor = UIColor.blue
     }
     
@@ -88,17 +94,19 @@ class CastingViewController: BasicVideoViewController {
             
             let disconnetAction = UIAlertAction(title: "Disconnect", style: .destructive) { [weak self] (action) in
                 guard let self = self else { return }
-                if self.casting {
-                    alertController.addAction(UIAlertAction(title: "Stop casting", style: .default, handler: { [weak self] (action) in
-                        guard let self = self else { return }
-                        self.castController?.stopCasting()
-                    }))
-                } else {
-                    alertController.addAction(UIAlertAction(title: "Cast", style: .default, handler: { [weak self] (action) in
-                        guard let self = self else { return }
-                        self.castController?.cast()
-                    }))
-                }
+                self.castController?.disconnect()
+            }
+            
+            if self.casting {
+                alertController.addAction(UIAlertAction(title: "Stop casting", style: .default, handler: { [weak self] (action) in
+                    guard let self = self else { return }
+                    self.castController?.stopCasting()
+                }))
+            } else {
+                alertController.addAction(UIAlertAction(title: "Cast", style: .default, handler: { [weak self] (action) in
+                    guard let self = self else { return }
+                    self.castController?.cast()
+                }))
             }
             alertController.addAction(disconnetAction)
         } else {
