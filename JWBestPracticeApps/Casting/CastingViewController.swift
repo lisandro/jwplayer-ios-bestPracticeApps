@@ -17,7 +17,11 @@ class CastingViewController: BasicVideoViewController {
     var castingButton: UIButton? = nil
     var barButtonItem: UIBarButtonItem? = nil
     
-    var casting = false
+    var casting = false {
+        didSet {
+            castingButton?.tintColor = casting ? UIColor.green : UIColor.blue
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,13 +33,13 @@ class CastingViewController: BasicVideoViewController {
     }
     
     func setupCastController() {
-        if let player = self.player {
-            let castController = JWCastController(player: player)
-            castController.chromeCastReceiverAppID = kGCKDefaultMediaReceiverApplicationID
-            castController.delegate = self
-            castController.scanForDevices()
-            self.castController = castController
-        }
+        guard let player = self.player else { return }
+        
+        let castController = JWCastController(player: player)
+        castController.chromeCastReceiverAppID = kGCKDefaultMediaReceiverApplicationID
+        castController.delegate = self
+        castController.scanForDevices()
+        self.castController = castController
     }
     
     func setupCastingButton() {
@@ -83,7 +87,6 @@ class CastingViewController: BasicVideoViewController {
     
     func setCastingStatus(_ casting: Bool) {
         self.casting = casting
-        castingButton?.tintColor = casting ? UIColor.green : UIColor.blue
     }
     
     @objc func castButtonTapped(sender: UIButton) {
@@ -112,7 +115,7 @@ class CastingViewController: BasicVideoViewController {
         } else {
             alertController.title = "Connect to"
             self.castController?.availableDevices.forEach({ (castingDevice) in
-                let deviceSelection = UIAlertAction.init(title: castingDevice.name, style: .default, handler: { [weak self] (action) in
+                let deviceSelection = UIAlertAction(title: castingDevice.name, style: .default, handler: { [weak self] (action) in
                     guard let self = self else { return }
                     self.castController?.connect(to: castingDevice)
                     self.startConnectingAnimation()
@@ -165,7 +168,7 @@ extension CastingViewController: JWCastingDelegate {
     }
     
     func onCasting() {
-        setCastingStatus(true)
+        self.setCastingStatus(true)
     }
     
     func onCastingEnded(_ error: Error?) {
