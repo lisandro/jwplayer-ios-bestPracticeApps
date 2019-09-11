@@ -16,22 +16,25 @@ class FeedTableViewController: UITableViewController {
         super.viewDidLoad()
         
         // Register the custom cell view
-        self.tableView.register(UINib.init(nibName: FeedItemCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: FeedItemCellIdentifier)
+        self.tableView.register(UINib(nibName: FeedItemCellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: FeedItemCellIdentifier)
         
         fetchFeed()
     }
     
     fileprivate func fetchFeed() {
         guard let feedFilePath = Bundle.main.path(forResource: "Feed", ofType: "plist"),
-            let feedInfo = NSArray.init(contentsOfFile: feedFilePath) as? [Dictionary<String, String>] else {
+            let feedInfo = NSArray(contentsOfFile: feedFilePath) as? [Dictionary<String, String>] else {
             return
         }
         
         // Populate the feed array with video players
         for itemInfo in feedInfo {
-            if let config = JWConfig.init(contentUrl: itemInfo["url"]),
-                let player = JWPlayerController.init(config: config) {
-                config.title = itemInfo["title"]
+            guard let url = itemInfo["url"] else {
+                continue
+            }
+            
+            if let player = JWPlayerController(config: JWConfig(contentUrl: url)) {
+                player.config.title = itemInfo["title"]
                 feed.append(player)
             }
         }
@@ -80,7 +83,7 @@ class FeedTableViewController: UITableViewController {
         // Iterate non-visible players to pause the video and remove the previous view from cell
         nonVisiblePlayers.forEach { (_, player: JWPlayerController) in
             player.pause()
-            player.view.removeFromSuperview()
+            player.view?.removeFromSuperview()
         }
     }
     
