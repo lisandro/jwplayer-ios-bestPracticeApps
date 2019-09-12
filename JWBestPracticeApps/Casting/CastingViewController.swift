@@ -57,7 +57,7 @@ class CastingViewController: BasicVideoViewController {
         self.castingButton = castingButton
         self.barButtonItem = barButtonItem
         
-        setCastingStatus(false)
+        self.casting = false
     }
     
     func prepareCastingButtonWithAnimation(_ button: UIButton) {
@@ -84,11 +84,7 @@ class CastingViewController: BasicVideoViewController {
         castingButton?.setImage(UIImage(named: castingImage)?.withRenderingMode(.alwaysTemplate), for: .normal)
         castingButton?.tintColor = UIColor.blue
     }
-    
-    func setCastingStatus(_ casting: Bool) {
-        self.casting = casting
-    }
-    
+
     @objc func castButtonTapped(sender: UIButton) {
         let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
         if let device = castController?.connectedDevice {
@@ -168,17 +164,17 @@ extension CastingViewController: JWCastingDelegate {
     }
     
     func onCasting() {
-        self.setCastingStatus(true)
+        self.casting = true
     }
     
     func onCastingEnded(_ error: Error?) {
         if let error = error { print("Casting error: ", error) }
-        self.setCastingStatus(false)
+        self.casting = false
     }
     
     func onCastingFailed(_ error: Error) {
         print("Casting error: ", error)
-        self.setCastingStatus(false)
+        self.casting = false
     }
     
     
