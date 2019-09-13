@@ -26,7 +26,7 @@ class CastingViewController: BasicVideoViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.navigationController?.navigationBar.barTintColor = UIColor.gray
+        navigationController?.navigationBar.barTintColor = UIColor.gray
         
         // Setup JWCastController object
         setupCastController()
@@ -133,11 +133,11 @@ extension CastingViewController: JWCastingDelegate {
     
     func onCastingDevicesAvailable(_ devices: [JWCastingDevice]) {
         self.avilableDevices = devices
-        if !devices.isEmpty && barButtonItem == nil {
+        if devices.isEmpty {
+            self.navigationItem.rightBarButtonItem = nil
+        } else if barButtonItem == nil {
             self.setupCastingButton()
             self.stopConnectingAnimation(connected: false)
-        } else {
-            self.navigationItem.rightBarButtonItem = nil
         }
     }
     
