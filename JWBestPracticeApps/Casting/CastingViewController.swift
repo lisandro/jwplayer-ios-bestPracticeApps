@@ -46,7 +46,15 @@ class CastingViewController: BasicVideoViewController {
         let buttonFrame = CGRect(x: 0, y: 0, width: 22, height: 22)
         let castingButton = UIButton(frame: buttonFrame)
         castingButton.addTarget(self, action: #selector(castButtonTapped(sender:)), for: .touchUpInside)
-        prepareCastingButtonWithAnimation(castingButton)
+        
+        // Load images for button's animation
+        let connectingImages = [UIImage(named: "cast_connecting0")?.withRenderingMode(.alwaysTemplate),
+                                UIImage(named: "cast_connecting1")?.withRenderingMode(.alwaysTemplate),
+                                UIImage(named: "cast_connecting2")?.withRenderingMode(.alwaysTemplate),
+                                UIImage(named: "cast_connecting1")?.withRenderingMode(.alwaysTemplate)]
+        // Compact map to avoid nil UIImage objects
+        castingButton.imageView?.animationImages = connectingImages.compactMap {$0}
+        castingButton.imageView?.animationDuration = 2
         
         let barButtonItem = UIBarButtonItem(customView: castingButton)
         self.navigationItem.rightBarButtonItem = barButtonItem
@@ -58,16 +66,6 @@ class CastingViewController: BasicVideoViewController {
         self.barButtonItem = barButtonItem
         
         self.casting = false
-    }
-    
-    func prepareCastingButtonWithAnimation(_ button: UIButton) {
-        let connectingImages = [UIImage(named: "cast_connecting0")?.withRenderingMode(.alwaysTemplate),
-                                UIImage(named: "cast_connecting1")?.withRenderingMode(.alwaysTemplate),
-                                UIImage(named: "cast_connecting2")?.withRenderingMode(.alwaysTemplate),
-                                UIImage(named: "cast_connecting1")?.withRenderingMode(.alwaysTemplate)]
-        // Compact map to avoid nil UIImage objects
-        button.imageView?.animationImages = connectingImages.compactMap {$0}
-        button.imageView?.animationDuration = 2
     }
     
     
