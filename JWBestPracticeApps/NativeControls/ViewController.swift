@@ -14,7 +14,7 @@ let DefaultTimeString = "00:00"
 class ViewController: JWBasicVideoViewController {
     
     @IBOutlet weak var controlsView: UIView!
-    @IBOutlet weak var replayButton: UIButton!
+    @IBOutlet weak var rewindButton: UIButton!
     @IBOutlet weak var playbackButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
     @IBOutlet weak var audioButton: UIButton!
@@ -23,9 +23,6 @@ class ViewController: JWBasicVideoViewController {
     @IBOutlet weak var timeSlider: UISlider!
     
     let indicatorView = UIActivityIndicatorView(style: .whiteLarge)
-    
-    // Array with tuples (Title, URL)
-    var feed: [(String, String)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,7 +47,7 @@ class ViewController: JWBasicVideoViewController {
         // Set button images
         playbackButton.setImage(UIImage.init(named: "icons8-play-100"), for: .normal)
         playbackButton.setImage(UIImage.init(named: "icons8-pause-100"), for: .selected)
-        replayButton.setImage(UIImage.init(named: "icons8-replay-10-100"), for: .normal)
+        rewindButton.setImage(UIImage.init(named: "icons8-rewind-10-100"), for: .normal)
         forwardButton.setImage(UIImage.init(named: "icons8-forward-10-100"), for: .normal)
         audioButton.setImage(UIImage.init(named: "icons8-audio-100"), for: .normal)
         audioButton.setImage(UIImage.init(named: "icons8-mute-100"), for: .selected)
@@ -76,7 +73,7 @@ class ViewController: JWBasicVideoViewController {
     }
     
     fileprivate func toggleControlsView(_ enabled: Bool) {
-        replayButton.isEnabled = enabled
+        rewindButton.isEnabled = enabled
         playbackButton.isEnabled = enabled
         forwardButton.isEnabled = enabled
         fullscreenButton.isEnabled = enabled
@@ -108,7 +105,7 @@ class ViewController: JWBasicVideoViewController {
         }
     }
     
-    @IBAction func replayButtonTapped(_ sender: Any) {
+    @IBAction func rewindButtonTapped(_ sender: Any) {
         guard let player = self.player else { return }
         
         // max function used to avoid negative values
@@ -205,7 +202,7 @@ class ViewController: JWBasicVideoViewController {
         if player.duration > 0 {
             // Enable controls used for normal streaming
             timeSlider.isEnabled = true
-            replayButton.isHidden = false
+            rewindButton.isHidden = false
             forwardButton.isHidden = false
             
             // Calculate progress(float) from position(seconds)
@@ -214,7 +211,7 @@ class ViewController: JWBasicVideoViewController {
             timeLabel.text = timeFormatted(Int(event.position))
         } else {
             // Hide controls not used for live streaming
-            replayButton.isHidden = true
+            rewindButton.isHidden = true
             forwardButton.isHidden = true
             
             if player.duration == 0 {

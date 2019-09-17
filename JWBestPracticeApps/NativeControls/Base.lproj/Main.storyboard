@@ -76,9 +76,9 @@
                                                     <constraint firstAttribute="height" constant="30" id="oU1-pb-hUk"/>
                                                 </constraints>
                                                 <color key="tintColor" red="0.91764705882352937" green="0.20392156862745098" blue="0.29803921568627451" alpha="1" colorSpace="calibratedRGB"/>
-                                                <state key="normal" image="icons8-replay-10-100"/>
+                                                <state key="normal" image="icons8-rewind-10-100"/>
                                                 <connections>
-                                                    <action selector="replayButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Rhz-iR-pZE"/>
+                                                    <action selector="rewindButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jAv-UP-LIL"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weL-EE-9ma">
@@ -138,7 +138,7 @@
                         <outlet property="forwardButton" destination="y56-Ag-YV5" id="FFR-ld-Njw"/>
                         <outlet property="fullscreenButton" destination="wS1-Yp-XzG" id="K8b-xA-HDl"/>
                         <outlet property="playbackButton" destination="weL-EE-9ma" id="LUh-20-kbh"/>
-                        <outlet property="replayButton" destination="FuR-h3-3Ns" id="fm2-UJ-CIK"/>
+                        <outlet property="rewindButton" destination="FuR-h3-3Ns" id="4uE-e6-drH"/>
                         <outlet property="timeLabel" destination="HB9-tV-Pbm" id="7Uq-VV-5MW"/>
                         <outlet property="timeSlider" destination="AfX-YV-Lyc" id="xeT-XE-GLb"/>
                     </connections>
@@ -153,6 +153,6 @@
         <image name="icons8-forward-10-100" width="100" height="100"/>
         <image name="icons8-full-screen-100" width="100" height="100"/>
         <image name="icons8-play-100" width="100" height="100"/>
-        <image name="icons8-replay-10-100" width="100" height="100"/>
+        <image name="icons8-rewind-10-100" width="100" height="100"/>
     </resources>
 </document>
