@@ -333,6 +333,7 @@
 		793AA646231ED916006CA8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		793AA648231ED917006CA8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		793AA64B231ED917006CA8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		793FCB6F23313F5E00C811D3 /* Casting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Casting.entitlements; sourceTree = "<group>"; };
 		7988D94E2304717E0043CE80 /* FeedTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7988D9502304717E0043CE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7988D9552304717E0043CE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -678,6 +679,7 @@
 		793AA640231ED916006CA8FF /* Casting */ = {
 			isa = PBXGroup;
 			children = (
+				793FCB6F23313F5E00C811D3 /* Casting.entitlements */,
 				793AA641231ED916006CA8FF /* AppDelegate.swift */,
 				793AA643231ED916006CA8FF /* CastingViewController.swift */,
 				793AA645231ED916006CA8FF /* Main.storyboard */,
@@ -1570,6 +1572,14 @@
 						CreatedOnToolsVersion = 10.3;
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.AccessWiFi = {
+								enabled = 1;
+							};
+							com.apple.WAC = {
+								enabled = 0;
+							};
+						};
 					};
 					7988D94D2304717E0043CE80 = {
 						CreatedOnToolsVersion = 10.3;
@@ -3200,9 +3210,15 @@
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				CODE_SIGN_ENTITLEMENTS = Casting/Casting.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Casting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Casting;
 				PRODUCT_NAME = Casting;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -3211,10 +3227,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COPY_PHASE_STRIP = YES;
+				CODE_SIGN_ENTITLEMENTS = Casting/Casting.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WX87M56X5N;
 				INFOPLIST_FILE = JWBestPracticeApps/Info.plist;
-				PRODUCT_BUNDLE_IDENTIFIER = JWPlayer.Casting;
+				PRODUCT_BUNDLE_IDENTIFIER = com.longtailvideo.jwplayer.Casting;
 				PRODUCT_NAME = Casting;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
