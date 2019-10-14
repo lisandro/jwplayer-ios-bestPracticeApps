@@ -7,7 +7,7 @@
 //
 
 class JWFairPlayDrmViewController: JWBasicVideoViewController, JWDrmDataSource, URLSessionDelegate {
-    
+
     let encryptedFile = "http://fps.ezdrm.com/demo/video/ezdrm.m3u8"
     
     override func viewDidLoad() {
@@ -51,7 +51,7 @@ class JWFairPlayDrmViewController: JWBasicVideoViewController, JWDrmDataSource, 
         }
     }
     
-    func fetchContentKey(withRequest requestBytes: Data, for encryption: JWEncryption, withCompletion completion: @escaping (Data, Date, String) -> Void) {
+    func fetchContentKey(withRequest requestBytes: Data, for encryption: JWEncryption, withCompletion completion: @escaping (Data, Date?, String?) -> Void) {
         if encryption == .fairPlay {
             let currentTime = NSTimeIntervalSince1970 * 1000
             let keyServerAddress = String.init(format: "http://fps.ezdrm.com/api/licenses/09cc0377-6dd4-40cb-b09d-b582236e70fe?p1=\(currentTime)")
