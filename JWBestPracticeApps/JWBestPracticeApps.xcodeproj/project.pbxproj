@@ -48,6 +48,12 @@
 		79CAAD372321D0FD002FFA23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD362321D0FD002FFA23 /* Assets.xcassets */; };
 		79CAAD3A2321D0FD002FFA23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79CAAD382321D0FD002FFA23 /* LaunchScreen.storyboard */; };
 		79CAAD3F2321D132002FFA23 /* JWBasicVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A729B5D1C99ABD2000F03A9 /* JWBasicVideoViewController.m */; };
+		79E3CC20234E6FAB00EA07CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E3CC1F234E6FAB00EA07CA /* AppDelegate.swift */; };
+		79E3CC22234E6FAB00EA07CA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E3CC21234E6FAB00EA07CA /* ViewController.swift */; };
+		79E3CC25234E6FAB00EA07CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E3CC23234E6FAB00EA07CA /* Main.storyboard */; };
+		79E3CC27234E6FAD00EA07CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79E3CC26234E6FAD00EA07CA /* Assets.xcassets */; };
+		79E3CC2A234E6FAD00EA07CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79E3CC28234E6FAD00EA07CA /* LaunchScreen.storyboard */; };
+		79E3CC2F234E751200EA07CA /* BasicVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AADBB9231DB01100E8B48D /* BasicVideoViewController.swift */; };
 		8A3734741D1DC2A80008FE59 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734731D1DC2A80008FE59 /* main.m */; };
 		8A3734771D1DC2A80008FE59 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A3734761D1DC2A80008FE59 /* AppDelegate.m */; };
 		8A37347D1D1DC2A80008FE59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A37347B1D1DC2A80008FE59 /* Main.storyboard */; };
@@ -366,6 +372,13 @@
 		79CAAD362321D0FD002FFA23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79CAAD392321D0FD002FFA23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79CAAD3B2321D0FD002FFA23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79E3CC1D234E6FAB00EA07CA /* AirPlay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AirPlay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		79E3CC1F234E6FAB00EA07CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		79E3CC21234E6FAB00EA07CA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		79E3CC24234E6FAB00EA07CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79E3CC26234E6FAD00EA07CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		79E3CC29234E6FAD00EA07CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		79E3CC30234F793800EA07CA /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7D48D6A378553044B19BF12D /* libPods-JWBestPracticeApps.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-JWBestPracticeApps.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EC65085B78B54CDD7DD2CDA /* Pods-JWRemoteController Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWRemoteController Extension.debug.xcconfig"; path = "Target Support Files/Pods-JWRemoteController Extension/Pods-JWRemoteController Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		804A275AF4A07CEEA0DBF020 /* libPods-Voicer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Voicer.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -752,6 +765,19 @@
 			path = NativeControls;
 			sourceTree = "<group>";
 		};
+		79E3CC1E234E6FAB00EA07CA /* AirPlay */ = {
+			isa = PBXGroup;
+			children = (
+				79E3CC1F234E6FAB00EA07CA /* AppDelegate.swift */,
+				79E3CC21234E6FAB00EA07CA /* ViewController.swift */,
+				79E3CC23234E6FAB00EA07CA /* Main.storyboard */,
+				79E3CC26234E6FAD00EA07CA /* Assets.xcassets */,
+				79E3CC28234E6FAD00EA07CA /* LaunchScreen.storyboard */,
+				79E3CC30234F793800EA07CA /* README.md */,
+			);
+			path = AirPlay;
+			sourceTree = "<group>";
+		};
 		8A3734711D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -841,6 +867,7 @@
 				79AADBB6231DB01100E8B48D /* BasicVideoViewController */,
 				79CAAD2E2321D0FC002FFA23 /* NativeControls */,
 				793AA640231ED916006CA8FF /* Casting */,
+				79E3CC1E234E6FAB00EA07CA /* AirPlay */,
 				8A729A781C98ACA8000F03A9 /* Products */,
 				52AC3655A45B0438BEB4426C /* Frameworks */,
 				D64388B1D46A92A630820C66 /* Pods */,
@@ -868,6 +895,7 @@
 				79AADBB5231DB01100E8B48D /* BasicVideoViewController.app */,
 				79CAAD2D2321D0FC002FFA23 /* NativeControls.app */,
 				793AA63F231ED916006CA8FF /* Casting.app */,
+				79E3CC1D234E6FAB00EA07CA /* AirPlay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1306,6 +1334,23 @@
 			productReference = 79CAAD2D2321D0FC002FFA23 /* NativeControls.app */;
 			productType = "com.apple.product-type.application";
 		};
+		79E3CC1C234E6FAB00EA07CA /* AirPlay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79E3CC2E234E6FAD00EA07CA /* Build configuration list for PBXNativeTarget "AirPlay" */;
+			buildPhases = (
+				79E3CC19234E6FAB00EA07CA /* Sources */,
+				79E3CC1A234E6FAB00EA07CA /* Frameworks */,
+				79E3CC1B234E6FAB00EA07CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AirPlay;
+			productName = AirPlay;
+			productReference = 79E3CC1D234E6FAB00EA07CA /* AirPlay.app */;
+			productType = "com.apple.product-type.application";
+		};
 		8A37346F1D1DC2A80008FE59 /* JWRemoteCastPlayer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8A3734861D1DC2A80008FE59 /* Build configuration list for PBXNativeTarget "JWRemoteCastPlayer" */;
@@ -1632,6 +1677,11 @@
 						DevelopmentTeam = WX87M56X5N;
 						ProvisioningStyle = Automatic;
 					};
+					79E3CC1C234E6FAB00EA07CA = {
+						CreatedOnToolsVersion = 10.3;
+						DevelopmentTeam = WX87M56X5N;
+						ProvisioningStyle = Automatic;
+					};
 					8A37346F1D1DC2A80008FE59 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = WX87M56X5N;
@@ -1750,6 +1800,7 @@
 				79AADBB4231DB01100E8B48D /* BasicVideoViewController */,
 				79CAAD2C2321D0FC002FFA23 /* NativeControls */,
 				793AA63E231ED916006CA8FF /* Casting */,
+				79E3CC1C234E6FAB00EA07CA /* AirPlay */,
 			);
 		};
 /* End PBXProject section */
@@ -2993,6 +3044,22 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		79E3CC23234E6FAB00EA07CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79E3CC24234E6FAB00EA07CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		79E3CC28234E6FAD00EA07CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				79E3CC29234E6FAD00EA07CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		8A37347B1D1DC2A80008FE59 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -4100,6 +4167,15 @@
 			buildConfigurations = (
 				79CAAD3C2321D0FD002FFA23 /* Debug */,
 				79CAAD3D2321D0FD002FFA23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79E3CC2E234E6FAD00EA07CA /* Build configuration list for PBXNativeTarget "AirPlay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				79E3CC2C234E6FAD00EA07CA /* Debug */,
+				79E3CC2D234E6FAD00EA07CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

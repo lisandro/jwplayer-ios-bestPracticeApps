@@ -121,5 +121,11 @@ target 'NativeControls' do
   
 end
 
+target 'AirPlay' do
+  
+  common_JW
+  
+end
+
 workspace 'JWBestPracticeApps'
 

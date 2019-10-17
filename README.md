@@ -26,6 +26,8 @@ Each target adds a level of complexity to the base target, JWBestPracticeApps, w
 
 - The target named NativeControls provides the code necessary to use your own custom controls and control the player playback even on full screen mode.
 
+- The target named AirPlay illustrates how to add AirPlay support.
+
 ### Initial Setup for JWBestPracticeApps:
 
 #### Via CocoaPods
