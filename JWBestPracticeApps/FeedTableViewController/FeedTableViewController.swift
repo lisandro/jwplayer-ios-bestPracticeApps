@@ -69,7 +69,7 @@ class FeedTableViewController: UITableViewController {
         return cell
     }
 
-//  MARK: UISCrollViewDelegate implementation
+//  MARK: UIScrollViewDelegate implementation
     
     override func scrollViewDidScroll(_ scrollView: UIScrollView) {
         guard let visibleIndexPaths = tableView.indexPathsForVisibleRows else { return }
