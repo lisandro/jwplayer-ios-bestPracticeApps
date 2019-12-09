@@ -2,10 +2,9 @@
 
 This repository contains samples relating to the JW Player SDK for iOS.
 
-The following projects can be found within this repository:
+The following project can be found within this repository:
 
 - [JWBestPracticeApps](#jwbestpracticeapps)
-- [JWPlayer-VR-Developer-Demo](#jwplayer-vr-developer-demo)
 
 ## JWBestPracticeApps
 
@@ -46,13 +45,7 @@ For more instructions please visit the official JW Player Developer guide at htt
 
 For targets that require casting to Google ChromeCast, you must import a Google ChromeCast Framework, as well as all of its depending frameworks. Our SDK is compatible with the 2.10.0.4070 version of the Google Cast SDK. For the list of necessary frameworks please visit https://developers.google.com/cast/docs/ios_sender#setup
 
-**Note**: The demo apps in this repository are intended to be used with **version 2.4** of the JW Player iOS SDK.
-
-## JWPlayer-VR-Developer-Demo
-
-The JWPlayer-VR-Developer-Demo project showcases how the JW Player VR SDK can be used to allow 360 video playback within your apps.
-
-For setup instructions see the JWPlayer-VR-Developer-Demo [README](./JWPlayer-VR-Developer-Demo/README.md).
+**Note**: The demo apps in this repository are intended to be used with **version 3.8.x** of the JW Player iOS SDK.
 
 ## **Feedback**:
 Was this repository helpful? How can we improve it? Please send your feedback to support+sdk@jwplayer.com.
