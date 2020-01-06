@@ -365,6 +365,7 @@
 		793AA648231ED917006CA8FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		793AA64B231ED917006CA8FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		793FCB6F23313F5E00C811D3 /* Casting.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Casting.entitlements; sourceTree = "<group>"; };
+		79579E6023C00BE90064A91E /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7988D94E2304717E0043CE80 /* FeedTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7988D9502304717E0043CE80 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7988D9552304717E0043CE80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -790,6 +791,7 @@
 				7988D961230472800043CE80 /* FeedItemCell.xib */,
 				7988D9572304717F0043CE80 /* Assets.xcassets */,
 				7988D967230487F20043CE80 /* Feed.plist */,
+				79579E6023C00BE90064A91E /* README.md */,
 			);
 			path = FeedTableViewController;
 			sourceTree = "<group>";
