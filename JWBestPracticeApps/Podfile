@@ -4,11 +4,11 @@
 # use_frameworks!
 
 def common_JW
-    pod 'JWPlayer-SDK', '~> 3.7.0'
+    pod 'JWPlayer-SDK', '~> 3.11.0'
 end
 
 def common_Cast
-    pod 'google-cast-sdk', '4.3.5'
+    pod 'google-cast-sdk', '4.4.5'
 end
 
 def common_Google_IMA
