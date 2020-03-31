@@ -33,6 +33,8 @@ Each target adds a level of complexity to the base target, JWBestPracticeApps, w
 
 - The target named FeedCollectionViewController illustrates how to implement a collection view to display a grid of videos.
 
+- The target named GoogleDAI presents the sample code necessary to play Ads with Google IMA's DAI.
+
 ### Initial Setup for JWBestPracticeApps:
 
 #### Via CocoaPods
