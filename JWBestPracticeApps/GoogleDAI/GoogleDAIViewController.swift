@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GoogleDAIViewController: UIViewController {
 
     var player: JWPlayerController!
 
