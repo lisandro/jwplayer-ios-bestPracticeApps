@@ -27,6 +27,12 @@ target 'BasicVideoViewController' do
   
 end
 
+target 'AutoplayVideoFeed' do
+  
+  common_JW
+  
+end 
+
 target 'GoogleDAI' do
   
   common_JW
