@@ -34,8 +34,16 @@ class AutoplayVideoFeedViewController: FeedTableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: FeedItemCellIdentifier, for: indexPath) as! FeedItemCell
         
         // Add player view to the container view of the cell
-        cell.thumbnailImageView.image = UIImage(named: thumbnailsIdentifiers[indexPath.row])
         cell.player = feed[indexPath.row]
+        
+        // Search for the title on the thumbnails Array and add the corresponding image
+        if let playerTitle = cell.player?.config.title {
+            let thumbnail = thumbnailsIdentifiers.filter { (key, value) in
+                key.contains(playerTitle)
+            }
+            guard let thumbnailName = thumbnail[playerTitle] else { return cell}
+            cell.thumbnailImageView.image = UIImage(named: thumbnailName)
+        }
         
         return cell
     }

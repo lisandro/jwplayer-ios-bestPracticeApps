@@ -11,7 +11,7 @@ import UIKit
 class FeedTableViewController: UITableViewController {
     
     var feed = [JWPlayerController]()
-    var thumbnailsIdentifiers = [String]()
+    var thumbnailsIdentifiers = [String:String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,7 +39,7 @@ class FeedTableViewController: UITableViewController {
             }
             //Populate the thumbnailsIdentifiers array with local thumbnail name
             if let localThumbnail = itemInfo["localThumbnail"] {
-                thumbnailsIdentifiers.append(localThumbnail)
+                thumbnailsIdentifiers[title] = localThumbnail
             }
         }
     }
