@@ -11,6 +11,7 @@ import UIKit
 class FeedTableViewController: UITableViewController {
     
     var feed = [JWPlayerController]()
+    var thumbnailsIdentifiers = [String]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,19 +34,24 @@ class FeedTableViewController: UITableViewController {
                 continue
             }
 
-            if let player = buildPlayer(title: title, url: url) {
+            if let player = buildPlayer(title: title, url: url, thumbnail: itemInfo["thumbnail"]) {
                 feed.append(player)
+            }
+            //Populate the thumbnailsIdentifiers array with local thumbnail name
+            if let localThumbnail = itemInfo["localThumbnail"] {
+                thumbnailsIdentifiers.append(localThumbnail)
             }
         }
     }
 
-    open func buildPlayer(title: String, url: String) -> JWPlayerController? {
+    open func buildPlayer(title: String, url: String, thumbnail: String?) -> JWPlayerController? {
         if let player = JWPlayerController(config: JWConfig(contentUrl: url)) {
             player.config.title = title
             return player
         }
         return nil
     }
+    
     
 // MARK: UITableViewDataSource implementation
     
