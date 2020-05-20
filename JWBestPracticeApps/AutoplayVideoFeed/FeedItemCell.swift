@@ -33,7 +33,7 @@ class FeedItemCell: UITableViewCell, JWPlayerDelegate {
             playerView.constraintToSuperview()
             
             // To avoid lag in video load show the local thumbnail before the player starts playing
-            if player.position <= 0.0 {
+            if player.state == .idle {
                 containerView.bringSubviewToFront(thumbnailImageView)
                 thumbnailImageView.isHidden = false
             } else {
