@@ -10,16 +10,32 @@ import UIKit
 
 class AutoplayVideoFeedViewController: FeedTableViewController {
     
-    override func buildPlayer(title: String, url: String, thumbnail: String?) -> JWPlayerController? {
+    override func fetchFeed() {
+        guard let feedFilePath = Bundle.main.path(forResource: "Feed", ofType: "plist"),
+            let feedInfo = NSArray(contentsOfFile: feedFilePath) as? [Dictionary<String, String>] else {
+            return
+        }
+        
+        // Populate the feed array with video players
+        for itemInfo in feedInfo {
+            guard let url = itemInfo["url"], let title = itemInfo["title"], let thumbnail = itemInfo["localThumbnail"] else {
+                continue
+            }
+
+            if let player = buildPlayer(title: title, url: url, thumbnail: thumbnail) {
+                feed.append(player)
+            }
+        }
+    }
+    
+    
+    func buildPlayer(title: String, url: String, thumbnail: String) -> JWPlayerController? {
         // We wish to show a video on a UITableCell, and have it play silently when
         // on the screen. The controls are disabled to prevent the user from
         // changing this state of the video in this example, since we begin them automatically.
         // We also add a thumbnail to load while the video autoplays.
-        let config = JWConfig(contentUrl: url)
-        config.controls = false
-
-        if let player = JWPlayerController(config: config) {
-            player.config.title = title
+        if let player = buildPlayer(title: title, url: url) {
+            player.config.controls = false
             player.config.image = thumbnail
             // The volume is muted because in this example we play the videos automatically,
             // and do not want multiple videos to play their audio at the same time,
@@ -37,14 +53,9 @@ class AutoplayVideoFeedViewController: FeedTableViewController {
         cell.player = feed[indexPath.row]
         
         // Search for the title on the thumbnails Array and add the corresponding image
-        if let playerTitle = cell.player?.config.title {
-            let thumbnail = thumbnailsIdentifiers.filter { (key, value) in
-                key.contains(playerTitle)
-            }
-            guard let thumbnailName = thumbnail[playerTitle] else { return cell}
-            cell.thumbnailImageView.image = UIImage(named: thumbnailName)
-        }
-        
+        guard let thumbnailName = cell.player?.config.image else { return cell }
+        cell.thumbnailImageView.image = UIImage(named: thumbnailName)
+                
         return cell
     }
 }
