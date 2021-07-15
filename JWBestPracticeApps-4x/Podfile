@@ -1,0 +1,27 @@
+platform :ios, '10.0'
+
+def common_Cast
+    pod 'google-cast-sdk'
+end
+
+def common_Google_IMA
+    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.12.1'
+end
+
+def common_JWPlayer
+    pod 'JWPlayer-SDK', '~> 4.0.0'
+end
+
+target 'BasicPlayer' do
+  use_frameworks!
+  common_Cast
+  common_Google_IMA
+  common_JWPlayer
+end
+
+target 'VastBestPracticeApp' do
+  use_frameworks!
+  common_Cast
+  common_Google_IMA
+  common_JWPlayer
+end
