@@ -9,7 +9,7 @@ def common_Google_IMA
 end
 
 def common_JWPlayer
-    pod 'JWPlayer-SDK', '~> 4.0.0'
+    pod 'JWPlayerKit', '~> 4.0.0'
 end
 
 target 'BasicPlayer' do
