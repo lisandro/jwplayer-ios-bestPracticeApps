@@ -46,8 +46,6 @@ class BasicPlayerViewController: JWPlayerViewController {
             player.configurePlayer(with: config)
 
         // Handle errors if building throws errors.
-        } catch JWPlayerConfigurationBuilderError.missingPlaylist {
-            print("Could not find playlist items")
         } catch {
             print("Error building configuration:", error.localizedDescription)
         }

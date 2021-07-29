@@ -43,8 +43,6 @@ class VastViewController: JWPlayerViewController {
             player.configurePlayer(with: config)
 
         // Handle errors if building throws errors.
-        } catch JWPlayerConfigurationBuilderError.missingPlaylist {
-            print("Could not find playlist items")
         } catch {
             print("Error building configuration:", error.localizedDescription)
         }
@@ -65,10 +63,6 @@ class VastViewController: JWPlayerViewController {
 
         do {
             adConfig = try adConfigBuilder.build()
-        } catch  JWAdsAdvertisingConfigBuilderError.missingAdSchedule {
-            print("Either tag or schedule was not set, having one of these is required")
-        } catch JWAdsAdvertisingConfigBuilderError.ambiguousAdSchedule {
-            print("The schedule set is ambiguous")
         } catch {
             print(error.localizedDescription)
         }
