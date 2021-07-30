@@ -8,7 +8,7 @@ This BestPractice project is composed of several targets which can be run as sep
 Showcasing functionality for the JWPlayerKit 4.0.0 SDK in each project.
 
 |Project | Description|
-|-----------------|:-------------|:---------------|
+| ------------- | ------------- |
 |BasicPlayer | Simple implementation of JWPlayerKit SDK with a single player item. |
 |VastBestPracticeApp | An implementation of VAST ads with JWPlayerKit SDK. |
 
