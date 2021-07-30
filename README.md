@@ -1,14 +1,16 @@
-# JW Player iOS 4.0.0 Best Practice Apps
+# JWPlayerKit 4.0.0 Best Practice Apps
 
-This repository contains samples relating to the JW Player SDK 4.0.0 for iOS.
-
+This repository contains samples relating to the JWPlayerKit SDK version 4.0.0 for iOS. 
 
 ## BestPracticeApps
 
 This BestPractice project is composed of several targets which can be run as separate iOS applications.
 Showcasing functionality for the JWPlayerKit 4.0.0 SDK in each project.
 
-* BasicPlayer, sets up a player with a single playlist item.
+|Project | Description|
+|-----------------|:-------------|:---------------|
+|BasicPlayer | Simple implementation of JWPlayerKit SDK with a single player item. |
+|VastBestPracticeApp | An implementation of VAST ads with JWPlayerKit SDK. |
 
 ## Setup
 
@@ -34,5 +36,7 @@ JWPlayerKitLicense.setLicenseKey(<#Your License Key#>)
 
 And run and build the project.
 
-**Note**: The demo apps in this repository are intended to be used with **version 4.0.0** of the JW Player iOS SDK.
+**Note**: The demo apps in this repository are intended to be used with **version 4.0.0** of the JWPlayerKit iOS SDK.
+
+For information on JWPlayer SDK **version 3.*** BestPracticeApps go to [this link](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main-v3/).
 
