@@ -4,6 +4,7 @@ use_frameworks!
 
 project 'JWBestPracticeApps-4x'
 project 'BasicPlayer/BasicPlayer'
+project 'DRMPlayer/DRMPlayer'
 
 def common_Cast
     pod 'google-cast-sdk'
@@ -35,6 +36,16 @@ target 'BasicPlayer-Swift' do
   project 'BasicPlayer/BasicPlayer'
   common_Cast
   common_Google_IMA
+  common_JWPlayer
+end
+
+target 'DRMPlayer-ObjC' do
+  project 'DRMPlayer/DRMPlayer'
+  common_JWPlayer
+end
+
+target 'DRMPlayer-Swift' do
+  project 'DRMPlayer/DRMPlayer'
   common_JWPlayer
 end
 
