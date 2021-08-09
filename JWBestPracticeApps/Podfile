@@ -2,10 +2,6 @@ platform :ios, '10.0'
 workspace 'JWBestPracticeApps-4x'
 use_frameworks!
 
-project 'JWBestPracticeApps-4x'
-project 'BasicPlayer/BasicPlayer'
-project 'DRMPlayer/DRMPlayer'
-
 def common_Cast
     pod 'google-cast-sdk'
 end
