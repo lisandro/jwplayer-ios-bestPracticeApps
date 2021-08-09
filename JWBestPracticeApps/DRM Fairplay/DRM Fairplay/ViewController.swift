@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  DRMPlayer-Swift
+//  DRM Fairplay
 //
 //  Created by David Almaguer on 06/08/21.
 //
@@ -61,21 +61,6 @@ class ViewController: JWPlayerViewController,
 
         // Lastly, use the created JWPlayerConfiguration to set up the player.
         player.configurePlayer(with: config)
-    }
-
-    override func jwplayerIsReady(_ player: JWPlayer) {
-        super.jwplayerIsReady(player)
-        print("\(#function)")
-    }
-
-    override func jwplayer(_ player: JWPlayer, failedWithSetupError code: UInt, message: String) {
-        super.jwplayer(player, failedWithSetupError: code, message: message)
-        print("\(#function):\n\(code): \(message)")
-    }
-
-    override func jwplayer(_ player: JWPlayer, encounteredWarning code: UInt, message: String) {
-        super.jwplayer(player, encounteredWarning: code, message: message)
-        print("\(#function):\n\(code): \(message)")
     }
 
     // MARK: JWDRMContentKeyDataSource

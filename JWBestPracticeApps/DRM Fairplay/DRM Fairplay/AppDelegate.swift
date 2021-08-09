@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DRMPlayer-Swift
+//  DRM Fairplay
 //
 //  Created by David Almaguer on 06/08/21.
 //

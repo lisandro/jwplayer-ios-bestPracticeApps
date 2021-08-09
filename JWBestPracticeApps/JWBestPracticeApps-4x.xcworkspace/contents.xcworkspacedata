@@ -11,7 +11,7 @@
       location = "group:BasicPlayer/BasicPlayer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DRMPlayer/DRMPlayer.xcodeproj">
+      location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

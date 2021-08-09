@@ -39,13 +39,8 @@ target 'BasicPlayer-Swift' do
   common_JWPlayer
 end
 
-target 'DRMPlayer-ObjC' do
-  project 'DRMPlayer/DRMPlayer'
-  common_JWPlayer
-end
-
-target 'DRMPlayer-Swift' do
-  project 'DRMPlayer/DRMPlayer'
+target 'DRM Fairplay' do
+  project 'DRM Fairplay/DRM Fairplay'
   common_JWPlayer
 end
 

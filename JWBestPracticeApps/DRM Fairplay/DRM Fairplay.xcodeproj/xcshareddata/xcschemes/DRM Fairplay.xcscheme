@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "79AF09F526BDBEAF002E638C"
-               BuildableName = "DRMPlayer-Swift.app"
-               BlueprintName = "DRMPlayer-Swift"
-               ReferencedContainer = "container:DRMPlayer.xcodeproj">
+               BuildableName = "DRM Fairplay.app"
+               BlueprintName = "DRM Fairplay"
+               ReferencedContainer = "container:DRM Fairplay.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -45,9 +45,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "79AF09F526BDBEAF002E638C"
-            BuildableName = "DRMPlayer-Swift.app"
-            BlueprintName = "DRMPlayer-Swift"
-            ReferencedContainer = "container:DRMPlayer.xcodeproj">
+            BuildableName = "DRM Fairplay.app"
+            BlueprintName = "DRM Fairplay"
+            ReferencedContainer = "container:DRM Fairplay.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -57,16 +57,6 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "79AF09F526BDBEAF002E638C"
-            BuildableName = "DRMPlayer-Swift.app"
-            BlueprintName = "DRMPlayer-Swift"
-            ReferencedContainer = "container:DRMPlayer.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
