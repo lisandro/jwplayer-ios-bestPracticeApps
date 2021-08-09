@@ -5,10 +5,10 @@
       location = "group:../README.md">
    </FileRef>
    <FileRef
-      location = "group:JWBestPracticeApps-4x.xcodeproj">
+      location = "group:BasicPlayer/BasicPlayer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:BasicPlayer/BasicPlayer.xcodeproj">
+      location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">

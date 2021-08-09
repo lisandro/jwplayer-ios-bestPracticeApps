@@ -18,13 +18,6 @@ def common_JWPlayer
     pod 'JWPlayerKit', '~> 4.0.0'
 end
 
-target 'VastBestPracticeApp' do
-    project 'JWBestPracticeApps-4x'
-    common_Cast
-    common_Google_IMA
-    common_JWPlayer
-end
-
 target 'BasicPlayer-ObjC' do
   project 'BasicPlayer/BasicPlayer'
   common_Cast
@@ -44,4 +37,8 @@ target 'DRM Fairplay' do
   common_JWPlayer
 end
 
-
+target 'JWPlayer Ads' do
+    project 'JWPlayer Ads/JWPlayer Ads'
+    common_JWPlayer
+    common_Cast
+end
