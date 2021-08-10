@@ -31,34 +31,28 @@ class ViewController: JWPlayerViewController {
 
         do {
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
-            let playerItembuilder = JWPlayerItemBuilder()
+            let playerItem = JWPlayerItemBuilder()
                 .file(videoUrl)
                 .posterImage(posterUrl)
-
-            // Build the player item. This method can throw so be sure to handle the error.
-            let playerItem = try playerItembuilder.build()
+                .build()
 
             // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
-            let adConfigBuilder = JWImaAdvertisingConfigBuilder()
+            let adConfig = JWImaAdvertisingConfigBuilder()
                 // Set the VMAP url for the builder to use.
                 .vmapURL(vmapURL)
+                .build()
 
-            // Build the IMA advertising configuration. This method can throw so be sure to handle the error.
-            let adConfig = try adConfigBuilder.build()
-
-            // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig
-            let configBuilder = JWPlayerConfigurationBuilder()
+            // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
+            let config = JWPlayerConfigurationBuilder()
                 .playlist([playerItem])
                 .advertising(adConfig)
                 .autostart(true)
-
-            // Build the player configuration. This method can throw so be sure to handle the error.
-            let config = try configBuilder.build()
+                .build()
 
             // Lastly, use the created JWPlayerConfiguration to set up the player.
             player.configurePlayer(with: config)
         } catch {
-            // Handle build failure
+            // Builders can throw, so be sure to handle build failures.
             print(error.localizedDescription)
             return
         }
