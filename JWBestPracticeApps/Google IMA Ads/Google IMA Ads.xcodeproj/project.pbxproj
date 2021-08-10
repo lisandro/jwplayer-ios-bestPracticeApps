@@ -14,6 +14,7 @@
 		799E46A626C1D5B400BBBB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A426C1D5B400BBBB98 /* Main.storyboard */; };
 		799E46A826C1D5B500BBBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A726C1D5B500BBBB98 /* Assets.xcassets */; };
 		799E46AB26C1D5B500BBBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A926C1D5B500BBBB98 /* LaunchScreen.storyboard */; };
+		799E472026C2FE4A00BBBB98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 799E471F26C2FE4A00BBBB98 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		799E46A726C1D5B500BBBB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799E46AA26C1D5B500BBBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799E46AC26C1D5B500BBBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		799E471F26C2FE4A00BBBB98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -45,6 +47,7 @@
 		799E469226C1D5B400BBBB98 = {
 			isa = PBXGroup;
 			children = (
+				799E471F26C2FE4A00BBBB98 /* README.md */,
 				799E469D26C1D5B400BBBB98 /* Google IMA Ads */,
 				799E469C26C1D5B400BBBB98 /* Products */,
 				C4F2AFF2A9AAE3BCC13E9862 /* Pods */,
@@ -154,6 +157,7 @@
 			files = (
 				799E46AB26C1D5B500BBBB98 /* LaunchScreen.storyboard in Resources */,
 				799E46A826C1D5B500BBBB98 /* Assets.xcassets in Resources */,
+				799E472026C2FE4A00BBBB98 /* README.md in Resources */,
 				799E46A626C1D5B400BBBB98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

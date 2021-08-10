@@ -14,6 +14,7 @@
 		799E46FF26C2E89400BBBB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46FD26C2E89400BBBB98 /* Main.storyboard */; };
 		799E470126C2E89500BBBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E470026C2E89500BBBB98 /* Assets.xcassets */; };
 		799E470426C2E89500BBBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E470226C2E89500BBBB98 /* LaunchScreen.storyboard */; };
+		799E472326C2FE4E00BBBB98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 799E472226C2FE4E00BBBB98 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		799E470026C2E89500BBBB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		799E470326C2E89500BBBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		799E470526C2E89500BBBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		799E472226C2FE4E00BBBB98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E22C804F79ED604984CC76F /* Pods_Google_DAI_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_DAI_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFE9940067D0D8875953836E /* Pods-Google DAI Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google DAI Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google DAI Ads/Pods-Google DAI Ads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -53,6 +55,7 @@
 		799E46EB26C2E89400BBBB98 = {
 			isa = PBXGroup;
 			children = (
+				799E472226C2FE4E00BBBB98 /* README.md */,
 				799E46F626C2E89400BBBB98 /* Google DAI Ads */,
 				799E46F526C2E89400BBBB98 /* Products */,
 				80519EBD4C6EEC6DCBEFCE0A /* Pods */,
@@ -154,6 +157,7 @@
 			files = (
 				799E470426C2E89500BBBB98 /* LaunchScreen.storyboard in Resources */,
 				799E470126C2E89500BBBB98 /* Assets.xcassets in Resources */,
+				799E472326C2FE4E00BBBB98 /* README.md in Resources */,
 				799E46FF26C2E89400BBBB98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
