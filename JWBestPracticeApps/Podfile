@@ -2,9 +2,6 @@ platform :ios, '10.0'
 workspace 'JWBestPracticeApps-4x'
 use_frameworks!
 
-project 'JWBestPracticeApps-4x'
-project 'BasicPlayer/BasicPlayer'
-
 def common_Cast
     pod 'google-cast-sdk'
 end
@@ -38,10 +35,14 @@ target 'BasicPlayer-Swift' do
   common_JWPlayer
 end
 
+target 'DRM Fairplay' do
+  project 'DRM Fairplay/DRM Fairplay'
+  common_JWPlayer
+end
+
 target 'Google IMA Ads' do
   project 'Google IMA Ads/Google IMA Ads'
   common_JWPlayer
   common_Google_IMA
   common_Cast
 end
-

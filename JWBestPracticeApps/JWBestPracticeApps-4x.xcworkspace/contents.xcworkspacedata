@@ -2,10 +2,16 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../README.md">
+   </FileRef>
+   <FileRef
       location = "group:JWBestPracticeApps-4x.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:BasicPlayer/BasicPlayer.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Google IMA Ads/Google IMA Ads.xcodeproj">

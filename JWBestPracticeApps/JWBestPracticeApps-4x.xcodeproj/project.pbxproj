@@ -31,7 +31,6 @@
 		086B95D55BEB55284DF39F89 /* Pods-VastBestPracticeApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.release.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.release.xcconfig"; sourceTree = "<group>"; };
 		0DE6354F79E56AA660616B71 /* Pods_VastBestPracticeApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VastBestPracticeApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		113A0240B76EDCC8ADEE7F96 /* Pods-VastBestPracticeApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VastBestPracticeApp.debug.xcconfig"; path = "Target Support Files/Pods-VastBestPracticeApp/Pods-VastBestPracticeApp.debug.xcconfig"; sourceTree = "<group>"; };
-		D3175593256C8192004E49CE /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		D3627900258031FD00E06E6E /* VastBestPracticeApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VastBestPracticeApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36279152580323300E06E6E /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		D36279162580323300E06E6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,7 +64,6 @@
 		D3175553256C8113004E49CE = {
 			isa = PBXGroup;
 			children = (
-				D3175593256C8192004E49CE /* README.md */,
 				D3627901258031FD00E06E6E /* VastBestPracticeApp */,
 				D317555D256C8113004E49CE /* Products */,
 				D317559E256C8233004E49CE /* Frameworks */,
