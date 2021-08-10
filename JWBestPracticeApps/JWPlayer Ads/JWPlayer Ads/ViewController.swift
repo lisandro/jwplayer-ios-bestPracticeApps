@@ -10,8 +10,8 @@ import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
     private let adUrlString = "https://playertest.longtailvideo.com/pre-60s.xml"
-    private let videoUrlString = "https://playertest.longtailvideo.com/adaptive/bbbfull/bbbfull.m3u8"
-    private let posterUrlString = "https://content.bitsontherun.com/thumbs/bkaovAYt-720.jpg"
+    private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
+    private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,54 +28,33 @@ class ViewController: JWPlayerViewController {
         let posterUrl = URL(string:posterUrlString)!
         let adURL = URL(string: adUrlString)!
 
-        // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
-        let playerItembuilder = JWPlayerItemBuilder()
-            .file(videoUrl)
-            .posterImage(posterUrl)
-
-        var playerItem: JWPlayerItem!
+        // Open a do-catch block to handle possible errors with the builders.
         do {
-            // Build the player item. This method can throw so be sure to handle the error.
-            playerItem = try playerItembuilder.build()
+            // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
+            let playerItem = try JWPlayerItemBuilder()
+                .file(videoUrl)
+                .posterImage(posterUrl)
+                .build()
+
+            // Second, use the JWAdsAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
+            let adConfig = try JWAdsAdvertisingConfigBuilder()
+                // Set the VAST tag for the builder to use.
+                .tag(adURL)
+                .build()
+
+            // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig
+            let config = try JWPlayerConfigurationBuilder()
+                .playlist([playerItem])
+                .advertising(adConfig)
+                .autostart(true)
+                .build()
+
+            // Lastly, use the created JWPlayerConfiguration to set up the player.
+            player.configurePlayer(with: config)
         } catch {
-            // Handle player item build failure
             print(error.localizedDescription)
             return
         }
-
-        // Second, use the JWAdsAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
-        let adConfigBuilder = JWAdsAdvertisingConfigBuilder()
-            // Set the VAST tag for the builder to use.
-            .tag(adURL)
-
-        var adConfig : JWAdvertisingConfig!
-        do {
-            // Build the advertising configuration. This method can throw so be sure to handle the error.
-            adConfig = try adConfigBuilder.build()
-        } catch {
-            // Handle advertising build failure
-            print(error.localizedDescription)
-            return
-        }
-
-        // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig
-        let configBuilder = JWPlayerConfigurationBuilder()
-            .playlist([playerItem])
-            .advertising(adConfig)
-            .autostart(true)
-
-        var config: JWPlayerConfiguration!
-        do {
-            // Build the player configuration. This method can throw so be sure to handle the error.
-            config = try configBuilder.build()
-        } catch {
-            // Handle player configuration build failure
-            print(error.localizedDescription)
-            return
-        }
-
-        // Lastly, use the created JWPlayerConfiguration to set up the player.
-        player.configurePlayer(with: config)
     }
 
     //pragma MARK: - Related advertising methods

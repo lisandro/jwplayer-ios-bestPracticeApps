@@ -31,19 +31,19 @@ class ViewController: JWPlayerViewController {
 
         do {
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
-            let playerItem = JWPlayerItemBuilder()
+            let playerItem = try JWPlayerItemBuilder()
                 .file(videoUrl)
                 .posterImage(posterUrl)
                 .build()
 
             // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
-            let adConfig = JWImaAdvertisingConfigBuilder()
+            let adConfig = try JWImaAdvertisingConfigBuilder()
                 // Set the VMAP url for the builder to use.
                 .vmapURL(vmapURL)
                 .build()
 
             // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
-            let config = JWPlayerConfigurationBuilder()
+            let config = try JWPlayerConfigurationBuilder()
                 .playlist([playerItem])
                 .advertising(adConfig)
                 .autostart(true)

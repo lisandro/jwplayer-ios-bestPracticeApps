@@ -8,10 +8,10 @@
       location = "group:BasicPlayer/BasicPlayer.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
+      location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
+      location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Google IMA Ads/Google IMA Ads.xcodeproj">

@@ -33,12 +33,12 @@ class ViewController: JWPlayerViewController,
             let videoUrl = URL(string:EZDRMVideoEndpoint)!
 
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
-            let playerItem = JWPlayerItemBuilder()
+            let playerItem = try JWPlayerItemBuilder()
                 .file(videoUrl)
                 .build()
 
             // Second, create a player config with the created JWPlayerItem.
-            let config = JWPlayerConfigurationBuilder()
+            let config = try JWPlayerConfigurationBuilder()
                 .playlist([playerItem])
                 .autostart(true)
                 .build()
