@@ -33,15 +33,15 @@ class ViewController: JWPlayerViewController,
             let videoUrl = URL(string:EZDRMVideoEndpoint)!
 
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
-            let playerItembuilder = JWPlayerItemBuilder()
+            let playerItem = JWPlayerItemBuilder()
                 .file(videoUrl)
-            let playerItem = try playerItembuilder.build()
+                .build()
 
             // Second, create a player config with the created JWPlayerItem.
-            let configBuilder = JWPlayerConfigurationBuilder()
+            let config = JWPlayerConfigurationBuilder()
                 .playlist([playerItem])
                 .autostart(true)
-            let config = try configBuilder.build()
+                .build()
 
             // Third, set the data source class. This class conforms to JWDRMContentKeyDataSource, and defines methods which affect DRM.
             player.contentKeyDataSource = self
@@ -49,7 +49,7 @@ class ViewController: JWPlayerViewController,
             // Lastly, use the created JWPlayerConfiguration to set up the player.
             player.configurePlayer(with: config)
         } catch {
-            // Handle build failure
+            // Builders can throw, so be sure to handle the build failures.
             print(error.localizedDescription)
             return
         }
