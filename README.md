@@ -9,11 +9,12 @@ Showcasing functionality for the JWPlayerKit 4.0.0 SDK in each project.
 
 |Project | Description|
 | ------------- | ------------- |
-|BasicPlayer | Simple implementation of JWPlayerKit SDK with a single player item. |
+|[Basic Player](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/BasicPlayer) | Simple implementation of JWPlayerKit SDK with a single player item. |
 |[DRM Fairplay](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/DRM%20Fairplay#drm-fairplay---best-practices-app)  | Simple implementation of JWPlayerKit SDK that plays protected video content through FairPlay (DRM). |
 |[JWPlayer Ads](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/JWPlayer%20Ads#jwplayer-ads---best-practices-app) | Simple implementation of JWPlayerKit SDK with advertising. |
 |[Google IMA Ads](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Google%20IMA%20Ads#google-ima-ads---best-practices-app) | Simple implementation of JWPlayerKit SDK with Google IMA. |
 |[Google DAI Ads](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Google%20DAI%20Ads#google-dai-ads---best-practices-app) | Simple implementation of JWPlayerKit SDK with Google DAI. |
+|[Recommendations](https://github.com/jwplayer/jwplayer-ios-bestPracticeApps/tree/main/JWBestPracticeApps/Recommendations) | Simple implementation including recommended related content. |
 
 ## Setup
 
