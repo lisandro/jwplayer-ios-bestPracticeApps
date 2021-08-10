@@ -38,4 +38,10 @@ target 'BasicPlayer-Swift' do
   common_JWPlayer
 end
 
+target 'Google IMA Ads' do
+  project 'Google IMA Ads/Google IMA Ads'
+  common_JWPlayer
+  common_Google_IMA
+  common_Cast
+end
 

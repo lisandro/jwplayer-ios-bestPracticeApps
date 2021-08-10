@@ -8,6 +8,9 @@
       location = "group:BasicPlayer/BasicPlayer.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Google IMA Ads/Google IMA Ads.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
