@@ -46,6 +46,13 @@ target 'Google IMA Ads' do
   common_Cast
 end
 
+target 'Google DAI Ads' do
+  project 'Google DAI Ads/Google DAI Ads'
+  common_JWPlayer
+  common_Google_IMA
+  common_Cast
+end
+
 target 'Recommendations' do
   project 'Recommendations/Recommendations'
   common_JWPlayer
