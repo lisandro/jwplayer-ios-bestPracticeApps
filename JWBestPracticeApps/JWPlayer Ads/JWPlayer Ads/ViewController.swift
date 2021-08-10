@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Google IMA Ads
+//  JWPlayer Ads
 //
 //  Created by David Almaguer on 09/08/21.
 //
@@ -9,8 +9,7 @@ import UIKit
 import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
-
-    private let vmapUrlString = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
+    private let adUrlString = "https://playertest.longtailvideo.com/pre-60s.xml"
     private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 
@@ -27,8 +26,9 @@ class ViewController: JWPlayerViewController {
     private func setUpPlayer() {
         let videoUrl = URL(string:videoUrlString)!
         let posterUrl = URL(string:posterUrlString)!
-        let vmapURL = URL(string: vmapUrlString)!
+        let adURL = URL(string: adUrlString)!
 
+        // Open a do-catch block to handle possible errors with the builders.
         do {
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
             let playerItem = try JWPlayerItemBuilder()
@@ -36,13 +36,13 @@ class ViewController: JWPlayerViewController {
                 .posterImage(posterUrl)
                 .build()
 
-            // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
-            let adConfig = try JWImaAdvertisingConfigBuilder()
-                // Set the VMAP url for the builder to use.
-                .vmapURL(vmapURL)
+            // Second, use the JWAdsAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
+            let adConfig = try JWAdsAdvertisingConfigBuilder()
+                // Set the VAST tag for the builder to use.
+                .tag(adURL)
                 .build()
 
-            // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
+            // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig
             let config = try JWPlayerConfigurationBuilder()
                 .playlist([playerItem])
                 .advertising(adConfig)
@@ -52,7 +52,6 @@ class ViewController: JWPlayerViewController {
             // Lastly, use the created JWPlayerConfiguration to set up the player.
             player.configurePlayer(with: config)
         } catch {
-            // Builders can throw, so be sure to handle build failures.
             print(error.localizedDescription)
             return
         }
@@ -66,13 +65,17 @@ class ViewController: JWPlayerViewController {
 
         switch event.type {
         case .adBreakStart:
-            print("The ad break has begun")
+            print("Ad break has begun")
+        case .schedule:
+            print("The ad(s) has been scheduled")
         case .request:
-            print("The ad(s) has been requested")
+            print("The ad has been requested")
         case .started:
             print("The ad playback has started")
         case .impression:
             print("The ad impression has been fulfilled")
+        case .meta:
+            print("The ad metadata is ready")
         case .clicked:
             print("The ad has been tapped")
         case .pause:
@@ -114,4 +117,3 @@ class ViewController: JWPlayerViewController {
     }
 
 }
-
