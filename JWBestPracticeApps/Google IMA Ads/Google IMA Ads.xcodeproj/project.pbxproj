@@ -7,130 +7,129 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		79AF09FA26BDBEAF002E638C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09F926BDBEAF002E638C /* AppDelegate.swift */; };
-		79AF09FC26BDBEAF002E638C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */; };
-		79AF09FE26BDBEAF002E638C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AF09FD26BDBEAF002E638C /* ViewController.swift */; };
-		79AF0A0126BDBEAF002E638C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF09FF26BDBEAF002E638C /* Main.storyboard */; };
-		79AF0A0326BDBEB1002E638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AF0A0226BDBEB1002E638C /* Assets.xcassets */; };
-		79AF0A0626BDBEB1002E638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */; };
-		E1D2B13A8BDF1DF90622C615 /* Pods_DRM_Fairplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */; };
+		4EF0C0F5EEFD492AEDBECDC9 /* Pods_Google_IMA_Ads.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */; };
+		799E469F26C1D5B400BBBB98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E469E26C1D5B400BBBB98 /* AppDelegate.swift */; };
+		799E46A126C1D5B400BBBB98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E46A026C1D5B400BBBB98 /* SceneDelegate.swift */; };
+		799E46A326C1D5B400BBBB98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 799E46A226C1D5B400BBBB98 /* ViewController.swift */; };
+		799E46A626C1D5B400BBBB98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A426C1D5B400BBBB98 /* Main.storyboard */; };
+		799E46A826C1D5B500BBBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A726C1D5B500BBBB98 /* Assets.xcassets */; };
+		799E46AB26C1D5B500BBBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E46A926C1D5B500BBBB98 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.debug.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.debug.xcconfig"; sourceTree = "<group>"; };
-		79AF09F626BDBEAF002E638C /* DRM Fairplay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DRM Fairplay.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		79AF09F926BDBEAF002E638C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		79AF09FD26BDBEAF002E638C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79AF0A0026BDBEAF002E638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		79AF0A0226BDBEB1002E638C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		79AF0A0526BDBEB1002E638C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		79AF0A0726BDBEB1002E638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79AF0A5A26BDC40A002E638C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DRM_Fairplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.release.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.release.xcconfig"; sourceTree = "<group>"; };
+		2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_IMA_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Ads.release.xcconfig"; path = "Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads.release.xcconfig"; sourceTree = "<group>"; };
+		799E469B26C1D5B400BBBB98 /* Google IMA Ads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Google IMA Ads.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		799E469E26C1D5B400BBBB98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		799E46A026C1D5B400BBBB98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		799E46A226C1D5B400BBBB98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		799E46A526C1D5B400BBBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		799E46A726C1D5B500BBBB98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		799E46AA26C1D5B500BBBB98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		799E46AC26C1D5B500BBBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google IMA Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		79AF09F326BDBEAF002E638C /* Frameworks */ = {
+		799E469826C1D5B400BBBB98 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E1D2B13A8BDF1DF90622C615 /* Pods_DRM_Fairplay.framework in Frameworks */,
+				4EF0C0F5EEFD492AEDBECDC9 /* Pods_Google_IMA_Ads.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		148CF2EC265DF142175F40E6 /* Pods */ = {
+		799E469226C1D5B400BBBB98 = {
 			isa = PBXGroup;
 			children = (
-				393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */,
-				D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */,
+				799E469D26C1D5B400BBBB98 /* Google IMA Ads */,
+				799E469C26C1D5B400BBBB98 /* Products */,
+				C4F2AFF2A9AAE3BCC13E9862 /* Pods */,
+				C90D4AFDBACEBD4338E28E09 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		799E469C26C1D5B400BBBB98 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				799E469B26C1D5B400BBBB98 /* Google IMA Ads.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		799E469D26C1D5B400BBBB98 /* Google IMA Ads */ = {
+			isa = PBXGroup;
+			children = (
+				799E469E26C1D5B400BBBB98 /* AppDelegate.swift */,
+				799E46A026C1D5B400BBBB98 /* SceneDelegate.swift */,
+				799E46A226C1D5B400BBBB98 /* ViewController.swift */,
+				799E46A426C1D5B400BBBB98 /* Main.storyboard */,
+				799E46A726C1D5B500BBBB98 /* Assets.xcassets */,
+				799E46A926C1D5B500BBBB98 /* LaunchScreen.storyboard */,
+				799E46AC26C1D5B500BBBB98 /* Info.plist */,
+			);
+			path = "Google IMA Ads";
+			sourceTree = "<group>";
+		};
+		C4F2AFF2A9AAE3BCC13E9862 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */,
+				5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */,
 			);
 			name = Pods;
 			path = ../Pods;
 			sourceTree = "<group>";
 		};
-		2888DA91EABFDF861C94E745 /* Frameworks */ = {
+		C90D4AFDBACEBD4338E28E09 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */,
+				2889FFC176A7905C22F13443 /* Pods_Google_IMA_Ads.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		79AF09ED26BDBEAF002E638C = {
-			isa = PBXGroup;
-			children = (
-				79AF0A5A26BDC40A002E638C /* README.md */,
-				79AF09F826BDBEAF002E638C /* DRM Fairplay */,
-				79AF09F726BDBEAF002E638C /* Products */,
-				148CF2EC265DF142175F40E6 /* Pods */,
-				2888DA91EABFDF861C94E745 /* Frameworks */,
-			);
-			sourceTree = "<group>";
-		};
-		79AF09F726BDBEAF002E638C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				79AF09F626BDBEAF002E638C /* DRM Fairplay.app */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		79AF09F826BDBEAF002E638C /* DRM Fairplay */ = {
-			isa = PBXGroup;
-			children = (
-				79AF09F926BDBEAF002E638C /* AppDelegate.swift */,
-				79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */,
-				79AF09FD26BDBEAF002E638C /* ViewController.swift */,
-				79AF09FF26BDBEAF002E638C /* Main.storyboard */,
-				79AF0A0226BDBEB1002E638C /* Assets.xcassets */,
-				79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */,
-				79AF0A0726BDBEB1002E638C /* Info.plist */,
-			);
-			path = "DRM Fairplay";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		79AF09F526BDBEAF002E638C /* DRM Fairplay */ = {
+		799E469A26C1D5B400BBBB98 /* Google IMA Ads */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 79AF0A0A26BDBEB1002E638C /* Build configuration list for PBXNativeTarget "DRM Fairplay" */;
+			buildConfigurationList = 799E46AF26C1D5B500BBBB98 /* Build configuration list for PBXNativeTarget "Google IMA Ads" */;
 			buildPhases = (
-				2C6A284A889B018D10EF5324 /* [CP] Check Pods Manifest.lock */,
-				79AF09F226BDBEAF002E638C /* Sources */,
-				79AF09F326BDBEAF002E638C /* Frameworks */,
-				79AF09F426BDBEAF002E638C /* Resources */,
-				C84C59B47ACC540125CF84A3 /* [CP] Embed Pods Frameworks */,
+				00611C630A0466FBF36EB355 /* [CP] Check Pods Manifest.lock */,
+				799E469726C1D5B400BBBB98 /* Sources */,
+				799E469826C1D5B400BBBB98 /* Frameworks */,
+				799E469926C1D5B400BBBB98 /* Resources */,
+				002AA27B686C6B8CB20CE980 /* [CP] Embed Pods Frameworks */,
+				F715665AF63D77F97947670B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "DRM Fairplay";
-			productName = DRMPlayer;
-			productReference = 79AF09F626BDBEAF002E638C /* DRM Fairplay.app */;
+			name = "Google IMA Ads";
+			productName = "Google IMA Ads";
+			productReference = 799E469B26C1D5B400BBBB98 /* Google IMA Ads.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		79AF09EE26BDBEAF002E638C /* Project object */ = {
+		799E469326C1D5B400BBBB98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
-					79AF09F526BDBEAF002E638C = {
+					799E469A26C1D5B400BBBB98 = {
 						CreatedOnToolsVersion = 12.3;
 					};
 				};
 			};
-			buildConfigurationList = 79AF09F126BDBEAF002E638C /* Build configuration list for PBXProject "DRM Fairplay" */;
+			buildConfigurationList = 799E469626C1D5B400BBBB98 /* Build configuration list for PBXProject "Google IMA Ads" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -138,31 +137,48 @@
 				en,
 				Base,
 			);
-			mainGroup = 79AF09ED26BDBEAF002E638C;
-			productRefGroup = 79AF09F726BDBEAF002E638C /* Products */;
+			mainGroup = 799E469226C1D5B400BBBB98;
+			productRefGroup = 799E469C26C1D5B400BBBB98 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				79AF09F526BDBEAF002E638C /* DRM Fairplay */,
+				799E469A26C1D5B400BBBB98 /* Google IMA Ads */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		79AF09F426BDBEAF002E638C /* Resources */ = {
+		799E469926C1D5B400BBBB98 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79AF0A0626BDBEB1002E638C /* LaunchScreen.storyboard in Resources */,
-				79AF0A0326BDBEB1002E638C /* Assets.xcassets in Resources */,
-				79AF0A0126BDBEAF002E638C /* Main.storyboard in Resources */,
+				799E46AB26C1D5B500BBBB98 /* LaunchScreen.storyboard in Resources */,
+				799E46A826C1D5B500BBBB98 /* Assets.xcassets in Resources */,
+				799E46A626C1D5B400BBBB98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2C6A284A889B018D10EF5324 /* [CP] Check Pods Manifest.lock */ = {
+		002AA27B686C6B8CB20CE980 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		00611C630A0466FBF36EB355 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -177,58 +193,58 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DRM Fairplay-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Google IMA Ads-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C84C59B47ACC540125CF84A3 /* [CP] Embed Pods Frameworks */ = {
+		F715665AF63D77F97947670B /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
-			name = "[CP] Embed Pods Frameworks";
+			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google IMA Ads/Pods-Google IMA Ads-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		79AF09F226BDBEAF002E638C /* Sources */ = {
+		799E469726C1D5B400BBBB98 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				79AF09FE26BDBEAF002E638C /* ViewController.swift in Sources */,
-				79AF09FA26BDBEAF002E638C /* AppDelegate.swift in Sources */,
-				79AF09FC26BDBEAF002E638C /* SceneDelegate.swift in Sources */,
+				799E46A326C1D5B400BBBB98 /* ViewController.swift in Sources */,
+				799E469F26C1D5B400BBBB98 /* AppDelegate.swift in Sources */,
+				799E46A126C1D5B400BBBB98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		79AF09FF26BDBEAF002E638C /* Main.storyboard */ = {
+		799E46A426C1D5B400BBBB98 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				79AF0A0026BDBEAF002E638C /* Base */,
+				799E46A526C1D5B400BBBB98 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */ = {
+		799E46A926C1D5B500BBBB98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				79AF0A0526BDBEB1002E638C /* Base */,
+				799E46AA26C1D5B500BBBB98 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -236,7 +252,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		79AF0A0826BDBEB1002E638C /* Debug */ = {
+		799E46AD26C1D5B500BBBB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -297,7 +313,7 @@
 			};
 			name = Debug;
 		};
-		79AF0A0926BDBEB1002E638C /* Release */ = {
+		799E46AE26C1D5B500BBBB98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -352,46 +368,42 @@
 			};
 			name = Release;
 		};
-		79AF0A0B26BDBEB1002E638C /* Debug */ = {
+		799E46B026C1D5B500BBBB98 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 393B1EBB1E37B6AB45D5930F /* Pods-DRM Fairplay.debug.xcconfig */;
+			baseConfigurationReference = E27128AA72241C53EEA279DB /* Pods-Google IMA Ads.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/DRM Fairplay/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = "Google IMA Ads/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.BPA-4-x.DRM-Fairplay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.BPA-4-x.Google-IMA-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		79AF0A0C26BDBEB1002E638C /* Release */ = {
+		799E46B126C1D5B500BBBB98 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */;
+			baseConfigurationReference = 5D7ED557EC1DFE198C169905 /* Pods-Google IMA Ads.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/DRM Fairplay/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				INFOPLIST_FILE = "Google IMA Ads/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.BPA-4-x.DRM-Fairplay";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jwplayer.BPA-4-x.Google-IMA-Ads";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -401,25 +413,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		79AF09F126BDBEAF002E638C /* Build configuration list for PBXProject "DRM Fairplay" */ = {
+		799E469626C1D5B400BBBB98 /* Build configuration list for PBXProject "Google IMA Ads" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79AF0A0826BDBEB1002E638C /* Debug */,
-				79AF0A0926BDBEB1002E638C /* Release */,
+				799E46AD26C1D5B500BBBB98 /* Debug */,
+				799E46AE26C1D5B500BBBB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		79AF0A0A26BDBEB1002E638C /* Build configuration list for PBXNativeTarget "DRM Fairplay" */ = {
+		799E46AF26C1D5B500BBBB98 /* Build configuration list for PBXNativeTarget "Google IMA Ads" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				79AF0A0B26BDBEB1002E638C /* Debug */,
-				79AF0A0C26BDBEB1002E638C /* Release */,
+				799E46B026C1D5B500BBBB98 /* Debug */,
+				799E46B126C1D5B500BBBB98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 79AF09EE26BDBEAF002E638C /* Project object */;
+	rootObject = 799E469326C1D5B400BBBB98 /* Project object */;
 }

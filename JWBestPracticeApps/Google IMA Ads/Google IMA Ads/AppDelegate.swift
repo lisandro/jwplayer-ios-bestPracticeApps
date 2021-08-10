@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  DRM Fairplay
+//  Google IMA Ads
 //
-//  Created by David Almaguer on 06/08/21.
+//  Created by David Almaguer on 09/08/21.
 //
 
 import UIKit
@@ -11,7 +11,6 @@ import JWPlayerKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -19,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // Add your JW Player license key.
         // JWPlayerKitLicense.setLicenseKey(<#key: String#>)
-        
+
         return true
     }
 
