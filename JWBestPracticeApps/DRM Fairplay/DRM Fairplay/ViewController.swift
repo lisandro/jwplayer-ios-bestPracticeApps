@@ -61,8 +61,12 @@ class ViewController: JWPlayerViewController,
      When called, this delegate method requests the identifier for the protected content to be passed through the delegate method's completion block.
      */
     func contentIdentifierForURL(_ url: URL, completionHandler handler: @escaping (Data?) -> Void) {
-        let uuid = "content-uuid"
-        let uuidData = uuid.data(using: .utf8)
+        guard let uuid = url.absoluteString.split(separator: ";").last,
+              let uuidData = uuid.data(using: .utf8) else {
+            handler(nil)
+            return
+        }
+        self.contentUUID = String(uuid)
         handler(uuidData)
     }
 
@@ -102,7 +106,7 @@ class ViewController: JWPlayerViewController,
         ckcRequest.addValue("application/octet-stream", forHTTPHeaderField: "Content-Type")
 
         URLSession.shared.dataTask(with: ckcRequest) { (data, response, error) in
-            guard error == nil, let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode == 200 else {
+            guard error == nil, let httpResponse = response as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
                 handler(nil, nil, nil)
                 return
             }
