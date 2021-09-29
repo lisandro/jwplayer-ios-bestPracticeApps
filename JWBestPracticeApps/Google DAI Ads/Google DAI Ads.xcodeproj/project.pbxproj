@@ -15,6 +15,7 @@
 		799E470126C2E89500BBBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E470026C2E89500BBBB98 /* Assets.xcassets */; };
 		799E470426C2E89500BBBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E470226C2E89500BBBB98 /* LaunchScreen.storyboard */; };
 		799E472326C2FE4E00BBBB98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 799E472226C2FE4E00BBBB98 /* README.md */; };
+		D33B8D7B2703F06C006986D9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B8D7A2703F06C006986D9 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		799E470526C2E89500BBBB98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		799E472226C2FE4E00BBBB98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		8E22C804F79ED604984CC76F /* Pods_Google_DAI_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_DAI_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D33B8D7A2703F06C006986D9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EFE9940067D0D8875953836E /* Pods-Google DAI Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google DAI Ads.debug.xcconfig"; path = "Target Support Files/Pods-Google DAI Ads/Pods-Google DAI Ads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -77,6 +79,7 @@
 				799E46F726C2E89400BBBB98 /* AppDelegate.swift */,
 				799E46F926C2E89400BBBB98 /* SceneDelegate.swift */,
 				799E46FB26C2E89400BBBB98 /* ViewController.swift */,
+				D33B8D7A2703F06C006986D9 /* RootViewController.swift */,
 				799E46FD26C2E89400BBBB98 /* Main.storyboard */,
 				799E470026C2E89500BBBB98 /* Assets.xcassets */,
 				799E470226C2E89500BBBB98 /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 			files = (
 				799E46FC26C2E89400BBBB98 /* ViewController.swift in Sources */,
 				799E46F826C2E89400BBBB98 /* AppDelegate.swift in Sources */,
+				D33B8D7B2703F06C006986D9 /* RootViewController.swift in Sources */,
 				799E46FA26C2E89400BBBB98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
