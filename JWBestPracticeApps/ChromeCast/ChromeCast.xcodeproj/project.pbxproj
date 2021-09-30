@@ -14,7 +14,6 @@
 		808A3EAE26C353E1003F9CEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808A3EAC26C353E1003F9CEF /* Main.storyboard */; };
 		808A3EB026C353E2003F9CEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 808A3EAF26C353E2003F9CEF /* Assets.xcassets */; };
 		808A3EB326C353E2003F9CEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 808A3EB126C353E2003F9CEF /* LaunchScreen.storyboard */; };
-		D33B8D772703EF56006986D9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B8D762703EF56006986D9 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,7 +27,6 @@
 		808A3EB226C353E2003F9CEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		808A3EB426C353E2003F9CEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0DF1B2307DCBA65B858AE8D /* Pods_ChromeCast.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChromeCast.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D33B8D762703EF56006986D9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		E5CB6423CCFDA4E54CF4B092 /* Pods-ChromeCast.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChromeCast.release.xcconfig"; path = "Target Support Files/Pods-ChromeCast/Pods-ChromeCast.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,7 +74,6 @@
 				808A3EA626C353E1003F9CEF /* AppDelegate.swift */,
 				808A3EA826C353E1003F9CEF /* SceneDelegate.swift */,
 				808A3EAA26C353E1003F9CEF /* ViewController.swift */,
-				D33B8D762703EF56006986D9 /* RootViewController.swift */,
 				808A3EAC26C353E1003F9CEF /* Main.storyboard */,
 				808A3EAF26C353E2003F9CEF /* Assets.xcassets */,
 				808A3EB126C353E2003F9CEF /* LaunchScreen.storyboard */,
@@ -229,7 +226,6 @@
 			files = (
 				808A3EAB26C353E1003F9CEF /* ViewController.swift in Sources */,
 				808A3EA726C353E1003F9CEF /* AppDelegate.swift in Sources */,
-				D33B8D772703EF56006986D9 /* RootViewController.swift in Sources */,
 				808A3EA926C353E1003F9CEF /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

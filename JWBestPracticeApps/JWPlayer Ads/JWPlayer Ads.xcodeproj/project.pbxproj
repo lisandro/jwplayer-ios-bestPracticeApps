@@ -15,7 +15,6 @@
 		799E466B26C1913E00BBBB98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 799E466A26C1913E00BBBB98 /* Assets.xcassets */; };
 		799E466E26C1913E00BBBB98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 799E466C26C1913E00BBBB98 /* LaunchScreen.storyboard */; };
 		799E468E26C1AC5E00BBBB98 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 799E468D26C1AC5E00BBBB98 /* README.md */; };
-		D33B8D7F2703F12F006986D9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B8D7E2703F12F006986D9 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,7 +29,6 @@
 		799E468D26C1AC5E00BBBB98 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		846B498D287CFF1694739151 /* Pods-JWPlayer Ads.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWPlayer Ads.release.xcconfig"; path = "Target Support Files/Pods-JWPlayer Ads/Pods-JWPlayer Ads.release.xcconfig"; sourceTree = "<group>"; };
 		B82B51F26270586F58C6F004 /* Pods_JWPlayer_Ads.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JWPlayer_Ads.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D33B8D7E2703F12F006986D9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		EB632FA8138FB8BB29EBD238 /* Pods-JWPlayer Ads.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JWPlayer Ads.debug.xcconfig"; path = "Target Support Files/Pods-JWPlayer Ads/Pods-JWPlayer Ads.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -81,7 +79,6 @@
 				799E466126C1913D00BBBB98 /* AppDelegate.swift */,
 				799E466326C1913D00BBBB98 /* SceneDelegate.swift */,
 				799E466526C1913D00BBBB98 /* ViewController.swift */,
-				D33B8D7E2703F12F006986D9 /* RootViewController.swift */,
 				799E466726C1913D00BBBB98 /* Main.storyboard */,
 				799E466A26C1913E00BBBB98 /* Assets.xcassets */,
 				799E466C26C1913E00BBBB98 /* LaunchScreen.storyboard */,
@@ -233,7 +230,6 @@
 			files = (
 				799E466626C1913D00BBBB98 /* ViewController.swift in Sources */,
 				799E466226C1913D00BBBB98 /* AppDelegate.swift in Sources */,
-				D33B8D7F2703F12F006986D9 /* RootViewController.swift in Sources */,
 				799E466426C1913D00BBBB98 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

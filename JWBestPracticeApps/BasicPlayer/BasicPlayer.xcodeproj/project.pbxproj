@@ -23,8 +23,6 @@
 		3B73974F26B9B3E500671DEC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B73974E26B9B3E500671DEC /* main.m */; };
 		3B73975826B9C2EE00671DEC /* Pods_BasicPlayer_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */; };
 		3B73975926B9C2EE00671DEC /* Pods_BasicPlayer_Swift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		D33B8D732703EDA5006986D9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D33B8D722703EDA5006986D9 /* RootViewController.m */; };
-		D33B8D752703EEB8006986D9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B8D742703EEB8006986D9 /* RootViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,9 +65,6 @@
 		4983387473663092286E81AF /* Pods-BasicPlayer-Swift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer-Swift.debug.xcconfig"; path = "Target Support Files/Pods-BasicPlayer-Swift/Pods-BasicPlayer-Swift.debug.xcconfig"; sourceTree = "<group>"; };
 		4FEC0F0004DAF4BEDBF090C6 /* Pods_BasicPlayer_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicPlayer_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8DBBD70EA66CE15802E313 /* Pods-BasicPlayer-ObjC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BasicPlayer-ObjC.debug.xcconfig"; path = "Target Support Files/Pods-BasicPlayer-ObjC/Pods-BasicPlayer-ObjC.debug.xcconfig"; sourceTree = "<group>"; };
-		D33B8D712703EDA5006986D9 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
-		D33B8D722703EDA5006986D9 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		D33B8D742703EEB8006986D9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		F16713D798A47959E27F3B1C /* Pods_BasicPlayer_ObjC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BasicPlayer_ObjC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -131,7 +126,6 @@
 				3B73972426B8A12A00671DEC /* AppDelegate.swift */,
 				3B73972626B8A12A00671DEC /* SceneDelegate.swift */,
 				3B73972826B8A12A00671DEC /* ViewController.swift */,
-				D33B8D742703EEB8006986D9 /* RootViewController.swift */,
 				3B73972A26B8A12A00671DEC /* Main.storyboard */,
 				3B73972D26B8A12B00671DEC /* Assets.xcassets */,
 				3B73972F26B8A12B00671DEC /* LaunchScreen.storyboard */,
@@ -149,8 +143,6 @@
 				3B73974026B9B3E500671DEC /* SceneDelegate.m */,
 				3B73974226B9B3E500671DEC /* ViewController.h */,
 				3B73974326B9B3E500671DEC /* ViewController.m */,
-				D33B8D712703EDA5006986D9 /* RootViewController.h */,
-				D33B8D722703EDA5006986D9 /* RootViewController.m */,
 				3B73974526B9B3E500671DEC /* Main.storyboard */,
 				3B73974826B9B3E500671DEC /* Assets.xcassets */,
 				3B73974A26B9B3E500671DEC /* LaunchScreen.storyboard */,
@@ -394,7 +386,6 @@
 			files = (
 				3B73972926B8A12A00671DEC /* ViewController.swift in Sources */,
 				3B73972526B8A12A00671DEC /* AppDelegate.swift in Sources */,
-				D33B8D752703EEB8006986D9 /* RootViewController.swift in Sources */,
 				3B73972726B8A12A00671DEC /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,7 +398,6 @@
 				3B73973E26B9B3E500671DEC /* AppDelegate.m in Sources */,
 				3B73974F26B9B3E500671DEC /* main.m in Sources */,
 				3B73974126B9B3E500671DEC /* SceneDelegate.m in Sources */,
-				D33B8D732703EDA5006986D9 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

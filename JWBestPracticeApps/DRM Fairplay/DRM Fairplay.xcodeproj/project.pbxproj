@@ -13,7 +13,6 @@
 		79AF0A0126BDBEAF002E638C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF09FF26BDBEAF002E638C /* Main.storyboard */; };
 		79AF0A0326BDBEB1002E638C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79AF0A0226BDBEB1002E638C /* Assets.xcassets */; };
 		79AF0A0626BDBEB1002E638C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */; };
-		D33B8D792703EFE9006986D9 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33B8D782703EFE9006986D9 /* RootViewController.swift */; };
 		E1D2B13A8BDF1DF90622C615 /* Pods_DRM_Fairplay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,7 +28,6 @@
 		79AF0A0726BDBEB1002E638C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79AF0A5A26BDC40A002E638C /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		B658FC67918D72B4FCE9F339 /* Pods_DRM_Fairplay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DRM_Fairplay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		D33B8D782703EFE9006986D9 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		D97A606DBCAD713DA82BCC94 /* Pods-DRM Fairplay.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DRM Fairplay.release.xcconfig"; path = "Target Support Files/Pods-DRM Fairplay/Pods-DRM Fairplay.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,7 +86,6 @@
 				79AF09F926BDBEAF002E638C /* AppDelegate.swift */,
 				79AF09FB26BDBEAF002E638C /* SceneDelegate.swift */,
 				79AF09FD26BDBEAF002E638C /* ViewController.swift */,
-				D33B8D782703EFE9006986D9 /* RootViewController.swift */,
 				79AF09FF26BDBEAF002E638C /* Main.storyboard */,
 				79AF0A0226BDBEB1002E638C /* Assets.xcassets */,
 				79AF0A0426BDBEB1002E638C /* LaunchScreen.storyboard */,
@@ -213,7 +210,6 @@
 			files = (
 				79AF09FE26BDBEAF002E638C /* ViewController.swift in Sources */,
 				79AF09FA26BDBEAF002E638C /* AppDelegate.swift in Sources */,
-				D33B8D792703EFE9006986D9 /* RootViewController.swift in Sources */,
 				79AF09FC26BDBEAF002E638C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
