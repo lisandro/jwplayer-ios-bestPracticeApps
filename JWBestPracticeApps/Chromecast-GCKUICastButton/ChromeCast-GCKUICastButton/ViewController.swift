@@ -26,10 +26,7 @@ class ViewController: JWPlayerViewController {
     }
     
     override func didMove(toParent parent: UIViewController?) {
-        let castButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
-        castButton.tintColor = .white
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
-        parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
+        setupCastButton()
     }
 
     /**
