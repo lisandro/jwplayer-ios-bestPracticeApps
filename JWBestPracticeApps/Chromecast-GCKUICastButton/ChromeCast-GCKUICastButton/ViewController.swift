@@ -22,11 +22,11 @@ class ViewController: JWPlayerViewController {
 
         // Set up the player.
         setUpPlayer()
-        setupCastButton()
     }
     
     override func didMove(toParent parent: UIViewController?) {
-        setupCastButton()
+        // Sets up cast button on parent's navigation controller.
+        setUpCastButton()
     }
 
     /**
@@ -58,10 +58,14 @@ class ViewController: JWPlayerViewController {
         }
     }
     
-    func setupCastButton(){
+    /**
+     Sets up GCKUICastButton casting button on navigation bar.
+     */
+    func setUpCastButton(){
+        // We initialize the GCKUICastButton and add to the view, for the user to interact with.
         let castButton = GCKUICastButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))
         castButton.tintColor = .white
-        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
+        // Since this is embedded in a container view, we update the parent's navigation item.
         parent?.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: castButton)
     }
     
