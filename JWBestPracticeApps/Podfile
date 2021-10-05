@@ -34,6 +34,12 @@ target 'ChromeCast' do
   common_JWPlayer
 end
 
+target 'ChromeCast-GCKUICastButton' do
+  project 'ChromeCast-GCKUICastButton/ChromeCast-GCKUICastButton'
+  common_Cast
+  common_JWPlayer
+end
+
 target 'DRM Fairplay' do
   project 'DRM Fairplay/DRM Fairplay'
   common_JWPlayer
