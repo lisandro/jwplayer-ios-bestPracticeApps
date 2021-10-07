@@ -11,7 +11,7 @@
       location = "group:ChromeCast/ChromeCast.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:/Users/davidperez/Documents/jwplayer-ios-bestPracticeApps/jwplayer-ios-bestPracticeApps/JWBestPracticeApps/Chromecast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
+      location = "group:Chromecast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
