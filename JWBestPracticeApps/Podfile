@@ -11,7 +11,7 @@ def common_Google_IMA
 end
 
 def common_JWPlayer
-    pod 'JWPlayerKit', '~> 4.3'
+    pod 'JWPlayerKit', '~> 4'
 end
 
 target 'AdvancedPlayer' do
@@ -67,5 +67,10 @@ end
 
 target 'Recommendations' do
   project 'Recommendations/Recommendations'
+  common_JWPlayer
+end
+
+target 'Custom UI' do
+  project 'Custom UI/Custom UI'
   common_JWPlayer
 end
