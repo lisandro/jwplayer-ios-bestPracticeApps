@@ -11,7 +11,7 @@ def common_Google_IMA
 end
 
 def common_JWPlayer
-    pod 'JWPlayerKit', '~> 4'
+    pod 'JWPlayerKit', '4.5.2'
 end
 
 target 'AdvancedPlayer' do
@@ -45,6 +45,11 @@ end
 
 target 'DRM Fairplay' do
   project 'DRM Fairplay/DRM Fairplay'
+  common_JWPlayer
+end
+
+target 'FeedTableViewControllerV4' do
+  project 'FeedTableViewControllerV4/FeedTableViewControllerV4'
   common_JWPlayer
 end
 
