@@ -16,8 +16,13 @@ protocol FeedViewModelDelegate: AnyObject {
 final class FeedViewModel {
     private weak var delegate: FeedViewModelDelegate?
     
+    private let client = MockJWClient()
+    
     private var items       = [JWPlayerItem]()
+    private var currentPage = 1 // increments until all items are loaded
     private var total       = 0
+    private var isFetchInProgress = false
+    
     var totalCount:   Int { total }
     var currentCount: Int { items.count }
     
@@ -29,16 +34,38 @@ final class FeedViewModel {
         items[index]
     }
     
+    @MainActor
+    /// Can be called repeatedly until all pages are loaded.
     func fetchItems() {
+        guard !isFetchInProgress
+        else { return }
+        
+        isFetchInProgress = true
+        
         // 'fetch' here, get [newItems]
-        let fetchedItems = fetchFeed()
+        client.fetchMediaItemsFromMockFeed(forPage: currentPage) { [self] result in
+            switch result {
+                case .failure(let error):
+                    isFetchInProgress = false
+                    delegate?.onFetchFailed(with: error.localizedDescription)
+                case .success(let response):
+                    // success
+                    currentPage += 1
+                    isFetchInProgress = false
         
-        // success
-        total += fetchedItems.count // new total
-        items.append(contentsOf: fetchedItems)
-        
-        let indexPathsToReload = indexPathsToReload(from: fetchedItems)
-        delegate?.onFetchCompleted(with: indexPathsToReload)
+                    total = response.total
+                    
+                    let fetchedItems = response.mediaItems.compactMap { $0.asPlayerItem() }
+                    items.append(contentsOf: fetchedItems)
+                    
+                    if response.page > 1 {
+                        let indexPathsToReload = indexPathsToReload(from: fetchedItems)
+                        delegate?.onFetchCompleted(with: indexPathsToReload)
+                    } else {
+                        delegate?.onFetchCompleted(with: .none)
+                    }
+            }
+        }
     }
     
     private func indexPathsToReload(from newItems: [JWPlayerItem]) -> [IndexPath] {
@@ -46,16 +73,5 @@ final class FeedViewModel {
         let endIndex   = startIndex  + newItems.count
         return (startIndex..<endIndex)
             .map { IndexPath(row: $0, section: 0) }
-    }
-    
-    // Currently, feed of player items is "fetched" from a local plist.
-    private func fetchFeed() -> [JWPlayerItem] {
-        guard
-            let feedURL = Bundle.main.url(forResource: "Feed", withExtension: "plist"),
-            let feedData = try? Data(contentsOf: feedURL),
-            let mockFeed = try? PropertyListDecoder().decode(FeedItemList.self, from: feedData)
-        else { return [] }
-
-        return mockFeed.compactMap { $0.asPlayerItem() }
     }
 }

@@ -9,7 +9,6 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-
     private var viewModel: FeedViewModel!
 
     override func viewDidLoad() {
@@ -21,6 +20,7 @@ class FeedTableViewController: UITableViewController {
         
         viewModel = FeedViewModel(delegate: self)
         viewModel.fetchItems()
+        tableView.prefetchDataSource = self
     }
 
     // MARK: UITableViewDelegate implementation
@@ -56,12 +56,33 @@ class FeedTableViewController: UITableViewController {
         
         return cell
     }
+}
+
+// MARK: UITableViewDataSourcePrefetching implementation
+extension FeedTableViewController: UITableViewDataSourcePrefetching {
+    func tableView(_ tableView: UITableView, prefetchRowsAt indexPaths: [IndexPath]) {
+        if indexPaths.contains(where: isLoadingCell) {
+            viewModel.fetchItems()
+        }
+    }
+
+    /// Determines if the cell is beyond the count of the items received so far.
+    private func isLoadingCell(for indexPath: IndexPath) -> Bool {
+        indexPath.row >= viewModel.currentCount
+    }
     
+    /// Calculates the rows that need to be reloaded
+    /// - Parameter indexPaths: Previously calculated by the view model.
+    /// - Returns: The paths that are both in the view model AND are visible.
+    private func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
+        let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
+        let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
+        return Array(indexPathsIntersection)
+    }
 }
 
 extension FeedTableViewController: FeedViewModelDelegate {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
-//    TODO: Implement me
         guard let newIndexPathsToReload = newIndexPathsToReload else { return }
         tableView.reloadRows(at: newIndexPathsToReload, with: .automatic)
     }

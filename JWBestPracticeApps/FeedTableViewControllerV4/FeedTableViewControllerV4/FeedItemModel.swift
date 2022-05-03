@@ -8,9 +8,6 @@
 import Foundation
 import JWPlayerKit
 
-
-typealias FeedItemList = [FeedItemModel]
-
 struct FeedItemModel: Decodable {
     var title: String
     var url: String
