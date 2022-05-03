@@ -18,6 +18,8 @@
 		118506B728205C8A00E16048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118506B628205C8A00E16048 /* Assets.xcassets */; };
 		118506BA28205CAB00E16048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118506B828205CAB00E16048 /* LaunchScreen.storyboard */; };
 		118506BD28205CBF00E16048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 118506BB28205CBF00E16048 /* Main.storyboard */; };
+		118506BF28205F2F00E16048 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118506BE28205F2F00E16048 /* FeedViewModel.swift */; };
+		118506C1282075FC00E16048 /* FeedItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118506C0282075FC00E16048 /* FeedItemModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,7 +27,6 @@
 		1185069028205ACD00E16048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1185069228205ACD00E16048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1185069E28205ACF00E16048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		118506AB28205C6700E16048 /* FeedTableViewController-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "FeedTableViewController-Bridging-Header.h"; path = "../../FeedTableViewController copy/FeedTableViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		118506AC28205C6700E16048 /* FeedItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FeedItemCell.xib; path = "../../FeedTableViewController copy/FeedItemCell.xib"; sourceTree = "<group>"; };
 		118506AD28205C6800E16048 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedTableViewController.swift; path = "../../FeedTableViewController copy/FeedTableViewController.swift"; sourceTree = "<group>"; };
 		118506AE28205C6800E16048 /* FeedItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedItemCell.swift; path = "../../FeedTableViewController copy/FeedItemCell.swift"; sourceTree = "<group>"; };
@@ -34,6 +35,8 @@
 		118506B628205C8A00E16048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = "../../FeedTableViewController copy/Assets.xcassets"; sourceTree = "<group>"; };
 		118506B928205CAB00E16048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../FeedTableViewController copy/Base.lproj/LaunchScreen.storyboard"; sourceTree = "<group>"; };
 		118506BC28205CBF00E16048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "../../FeedTableViewController copy/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
+		118506BE28205F2F00E16048 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		118506C0282075FC00E16048 /* FeedItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemModel.swift; sourceTree = "<group>"; };
 		1B7C64362DF0AE57F91E4BB2 /* Pods-FeedTableViewControllerV4.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewControllerV4.release.xcconfig"; path = "Target Support Files/Pods-FeedTableViewControllerV4/Pods-FeedTableViewControllerV4.release.xcconfig"; sourceTree = "<group>"; };
 		D51C535B55FAC82CADBE0A23 /* Pods_FeedTableViewControllerV4.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FeedTableViewControllerV4.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAC9F5FE8269E16A52814303 /* Pods-FeedTableViewControllerV4.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FeedTableViewControllerV4.debug.xcconfig"; path = "Target Support Files/Pods-FeedTableViewControllerV4/Pods-FeedTableViewControllerV4.debug.xcconfig"; sourceTree = "<group>"; };
@@ -82,11 +85,12 @@
 			children = (
 				1185069028205ACD00E16048 /* AppDelegate.swift */,
 				1185069228205ACD00E16048 /* SceneDelegate.swift */,
+				118506AD28205C6800E16048 /* FeedTableViewController.swift */,
 				118506B028205C6800E16048 /* Feed.plist */,
 				118506AE28205C6800E16048 /* FeedItemCell.swift */,
 				118506AC28205C6700E16048 /* FeedItemCell.xib */,
-				118506AB28205C6700E16048 /* FeedTableViewController-Bridging-Header.h */,
-				118506AD28205C6800E16048 /* FeedTableViewController.swift */,
+				118506BE28205F2F00E16048 /* FeedViewModel.swift */,
+				118506C0282075FC00E16048 /* FeedItemModel.swift */,
 				118506AF28205C6800E16048 /* README.md */,
 				118506BB28205CBF00E16048 /* Main.storyboard */,
 				118506B628205C8A00E16048 /* Assets.xcassets */,
@@ -224,9 +228,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				118506BF28205F2F00E16048 /* FeedViewModel.swift in Sources */,
 				1185069128205ACD00E16048 /* AppDelegate.swift in Sources */,
 				1185069328205ACD00E16048 /* SceneDelegate.swift in Sources */,
 				118506B228205C6800E16048 /* FeedTableViewController.swift in Sources */,
+				118506C1282075FC00E16048 /* FeedItemModel.swift in Sources */,
 				118506B328205C6800E16048 /* FeedItemCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
