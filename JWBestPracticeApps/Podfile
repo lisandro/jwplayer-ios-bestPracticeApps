@@ -48,8 +48,8 @@ target 'DRM Fairplay' do
   common_JWPlayer
 end
 
-target 'FeedTableViewControllerV4' do
-  project 'FeedTableViewControllerV4/FeedTableViewControllerV4'
+target 'FeedTableViewController' do
+  project 'FeedTableViewController/FeedTableViewController'
   common_JWPlayer
 end
 
