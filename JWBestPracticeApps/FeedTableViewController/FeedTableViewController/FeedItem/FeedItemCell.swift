@@ -9,29 +9,30 @@
 import UIKit
 import JWPlayerKit
 
-let FeedItemCellDefaultHeight: CGFloat = 300
-let FeedItemCellIdentifier: String = "FeedItemCell"
-
 class FeedItemCell: UITableViewCell {
-    @IBOutlet weak var playerView: JWPlayerView!
-    
+    // Reuse ID
+    static   let reuseIdentifier = "FeedItemCell"
+    override var reuseIdentifier: String? { FeedItemCell.reuseIdentifier }
+            
+    // Provided by viewModel.
     var item: JWPlayerItem? {
-        didSet {
-            configureCellPlayer(with: item)
-        }
+        didSet { configureCellPlayer(with: item) }
     }
     
+    // The view (UIView subclass) underlying this View (in the MVVM sense)
+    @IBOutlet weak var playerView: JWPlayerView!
+    
     private func configureCellPlayer(with item: JWPlayerItem?) {
-        guard let item = item,
-              let itemConfig = getPlayerConfig(for: item)
-        else {
-            return
-        }
+        guard let itemConfig = getPlayerConfig(for: item)
+        else { return }
 
         self.playerView.player.configurePlayer(with: itemConfig)
     }
     
-    private func getPlayerConfig(for item: JWPlayerItem) -> JWPlayerConfiguration? {
+    private func getPlayerConfig(for item: JWPlayerItem?) -> JWPlayerConfiguration? {
+        guard let item = item
+        else { return nil }
+
         do {
             return try JWPlayerConfigurationBuilder()
                 .playlist([item])
@@ -41,9 +42,5 @@ class FeedItemCell: UITableViewCell {
             print(error.localizedDescription)
             return nil
         }
-    }
-    
-    override var reuseIdentifier: String? {
-        return FeedItemCellIdentifier
     }
 }
