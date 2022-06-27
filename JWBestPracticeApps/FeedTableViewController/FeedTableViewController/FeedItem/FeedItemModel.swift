@@ -10,19 +10,19 @@ import JWPlayerKit
 
 struct FeedItemModel: Decodable {
     var title: String
-    var url: String
-    var thumbnail: String
+    var videoUrl: String
+    var thumbnailUrl: String
     
     func asPlayerItem() -> JWPlayerItem? {
         guard
-            let url = URL(string: url),
-            let thumbUrl = URL(string: thumbnail)
+            let videoURL = URL(string: videoUrl),
+            let thumbnailURL = URL(string: thumbnailUrl)
         else { return nil }
         
         return try? JWPlayerItemBuilder()
             .title(title)
-            .file(url)
-            .posterImage(thumbUrl)
+            .file(videoURL)
+            .posterImage(thumbnailURL)
             .build()
     }
 }
