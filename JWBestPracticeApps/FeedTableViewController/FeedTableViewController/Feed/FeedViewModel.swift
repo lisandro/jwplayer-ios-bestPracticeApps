@@ -59,9 +59,11 @@ final class FeedViewModel {
     }
     
     private func indexPathsToReload(from newItems: [JWPlayerItem]) -> [IndexPath] {
-        let startIndex = items.count - newItems.count
-        let endIndex   = startIndex  + newItems.count
-        return (startIndex..<endIndex)
+        let startIndex    = items.count - newItems.count
+        let endIndex      = startIndex  + newItems.count
+        let pathsToReload = (startIndex..<endIndex)
             .map { IndexPath(row: $0, section: 0) }
+//        print(pathsToReload)
+        return pathsToReload
     }
 }

@@ -88,11 +88,6 @@ class FeedTableViewController: UITableViewController {
         
         return UITableViewCell()
     }
-}
-
-// MARK: UITableViewDataSourcePrefetching implementation
-extension FeedTableViewController {
-
 
     /// Calculates the rows that need to be reloaded
     /// - Parameter indexPaths: Previously calculated by the view model.
@@ -106,7 +101,10 @@ extension FeedTableViewController {
 
 extension FeedTableViewController: FeedViewModelDelegate {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
-        guard let newIndexPathsToReload = newIndexPathsToReload else { return }
-        tableView.reloadRows(at: newIndexPathsToReload, with: .automatic)
+        tableView.reloadData()
+
+        // TODO: only reload the new indexPaths.
+//        guard let newIndexPathsToReload = newIndexPathsToReload else { return }
+//        tableView.reloadRows(at: newIndexPathsToReload, with: .automatic)
     }
 }
