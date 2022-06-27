@@ -10,24 +10,31 @@ import JWPlayerKit
 
 protocol FeedViewModelDelegate: AnyObject {
     func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
-    func onFetchFailed(with reason: String)
 }
 
 final class FeedViewModel {
     private weak var delegate: FeedViewModelDelegate?
-    
-    private let client = MockJWClient()
-    
+
+    // Dynamic values
     private var items       = [JWPlayerItem]()
-    private var currentPage = 1 // increments until all items are loaded
-    private var total       = 0
-    private var isFetchInProgress = false
+    private var total: Int?
     
-    var totalCount:   Int { total }
-    var currentCount: Int { items.count }
+    // Derived values
+    var totalCount:       Int { total ?? currentCount }
+    var currentCount:     Int { items.count }
+    var numberOfSections: Int { (totalCount > 0) ? 1 : 0 }
+
+    // Constant values
+    var cellDefaultHeight: CGFloat { 300 }
+    var cellReuseIdentifier = FeedItemCell.reuseIdentifier
+    var cellNibName         = FeedItemCell.reuseIdentifier
+    
+    // Hard-coded demo response.
+    let feedPrototype: JWV2Playlist
     
     init(delegate: FeedViewModelDelegate) {
         self.delegate = delegate
+        feedPrototype = JWV2Playlist.exampleManualPlaylist
     }
     
     func item(at index: Int) -> JWPlayerItem {
@@ -36,36 +43,19 @@ final class FeedViewModel {
     
     @MainActor
     /// Can be called repeatedly until all pages are loaded.
-    func fetchItems() {
-        guard !isFetchInProgress
-        else { return }
+    func addBatchedItems() {
+        let itemsToAdd = feedPrototype
+            .playlist?
+            .compactMap({
+                FeedItemModel
+                    .from(playlistItem: $0)?
+                    .toJWPlayerItem()
+            })
+        ?? []
         
-        isFetchInProgress = true
-        
-        // 'fetch' here, get [newItems]
-        client.fetchMediaItemsFromMockFeed(forPage: currentPage) { [self] result in
-            switch result {
-                case .failure(let error):
-                    isFetchInProgress = false
-                    delegate?.onFetchFailed(with: error.localizedDescription)
-                case .success(let response):
-                    // success
-                    currentPage += 1
-                    isFetchInProgress = false
-        
-                    total = response.total
-                    
-                    let fetchedItems = response.mediaItems.compactMap { $0.asPlayerItem() }
-                    items.append(contentsOf: fetchedItems)
-                    
-                    if response.page > 1 {
-                        let indexPathsToReload = indexPathsToReload(from: fetchedItems)
-                        delegate?.onFetchCompleted(with: indexPathsToReload)
-                    } else {
-                        delegate?.onFetchCompleted(with: .none)
-                    }
-            }
-        }
+        items += itemsToAdd
+        let indexPathsToReload = indexPathsToReload(from: itemsToAdd)
+        delegate?.onFetchCompleted(with: indexPathsToReload)
     }
     
     private func indexPathsToReload(from newItems: [JWPlayerItem]) -> [IndexPath] {
