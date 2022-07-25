@@ -9,10 +9,8 @@
 import UIKit
 import JWPlayerKit
 
-class FeedItemCell: UITableViewCell {
-    // Reuse ID
-    static   let reuseIdentifier = "FeedItemCell"
-    override var reuseIdentifier: String? { FeedItemCell.reuseIdentifier }
+class PlayerItemCell: UITableViewCell {
+    static let reuseIdentifier = "PlayerItemCell"
             
     // Provided by viewModel.
     var item: JWPlayerItem? {

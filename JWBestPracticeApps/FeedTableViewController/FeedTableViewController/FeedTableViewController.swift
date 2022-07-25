@@ -26,7 +26,7 @@ class FeedTableViewController: UITableViewController {
     // MARK: UITableViewDelegate implementation
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? FeedItemCell
+        guard let cell = cell as? PlayerItemCell
         else { return }
         
         cell.playerView.player.pause()
@@ -70,7 +70,7 @@ class FeedTableViewController: UITableViewController {
         if isVideoSection {
             let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath)
             
-            guard let cell = cell as? FeedItemCell
+            guard let cell = cell as? PlayerItemCell
             else { return UITableViewCell() }
             
             cell.item = viewModel.item(at: indexPath.row)

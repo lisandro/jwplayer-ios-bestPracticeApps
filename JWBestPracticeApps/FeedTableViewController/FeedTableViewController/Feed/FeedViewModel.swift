@@ -26,8 +26,8 @@ final class FeedViewModel {
 
     // Constant values
     var cellDefaultHeight: CGFloat { 300 }
-    var cellReuseIdentifier = FeedItemCell.reuseIdentifier
-    var cellNibName         = FeedItemCell.reuseIdentifier
+    var cellReuseIdentifier = PlayerItemCell.reuseIdentifier
+    var cellNibName         = PlayerItemCell.reuseIdentifier
     
     // Hard-coded demo response.
     let feedPrototype: JWV2Playlist

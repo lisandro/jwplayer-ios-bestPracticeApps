@@ -16,8 +16,8 @@
 		118506B728205C8A00E16048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118506B628205C8A00E16048 /* Assets.xcassets */; };
 		118506BF28205F2F00E16048 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118506BE28205F2F00E16048 /* FeedViewModel.swift */; };
 		11BEC5512822FF4F00BBB637 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5502822FF4F00BBB637 /* FeedTableViewController.swift */; };
-		11BEC5542822FF8300BBB637 /* FeedItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5522822FF8300BBB637 /* FeedItemCell.xib */; };
-		11BEC5552822FF8300BBB637 /* FeedItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5532822FF8300BBB637 /* FeedItemCell.swift */; };
+		11BEC5542822FF8300BBB637 /* PlayerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5522822FF8300BBB637 /* PlayerItemCell.xib */; };
+		11BEC5552822FF8300BBB637 /* PlayerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5532822FF8300BBB637 /* PlayerItemCell.swift */; };
 		11BEC5572822FFB300BBB637 /* FeedItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5562822FFB300BBB637 /* FeedItemModel.swift */; };
 		11BEC5592822FFFC00BBB637 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5582822FFFC00BBB637 /* README.md */; };
 		11BEC5642823054900BBB637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5602823054900BBB637 /* Main.storyboard */; };
@@ -35,8 +35,8 @@
 		118506B628205C8A00E16048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		118506BE28205F2F00E16048 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		11BEC5502822FF4F00BBB637 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
-		11BEC5522822FF8300BBB637 /* FeedItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FeedItemCell.xib; sourceTree = "<group>"; };
-		11BEC5532822FF8300BBB637 /* FeedItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemCell.swift; sourceTree = "<group>"; };
+		11BEC5522822FF8300BBB637 /* PlayerItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerItemCell.xib; sourceTree = "<group>"; };
+		11BEC5532822FF8300BBB637 /* PlayerItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerItemCell.swift; sourceTree = "<group>"; };
 		11BEC5562822FFB300BBB637 /* FeedItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemModel.swift; sourceTree = "<group>"; };
 		11BEC5582822FFFC00BBB637 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = FeedTableViewController/README.md; sourceTree = "<group>"; };
 		11BEC5612823054900BBB637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -115,8 +115,8 @@
 		11AE08EF286506CC00C8CAE0 /* FeedItem */ = {
 			isa = PBXGroup;
 			children = (
-				11BEC5532822FF8300BBB637 /* FeedItemCell.swift */,
-				11BEC5522822FF8300BBB637 /* FeedItemCell.xib */,
+				11BEC5532822FF8300BBB637 /* PlayerItemCell.swift */,
+				11BEC5522822FF8300BBB637 /* PlayerItemCell.xib */,
 				11BEC5562822FFB300BBB637 /* FeedItemModel.swift */,
 			);
 			path = FeedItem;
@@ -196,7 +196,7 @@
 				11BEC5642823054900BBB637 /* Main.storyboard in Resources */,
 				116AA7AF286A43520039FB53 /* LoadingCell.xib in Resources */,
 				11BEC5652823054900BBB637 /* LaunchScreen.storyboard in Resources */,
-				11BEC5542822FF8300BBB637 /* FeedItemCell.xib in Resources */,
+				11BEC5542822FF8300BBB637 /* PlayerItemCell.xib in Resources */,
 				118506B728205C8A00E16048 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11BEC5552822FF8300BBB637 /* FeedItemCell.swift in Sources */,
+				11BEC5552822FF8300BBB637 /* PlayerItemCell.swift in Sources */,
 				118506BF28205F2F00E16048 /* FeedViewModel.swift in Sources */,
 				116AA7AE286A43520039FB53 /* LoadingCell.swift in Sources */,
 				11BEC5572822FFB300BBB637 /* FeedItemModel.swift in Sources */,
