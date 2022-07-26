@@ -9,18 +9,16 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-    private var viewModel: FeedViewModel!
+    private var viewModel = FeedViewModel.shared
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel = FeedViewModel(delegate: self)
-        viewModel.addBatchedItems()
+        viewModel.addMoreItems()
         
         // Register the custom cell view
-        let feedNib = UINib(nibName: viewModel.cellNibName, bundle: Bundle.main)
+        let feedNib = UINib(nibName: viewModel.cellNibName, bundle: .main)
         tableView.register(feedNib, forCellReuseIdentifier: viewModel.cellReuseIdentifier)
-        let loadingNib = UINib(nibName: "LoadingCell", bundle: nil)
-        tableView.register(loadingNib, forCellReuseIdentifier: LoadingCell.reuseIdentifer)
+        tableView.isPagingEnabled = true
     }
 
     // MARK: UITableViewDelegate implementation
@@ -33,60 +31,27 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        if indexPath.row == viewModel.currentCount - 5 {
-            viewModel.addBatchedItems()
-        }
+        // TODO: When you hit the bottom, expand the table
     }
     
-    // MARK: UITableViewDataSource implementation
-    
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        viewModel.numberOfSections + 1 // for the loading cell
-    }
-    
+    // MARK: - UITableViewDataSource implementation
+        
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        let isVideoSection    = section == 0
-        let isLoadingSection  = section == tableView.numberOfSections - 1
-        
-        if isVideoSection {
-            return viewModel.totalCount
-        }
-        
-        if isLoadingSection {
-            return 1
-        }
-        
-        return 0
+        viewModel.count
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        viewModel.cellDefaultHeight
+        tableView.height
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let isVideoSection    = indexPath.section == 0
-        let isLoadingSection  = indexPath.section == tableView.numberOfSections - 1
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath) as? PlayerItemCell
+        else { return UITableViewCell() }
         
-        if isVideoSection {
-            let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath)
-            
-            guard let cell = cell as? PlayerItemCell
-            else { return UITableViewCell() }
-            
-            cell.item = viewModel.item(at: indexPath.row)
-            
-            return cell
-        } else if isLoadingSection {
-            let cell = tableView.dequeueReusableCell(withIdentifier: LoadingCell.reuseIdentifer, for: indexPath)
-            
-            guard let cell = cell as? LoadingCell
-            else { return UITableViewCell() }
-            
-            cell.activityIndicator.startAnimating()
-            return cell
-        }
+        cell.item = viewModel.item(at: indexPath.row)
+        cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
         
-        return UITableViewCell()
+        return cell
     }
 
     /// Calculates the rows that need to be reloaded
@@ -99,12 +64,11 @@ class FeedTableViewController: UITableViewController {
     }
 }
 
-extension FeedTableViewController: FeedViewModelDelegate {
-    func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?) {
-        tableView.reloadData()
-
-        // TODO: only reload the new indexPaths.
-//        guard let newIndexPathsToReload = newIndexPathsToReload else { return }
-//        tableView.reloadRows(at: newIndexPathsToReload, with: .automatic)
-    }
+extension UIView {
+    var width:  CGFloat { frame.size.width  }
+    var height: CGFloat { frame.size.height }
+    var left:   CGFloat { frame.origin.x    }
+    var right:  CGFloat { left + width      }
+    var top:    CGFloat { frame.origin.y    }
+    var bottom: CGFloat { top + height      }
 }

@@ -8,34 +8,23 @@
 import Foundation
 import JWPlayerKit
 
-protocol FeedViewModelDelegate: AnyObject {
-    func onFetchCompleted(with newIndexPathsToReload: [IndexPath]?)
-}
-
+/// All hard-coded and dynamic values required by the table view.
+/// Since there is only one d-source for a table view, this is a singleton.
 final class FeedViewModel {
-    private weak var delegate: FeedViewModelDelegate?
-
+    // Singleton pattern
+    static let shared = FeedViewModel()
+    private init() {}
+    
     // Dynamic values
-    private var items       = [JWPlayerItem]()
-    private var total: Int?
+    private var items = [JWPlayerItem]()
     
     // Derived values
-    var totalCount:       Int { total ?? currentCount }
-    var currentCount:     Int { items.count }
-    var numberOfSections: Int { (totalCount > 0) ? 1 : 0 }
+    var count: Int { items.count }
 
     // Constant values
     var cellDefaultHeight: CGFloat { 300 }
     var cellReuseIdentifier = PlayerItemCell.reuseIdentifier
     var cellNibName         = PlayerItemCell.reuseIdentifier
-    
-    // Hard-coded demo response.
-    let feedPrototype: JWV2Playlist
-    
-    init(delegate: FeedViewModelDelegate) {
-        self.delegate = delegate
-        feedPrototype = JWV2Playlist.exampleManualPlaylist
-    }
     
     func item(at index: Int) -> JWPlayerItem {
         items[index]
@@ -43,27 +32,34 @@ final class FeedViewModel {
     
     @MainActor
     /// Can be called repeatedly until all pages are loaded.
-    func addBatchedItems() {
-        let itemsToAdd = feedPrototype
-            .playlist?
-            .compactMap({
-                FeedItemModel
-                    .from(playlistItem: $0)?
-                    .toJWPlayerItem()
-            })
-        ?? []
+    func addMoreItems() {
+        let itemsToAdd = Playlist.bpaManual
+            .compactMap {
+                try? JWPlayerItemBuilder()
+                    .title($0.title)
+                    .file($0.source)
+                    .build()
+            }
         
         items += itemsToAdd
-        let indexPathsToReload = indexPathsToReload(from: itemsToAdd)
-        delegate?.onFetchCompleted(with: indexPathsToReload)
+//        let indexPathsToReload = indexPathsToReload(from: itemsToAdd)
     }
     
-    private func indexPathsToReload(from newItems: [JWPlayerItem]) -> [IndexPath] {
-        let startIndex    = items.count - newItems.count
-        let endIndex      = startIndex  + newItems.count
-        let pathsToReload = (startIndex..<endIndex)
-            .map { IndexPath(row: $0, section: 0) }
-//        print(pathsToReload)
-        return pathsToReload
+//    private func indexPathsToReload(from newItems: [JWPlayerItem]) -> [IndexPath] {
+//        let startIndex    = items.count - newItems.count
+//        let endIndex      = startIndex  + newItems.count
+//        let pathsToReload = (startIndex..<endIndex)
+//            .map { IndexPath(row: $0, section: 0) }
+//        return pathsToReload
+//    }
+}
+
+
+fileprivate extension PlayerItemModel {
+    func toJWPlayerItem() -> JWPlayerItem? {
+        try? JWPlayerItemBuilder()
+            .title(title)
+            .file(source)
+            .build()
     }
 }
