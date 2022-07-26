@@ -8,26 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		030A8FE888F6A2CA2212B429 /* Pods_FeedTableViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D51C535B55FAC82CADBE0A23 /* Pods_FeedTableViewController.framework */; };
-		111A06ED28693A46005F5C21 /* JWV2Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111A06EC28693A46005F5C21 /* JWV2Playlist.swift */; };
-		116AA7AE286A43520039FB53 /* LoadingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116AA7AC286A43520039FB53 /* LoadingCell.swift */; };
-		116AA7AF286A43520039FB53 /* LoadingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116AA7AD286A43520039FB53 /* LoadingCell.xib */; };
+		11385757288F60AE00560808 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118506BE28205F2F00E16048 /* FeedViewModel.swift */; };
+		11385758288F642700560808 /* Playlist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111A06EC28693A46005F5C21 /* Playlist.swift */; };
 		1185069128205ACD00E16048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185069028205ACD00E16048 /* AppDelegate.swift */; };
 		1185069328205ACD00E16048 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1185069228205ACD00E16048 /* SceneDelegate.swift */; };
 		118506B728205C8A00E16048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 118506B628205C8A00E16048 /* Assets.xcassets */; };
-		118506BF28205F2F00E16048 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 118506BE28205F2F00E16048 /* FeedViewModel.swift */; };
 		11BEC5512822FF4F00BBB637 /* FeedTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5502822FF4F00BBB637 /* FeedTableViewController.swift */; };
 		11BEC5542822FF8300BBB637 /* PlayerItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5522822FF8300BBB637 /* PlayerItemCell.xib */; };
 		11BEC5552822FF8300BBB637 /* PlayerItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5532822FF8300BBB637 /* PlayerItemCell.swift */; };
-		11BEC5572822FFB300BBB637 /* FeedItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11BEC5562822FFB300BBB637 /* FeedItemModel.swift */; };
 		11BEC5592822FFFC00BBB637 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5582822FFFC00BBB637 /* README.md */; };
 		11BEC5642823054900BBB637 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5602823054900BBB637 /* Main.storyboard */; };
 		11BEC5652823054900BBB637 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11BEC5622823054900BBB637 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		111A06EC28693A46005F5C21 /* JWV2Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JWV2Playlist.swift; sourceTree = "<group>"; };
-		116AA7AC286A43520039FB53 /* LoadingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCell.swift; sourceTree = "<group>"; };
-		116AA7AD286A43520039FB53 /* LoadingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingCell.xib; sourceTree = "<group>"; };
+		111A06EC28693A46005F5C21 /* Playlist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Playlist.swift; sourceTree = "<group>"; };
 		1185068D28205ACD00E16048 /* FeedTableViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FeedTableViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1185069028205ACD00E16048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1185069228205ACD00E16048 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +32,6 @@
 		11BEC5502822FF4F00BBB637 /* FeedTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedTableViewController.swift; sourceTree = "<group>"; };
 		11BEC5522822FF8300BBB637 /* PlayerItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayerItemCell.xib; sourceTree = "<group>"; };
 		11BEC5532822FF8300BBB637 /* PlayerItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerItemCell.swift; sourceTree = "<group>"; };
-		11BEC5562822FFB300BBB637 /* FeedItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemModel.swift; sourceTree = "<group>"; };
 		11BEC5582822FFFC00BBB637 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = FeedTableViewController/README.md; sourceTree = "<group>"; };
 		11BEC5612823054900BBB637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11BEC5632823054900BBB637 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,8 +87,6 @@
 				11BEC5502822FF4F00BBB637 /* FeedTableViewController.swift */,
 				11AE08EE286506C200C8CAE0 /* Feed */,
 				11AE08EF286506CC00C8CAE0 /* FeedItem */,
-				116AA7AC286A43520039FB53 /* LoadingCell.swift */,
-				116AA7AD286A43520039FB53 /* LoadingCell.xib */,
 				118506B628205C8A00E16048 /* Assets.xcassets */,
 				11BEC5602823054900BBB637 /* Main.storyboard */,
 				11BEC5622823054900BBB637 /* LaunchScreen.storyboard */,
@@ -107,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				118506BE28205F2F00E16048 /* FeedViewModel.swift */,
-				111A06EC28693A46005F5C21 /* JWV2Playlist.swift */,
+				111A06EC28693A46005F5C21 /* Playlist.swift */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -117,7 +109,6 @@
 			children = (
 				11BEC5532822FF8300BBB637 /* PlayerItemCell.swift */,
 				11BEC5522822FF8300BBB637 /* PlayerItemCell.xib */,
-				11BEC5562822FFB300BBB637 /* FeedItemModel.swift */,
 			);
 			path = FeedItem;
 			sourceTree = "<group>";
@@ -194,7 +185,6 @@
 			files = (
 				11BEC5592822FFFC00BBB637 /* README.md in Resources */,
 				11BEC5642823054900BBB637 /* Main.storyboard in Resources */,
-				116AA7AF286A43520039FB53 /* LoadingCell.xib in Resources */,
 				11BEC5652823054900BBB637 /* LaunchScreen.storyboard in Resources */,
 				11BEC5542822FF8300BBB637 /* PlayerItemCell.xib in Resources */,
 				118506B728205C8A00E16048 /* Assets.xcassets in Resources */,
@@ -251,13 +241,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BEC5552822FF8300BBB637 /* PlayerItemCell.swift in Sources */,
-				118506BF28205F2F00E16048 /* FeedViewModel.swift in Sources */,
-				116AA7AE286A43520039FB53 /* LoadingCell.swift in Sources */,
-				11BEC5572822FFB300BBB637 /* FeedItemModel.swift in Sources */,
+				11385757288F60AE00560808 /* FeedViewModel.swift in Sources */,
+				11385758288F642700560808 /* Playlist.swift in Sources */,
 				1185069128205ACD00E16048 /* AppDelegate.swift in Sources */,
 				1185069328205ACD00E16048 /* SceneDelegate.swift in Sources */,
 				11BEC5512822FF4F00BBB637 /* FeedTableViewController.swift in Sources */,
-				111A06ED28693A46005F5C21 /* JWV2Playlist.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
