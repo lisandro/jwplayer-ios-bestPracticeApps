@@ -22,7 +22,6 @@ final class FeedViewModel {
     var count: Int { items.count }
 
     // Constant values
-    var cellDefaultHeight: CGFloat { 300 }
     var cellReuseIdentifier = PlayerItemCell.reuseIdentifier
     var cellNibName         = PlayerItemCell.reuseIdentifier
     
@@ -30,8 +29,7 @@ final class FeedViewModel {
         items[index]
     }
     
-    @MainActor
-    /// Can be called repeatedly until all pages are loaded.
+    /// Can be called repeatedly to add another copy of the playlist to the feed.
     func addMoreItems() {
         let itemsToAdd = Playlist.bpaManual
             .compactMap {
@@ -42,18 +40,9 @@ final class FeedViewModel {
             }
         
         items += itemsToAdd
-//        let indexPathsToReload = indexPathsToReload(from: itemsToAdd)
+        // Here's a good place to calculate the index paths of just the new rows, to reload.
     }
-    
-//    private func indexPathsToReload(from newItems: [JWPlayerItem]) -> [IndexPath] {
-//        let startIndex    = items.count - newItems.count
-//        let endIndex      = startIndex  + newItems.count
-//        let pathsToReload = (startIndex..<endIndex)
-//            .map { IndexPath(row: $0, section: 0) }
-//        return pathsToReload
-//    }
 }
-
 
 fileprivate extension PlayerItemModel {
     func toJWPlayerItem() -> JWPlayerItem? {

@@ -8,11 +8,13 @@
 import Foundation
 import UIKit
 
+/// Setting to `false` will load the landscape videos.
 private let showPortraitVideos = true
 
 struct Playlist {
     
-    /// The "BPA Manual" playlist, id: [d7sk9orq](https://cdn.jwplayer.com/v2/playlists/d7sk9orq)
+    /// The "BPA Manual, landscape" playlist, id: [d7sk9orq](https://cdn.jwplayer.com/v2/playlists/d7sk9orq)
+    /// The "BPA Manual, portrait" playlist, id: [V44RvNO4](https://cdn.jwplayer.com/v2/playlists/V44RvNO4)
     static var bpaManual: [PlayerItemModel] = {
         // Simple array of structs from the pairs of titles/sources
         let titles =  showPortraitVideos ? portraitTitles  : landscapeTitles

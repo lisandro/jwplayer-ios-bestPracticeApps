@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -20,15 +21,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="378" height="300"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Video Description Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw9-Lh-jB0">
-                                <rect key="frame" x="40" y="40" width="181" height="21"/>
+                                <rect key="frame" x="40" y="60" width="183" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemBackgroundColor"/>
+                                <size key="shadowOffset" width="2" height="-1"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Video Title Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZGB-00-2hx">
+                                <rect key="frame" x="40" y="219" width="330" height="22"/>
+                                <color key="backgroundColor" systemColor="secondarySystemBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" systemColor="systemBackgroundColor"/>
                             </label>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="ZGB-00-2hx" firstAttribute="width" relation="lessThanOrEqual" secondItem="L6O-La-Q5Z" secondAttribute="width" multiplier="0.335979" constant="203" id="0Mm-6T-6Wv"/>
                             <constraint firstItem="Pw9-Lh-jB0" firstAttribute="leading" secondItem="L6O-La-Q5Z" secondAttribute="leading" constant="40" id="F2X-3g-hW6"/>
-                            <constraint firstItem="Pw9-Lh-jB0" firstAttribute="top" secondItem="L6O-La-Q5Z" secondAttribute="top" constant="40" id="iWB-0R-H1a"/>
+                            <constraint firstAttribute="bottom" secondItem="ZGB-00-2hx" secondAttribute="bottom" constant="59" id="STl-nd-wpy"/>
+                            <constraint firstItem="ZGB-00-2hx" firstAttribute="leading" secondItem="Pw9-Lh-jB0" secondAttribute="leading" id="h3C-jX-Brv"/>
+                            <constraint firstItem="Pw9-Lh-jB0" firstAttribute="top" secondItem="L6O-La-Q5Z" secondAttribute="top" constant="60" id="iWB-0R-H1a"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -44,8 +58,17 @@
             <connections>
                 <outlet property="descriptionLabel" destination="Pw9-Lh-jB0" id="jNK-x5-8Er"/>
                 <outlet property="playerView" destination="L6O-La-Q5Z" id="4fG-0I-PCE"/>
+                <outlet property="titleLabel" destination="ZGB-00-2hx" id="vSH-sm-Cmt"/>
             </connections>
             <point key="canvasLocation" x="179.71014492753625" y="160.04464285714286"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -2,8 +2,7 @@
 //  FeedTableViewController.swift
 //  FeedTableViewController
 //
-//  Created by David Almaguer on 8/14/19.
-//  Copyright © 2019 Karim Mourra. All rights reserved.
+//  Created by Amitai Blickstein on 6/26/22.
 //
 
 import UIKit
@@ -19,6 +18,7 @@ class FeedTableViewController: UITableViewController {
         let feedNib = UINib(nibName: viewModel.cellNibName, bundle: .main)
         tableView.register(feedNib, forCellReuseIdentifier: viewModel.cellReuseIdentifier)
         tableView.isPagingEnabled = true
+        tableView.rowHeight = view.bounds.inset(by: view.safeAreaInsets).height
     }
 
     // MARK: UITableViewDelegate implementation
@@ -27,21 +27,29 @@ class FeedTableViewController: UITableViewController {
         guard let cell = cell as? PlayerItemCell
         else { return }
         
+        // Pause a cell as it goes offscreen
         cell.playerView.player.pause()
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        // TODO: When you hit the bottom, expand the table
+        guard let cell = cell as? PlayerItemCell
+        else { return }
+        
+        // Play a cell as it becomes visible
+        cell.playerView.player.play()
+
+        // Add more rows when we hit the end.
+        if indexPath.row == viewModel.count - 1 {
+            viewModel.addMoreItems()
+            tableView.reloadData()
+            // For more efficiency, use `reloadRows(at:with:)` for the (new && visible) rows.
+        }
     }
     
     // MARK: - UITableViewDataSource implementation
         
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.count
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        tableView.height
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -53,22 +61,4 @@ class FeedTableViewController: UITableViewController {
         
         return cell
     }
-
-    /// Calculates the rows that need to be reloaded
-    /// - Parameter indexPaths: Previously calculated by the view model.
-    /// - Returns: The paths that are both in the view model AND are visible.
-    private func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
-        let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
-        let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
-        return Array(indexPathsIntersection)
-    }
-}
-
-extension UIView {
-    var width:  CGFloat { frame.size.width  }
-    var height: CGFloat { frame.size.height }
-    var left:   CGFloat { frame.origin.x    }
-    var right:  CGFloat { left + width      }
-    var top:    CGFloat { frame.origin.y    }
-    var bottom: CGFloat { top + height      }
 }
