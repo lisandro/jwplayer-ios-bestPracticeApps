@@ -11,12 +11,10 @@ import JWPlayerKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-#warning("Add your JW Player license key if needed.")
-//         JWPlayerKitLicense.setLicenseKey( )
+        // Add your JW Player license key.
+        // JWPlayerKitLicense.setLicenseKey(<#key: String#>)
 
         return true
     }
