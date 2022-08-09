@@ -10,13 +10,12 @@ import JWPlayerKit
 
 class ViewController: JWPlayerViewController {
 
-    private let vmapUrlString = "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/ad_rule_samples&ciu_szs=300x250&ad_rule=1&impl=s&gdfp_req=1&env=vp&output=vmap&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ar%3Dpremidpost&cmsid=496&vid=short_onecue&correlator="
-    private let videoUrlString = "https://cdn.jwplayer.com/videos/CXz339Xh-sJF8m8CA.mp4"
+    private let videoUrlString = "https://cdn.jwplayer.com/manifests/UCExCusa.m3u8"
     private let posterUrlString = "https://cdn.jwplayer.com/thumbs/CXz339Xh-720.jpg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        JWPlayerKitLicense.setLicenseKey("")
         // Set up the player.
         setUpPlayer()
     }
@@ -27,7 +26,6 @@ class ViewController: JWPlayerViewController {
     private func setUpPlayer() {
         let videoUrl = URL(string:videoUrlString)!
         let posterUrl = URL(string:posterUrlString)!
-        let vmapURL = URL(string: vmapUrlString)!
 
         do {
             // First, use the JWPlayerItemBuilder to create a JWPlayerItem that will be used by the player configuration.
@@ -37,14 +35,20 @@ class ViewController: JWPlayerViewController {
                 .build()
 
             // Second, use the JWImaAdvertisingConfigBuilder to create a JWAdvertisingConfig that will be used by the player configuration.
-            let adConfig = try JWImaAdvertisingConfigBuilder()
-                // Set the VMAP url for the builder to use.
-                .vmapURL(vmapURL)
+            // https://developers.google.com/interactive-media-ads/docs/sdks/ios/client-side/tags?hl=es-419
+            let imaUrlString = "https://pubads.g.doubleclick.net/gampad/ads?iu=/21775744923/external/single_ad_samples&sz=640x480&cust_params=sample_ct%3Dredirecterror&ciu_szs=300x250%2C728x90&gdfp_req=1&output=vast&unviewed_position_start=1&env=vp&impl=s&correlator="
+            var adConfig: JWAdvertisingConfig
+            let adBreak = try JWAdBreakBuilder()
+                .offset(.preroll())
+                .tags([URL(string: imaUrlString)!])
+                .build()
+            adConfig = try JWImaAdvertisingConfigBuilder()
+                .schedule([adBreak])
                 .build()
 
             // Third, create a player config with the created JWPlayerItem and JWAdvertisingConfig.
             let config = try JWPlayerConfigurationBuilder()
-                .playlist([playerItem])
+                .playlist([playerItem, playerItem, playerItem])
                 .advertising(adConfig)
                 .autostart(true)
                 .build()
@@ -95,6 +99,7 @@ class ViewController: JWPlayerViewController {
         super.onAdTimeEvent(time)
 
         // If you are not interested in the ad time data, avoid overriding this method due to performance reasons.
+        print("An ad time \(time.duration)")
     }
 
     // When the player encounters an ad warning within the SDK, this method is called on the delegate.
@@ -111,6 +116,17 @@ class ViewController: JWPlayerViewController {
         super.jwplayer(player, encounteredAdError: code, message: message)
 
         print("An ad error has been encountered: (\(code))-\(message)")
+    }
+    
+    override func jwplayer(_ player: JWPlayer, didBecomeIdleWithReason reason: JWIdleReason) {
+        super.jwplayer(player, didBecomeIdleWithReason: reason)
+     
+        print("Did become idle: \(reason)")
+    }
+    
+    override func jwplayer(_ player: JWPlayer, didPauseWithReason reason: JWPauseReason) {
+        super.jwplayer(player, didPauseWithReason: reason)
+        print("Did pause: \(reason)")
     }
 
 }
