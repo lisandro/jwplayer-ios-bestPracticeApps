@@ -8,18 +8,26 @@
 import Foundation
 import JWPlayerKit
 
+protocol FeedViewModelDelegate: AnyObject {
+    /// Tells the delegate that new items were added to the view model, so that it can efficiently
+    /// reload only the newly required UI.
+    /// - Parameter newIndicesToReload: This consists of all indices for the new items.
+    func didAddNewItemsToViewModel(with newIndicesToReload: [Int]?)
+}
+
 /// All hard-coded and dynamic values required by the table view.
 final class FeedViewModel {
-    init(with initialItems: [PlayerItemModel]? = nil) {
-        self.feedItems = initialItems ?? Playlist.bpaManual
+    /// Used to safely let the UI know which and when to reload only the newly added models.
+    weak var delegate: FeedViewModelDelegate?
+    
+    init(withItems items: [JWPlayerItem], delegate: FeedViewModelDelegate? = nil) {
+        self.items    = items
+        self.delegate = delegate
     }
     
     
     // MARK: Private
     
-    /// The fetched JSON or JSON-mapped data structures representing video assets from the feed.
-    /// Currently mocked with a hard-coded 'feed' of assets.
-    private let feedItems: [PlayerItemModel]
     /// The source for the datasource.
     /// - note: The video feed gets 'fed' to (added) here for 'consumption' by (insertion to) the table view.
     private var items = [JWPlayerItem]()
@@ -45,17 +53,17 @@ final class FeedViewModel {
     /// Can be called repeatedly to add another copy of the playlist to the feed.
     /// - note: Call when or just before the table view reaches the end of the table in order to
     /// implement an "infinite scrolling feed".
-    func insertItems() {
-        items += feedItems
-            .compactMap { $0.toJWPlayerItem() }
+    func appendItems(fromPlaylist newlyAppendedItems: [JWPlayerItem] ) {
+        items += newlyAppendedItems
+        
+        let indiciesToReload = newIndicies(from: newlyAppendedItems)
+        delegate?.didAddNewItemsToViewModel(with: indiciesToReload)
     }
-}
-
-fileprivate extension PlayerItemModel {
-    func toJWPlayerItem() -> JWPlayerItem? {
-        try? JWPlayerItemBuilder()
-            .title(title)
-            .file(source)
-            .build()
+    
+    private func newIndicies(from newItems: [JWPlayerItem]) -> [Int] {
+        let startIndex = items.count - newItems.count
+        let endIndex   = startIndex  + newItems.count
+        let newIndexes = Array(startIndex..<endIndex)
+        return newIndexes
     }
 }

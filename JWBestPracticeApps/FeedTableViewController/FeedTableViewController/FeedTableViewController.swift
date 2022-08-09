@@ -8,20 +8,43 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-    private var viewModel = FeedViewModel(with: Playlist.bpaManual)
+    /// Instantiated with our mock/hard-coded playlist.
+    private var viewModel = FeedViewModel(withItems: Playlist.bpaManual)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Must be called once to populate the table view.
-        viewModel.insertItems()
+        viewModel.delegate = self
         
-        // Register the custom cell view
+        // Register the custom cell view.
         let feedNib = UINib(nibName: viewModel.cellNibName, bundle: .main)
         tableView.register(feedNib, forCellReuseIdentifier: viewModel.cellReuseIdentifier)
+        
+        // Various stylistic options.
         tableView.isPagingEnabled = true
         tableView.rowHeight = view.bounds.inset(by: view.safeAreaInsets).height
+        
+        // Must be called once to populate the table view.
+        viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
     }
 
+    
+    // MARK: - UITableViewDataSource implementation
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath) as? PlayerItemCell
+        else { return UITableViewCell() }
+        
+        cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
+        cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
+        
+        return cell
+    }
+    
+    
     // MARK: UITableViewDelegate implementation
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -39,27 +62,31 @@ class FeedTableViewController: UITableViewController {
         // Play a cell as it becomes visible
         cell.playerView.player.play()
 
-        // Add more rows when we hit the end.
+        // Add more rows to the data source when we hit the end.
         if indexPath.row == viewModel.count - 1 {
-            viewModel.insertItems()
-            tableView.reloadData()
-            // 👆 TODO: For performance and resource-efficiency, consider replacing 'reloadData()' with `reloadRows(at:with:)` for the (new && visible) rows.
+            viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
         }
     }
     
-    // MARK: - UITableViewDataSource implementation
-        
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.count
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        super.tableView(tableView, didSelectRowAt: indexPath)
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
+}
+
+extension FeedTableViewController: FeedViewModelDelegate {
+    /// When new items are added to the data source, this will be called to reload the appropriate rows.
+    @MainActor
+    func didAddNewItemsToViewModel(with newIndicesToReload: [Int]?) {
+        let newIndexPaths = (newIndicesToReload ?? [])
+            .map { IndexPath(row: $0, section: 0) }
+        let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPaths)
+        tableView.reloadRows(at: indexPathsToReload, with: .automatic)
     }
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath) as? PlayerItemCell
-        else { return UITableViewCell() }
-        
-        cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
-        cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
-        
-        return cell
+    private func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
+        let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
+        let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
+        return Array(indexPathsIntersection)
     }
 }
