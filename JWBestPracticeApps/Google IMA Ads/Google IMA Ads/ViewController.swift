@@ -18,6 +18,43 @@ class ViewController: JWPlayerViewController {
         JWPlayerKitLicense.setLicenseKey("")
         // Set up the player.
         setUpPlayer()
+        
+        // Create UIButton
+        let myButton = UIButton(type: .system)
+        
+        // Position Button
+        myButton.frame = CGRect(x: 20, y: 20, width: 100, height: 50)
+        // Set text on button
+        myButton.setTitle("Play", for: .normal)
+        myButton.setTitle("Play + Hold", for: .highlighted)
+        
+        // Set button action
+        myButton.addTarget(self, action: #selector(buttonAction(_:)), for: .touchUpInside)
+        
+        // Create UIButton
+        let pauseButton = UIButton(type: .system)
+        
+        // Position Button
+        pauseButton.frame = CGRect(x: 20, y: 72, width: 100, height: 50)
+        // Set text on button
+        pauseButton.setTitle("Pause", for: .normal)
+        pauseButton.setTitle("Pause + Hold", for: .highlighted)
+        
+        // Set button action
+        pauseButton.addTarget(self, action: #selector(pauseAction(_:)), for: .touchUpInside)
+        
+        view.addSubview(pauseButton)
+        view.addSubview(myButton)
+    }
+    
+    @objc func buttonAction(_ sender:UIButton!)
+    {
+        player.play()
+    }
+    
+    @objc func pauseAction(_ sender:UIButton!)
+    {
+        player.pause()
     }
 
     /**
@@ -50,7 +87,6 @@ class ViewController: JWPlayerViewController {
             let config = try JWPlayerConfigurationBuilder()
                 .playlist([playerItem, playerItem, playerItem])
                 .advertising(adConfig)
-                .autostart(true)
                 .build()
 
             // Lastly, use the created JWPlayerConfiguration to set up the player.
@@ -90,7 +126,7 @@ class ViewController: JWPlayerViewController {
         case .adBreakEnd:
             print("The ad break has finished")
         default:
-            break
+            print("The default ad event")
         }
     }
 
@@ -127,6 +163,11 @@ class ViewController: JWPlayerViewController {
     override func jwplayer(_ player: JWPlayer, didPauseWithReason reason: JWPauseReason) {
         super.jwplayer(player, didPauseWithReason: reason)
         print("Did pause: \(reason)")
+    }
+    
+    override func jwplayerIsReady(_ player: JWPlayer) {
+        super.jwplayerIsReady(player)
+        player.play()
     }
 
 }
