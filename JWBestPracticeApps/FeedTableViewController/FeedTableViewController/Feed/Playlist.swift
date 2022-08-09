@@ -11,10 +11,10 @@ import UIKit
 /// Setting to `false` will load the landscape videos.
 private let showPortraitVideos = true
 
+/// A structure that provides a hard-coded JSON 'feed' of `PlayerItemModel`s.
 struct Playlist {
-    
-    /// The "BPA Manual, landscape" playlist, id: [d7sk9orq](https://cdn.jwplayer.com/v2/playlists/d7sk9orq)
-    /// The "BPA Manual, portrait" playlist, id: [V44RvNO4](https://cdn.jwplayer.com/v2/playlists/V44RvNO4)
+    /// * The "BPA Manual, landscape" playlist, id: [d7sk9orq](https://cdn.jwplayer.com/v2/playlists/d7sk9orq)
+    /// * The "BPA Manual, portrait" playlist, id: [V44RvNO4](https://cdn.jwplayer.com/v2/playlists/V44RvNO4)
     static var bpaManual: [PlayerItemModel] = {
         // Simple array of structs from the pairs of titles/sources
         let titles =  showPortraitVideos ? portraitTitles  : landscapeTitles
@@ -27,14 +27,10 @@ struct Playlist {
             }
     }()
     
+    
     // MARK: Landscape videos
+    
     private static let landscapeTitles = [
-//        "Two Girls Having Fun In A Retro Restaurant",
-//        "Computer Fan With Neon Lights",
-//        "Little Girl Dressed As An Astronaut Jumping On The Bed",
-//        "Lens Focus In Motion",
-//        "Competitive Woman Playing Together With Other Gamers",
-
         "BPA Manual Playlist",
         "Big Buck Bunny 33s",
         "Office chair race",
@@ -50,12 +46,6 @@ struct Playlist {
     ]
     
     private static let landscapeSources = [
-//       "https://cdn.jwplayer.com/manifests/90gsMZTi.m3u8",
-//       "https://cdn.jwplayer.com/manifests/gUG7L7wS.m3u8",
-//       "https://cdn.jwplayer.com/manifests/I03KukI9.m3u8",
-//       "https://cdn.jwplayer.com/manifests/pCoOm1XY.m3u8",
-//       "https://cdn.jwplayer.com/manifests/SPAgxFxi.m3u8",
-
         "https://cdn.jwplayer.com/manifests/YuJG5ygn.m3u8",
         "https://cdn.jwplayer.com/manifests/XKvnATBz.m3u8",
         "https://cdn.jwplayer.com/manifests/FCEcttZF.m3u8",
@@ -71,6 +61,7 @@ struct Playlist {
 
     
     // MARK: Portrait videos
+    
     static let portraitTitles = [
         "Two Girls Having Fun In A Retro Restaurant",
         "Computer Fan With Neon Lights",
@@ -86,9 +77,4 @@ struct Playlist {
         "https://cdn.jwplayer.com/manifests/pCoOm1XY.m3u8",
         "https://cdn.jwplayer.com/manifests/SPAgxFxi.m3u8",
     ]
-}
-
-struct PlayerItemModel {
-    var title: String
-    var source: URL    
 }

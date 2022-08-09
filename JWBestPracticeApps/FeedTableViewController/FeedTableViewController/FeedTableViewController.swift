@@ -8,11 +8,12 @@
 import UIKit
 
 class FeedTableViewController: UITableViewController {
-    private var viewModel = FeedViewModel.shared
+    private var viewModel = FeedViewModel(with: Playlist.bpaManual)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.addMoreItems()
+        // Must be called once to populate the table view.
+        viewModel.insertItems()
         
         // Register the custom cell view
         let feedNib = UINib(nibName: viewModel.cellNibName, bundle: .main)
@@ -40,9 +41,9 @@ class FeedTableViewController: UITableViewController {
 
         // Add more rows when we hit the end.
         if indexPath.row == viewModel.count - 1 {
-            viewModel.addMoreItems()
+            viewModel.insertItems()
             tableView.reloadData()
-            // For more efficiency, use `reloadRows(at:with:)` for the (new && visible) rows.
+            // 👆 TODO: For performance and resource-efficiency, consider replacing 'reloadData()' with `reloadRows(at:with:)` for the (new && visible) rows.
         }
     }
     
@@ -56,7 +57,7 @@ class FeedTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath) as? PlayerItemCell
         else { return UITableViewCell() }
         
-        cell.item = viewModel.item(at: indexPath.row)
+        cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
         cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
         
         return cell

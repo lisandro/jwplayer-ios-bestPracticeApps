@@ -9,38 +9,45 @@ import Foundation
 import JWPlayerKit
 
 /// All hard-coded and dynamic values required by the table view.
-/// Since there is only one d-source for a table view, this is a singleton.
 final class FeedViewModel {
-    // Singleton pattern
-    static let shared = FeedViewModel()
-    private init() {}
+    init(with initialItems: [PlayerItemModel]? = nil) {
+        self.feedItems = initialItems ?? Playlist.bpaManual
+    }
     
-    // Dynamic values
+    
+    // MARK: Private
+    
+    /// The fetched JSON or JSON-mapped data structures representing video assets from the feed.
+    /// Currently mocked with a hard-coded 'feed' of assets.
+    private let feedItems: [PlayerItemModel]
+    /// The source for the datasource.
+    /// - note: The video feed gets 'fed' to (added) here for 'consumption' by (insertion to) the table view.
     private var items = [JWPlayerItem]()
     
-    // Derived values
+    
+    // MARK: Public
+    
+    /// The number of `JWPlayerItem`s currently in the feed/model.
     var count: Int { items.count }
 
     // Constant values
-    var cellReuseIdentifier = PlayerItemCell.reuseIdentifier
-    var cellNibName         = PlayerItemCell.reuseIdentifier
+    let cellReuseIdentifier = PlayerItemCell.reuseIdentifier
+    let cellNibName         = PlayerItemCell.reuseIdentifier
     
-    func item(at index: Int) -> JWPlayerItem {
+    /// Returns a `JWPlayerItem` representing the video model (title and URL source) in the data source.
+    func itemForVideoMetadata(at index: Int) -> JWPlayerItem {
+        // The (relatively simple) implementation is hidden from the table view consuming it.
         items[index]
     }
     
+    /// Adds items to the view model, and thus, to the data source.
+    ///
     /// Can be called repeatedly to add another copy of the playlist to the feed.
-    func addMoreItems() {
-        let itemsToAdd = Playlist.bpaManual
-            .compactMap {
-                try? JWPlayerItemBuilder()
-                    .title($0.title)
-                    .file($0.source)
-                    .build()
-            }
-        
-        items += itemsToAdd
-        // Here's a good place to calculate the index paths of just the new rows, to reload.
+    /// - note: Call when or just before the table view reaches the end of the table in order to
+    /// implement an "infinite scrolling feed".
+    func insertItems() {
+        items += feedItems
+            .compactMap { $0.toJWPlayerItem() }
     }
 }
 
