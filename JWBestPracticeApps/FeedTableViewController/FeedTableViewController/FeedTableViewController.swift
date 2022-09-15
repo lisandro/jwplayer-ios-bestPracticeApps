@@ -69,24 +69,21 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        super.tableView(tableView, didSelectRowAt: indexPath)
         tableView.deselectRow(at: indexPath, animated: false)
     }
 }
 
 extension FeedTableViewController: FeedViewModelDelegate {
     /// When new items are added to the data source, this will be called to reload the appropriate rows.
-    @MainActor
     func didAddNewItemsToViewModel(with newIndicesToReload: [Int]?) {
         let newIndexPaths = (newIndicesToReload ?? [])
             .map { IndexPath(row: $0, section: 0) }
-        let indexPathsToReload = visibleIndexPathsToReload(intersecting: newIndexPaths)
-        tableView.reloadRows(at: indexPathsToReload, with: .automatic)
+        
+        didAddNewRows(withIndexPaths: newIndexPaths)
     }
     
-    private func visibleIndexPathsToReload(intersecting indexPaths: [IndexPath]) -> [IndexPath] {
-        let indexPathsForVisibleRows = tableView.indexPathsForVisibleRows ?? []
-        let indexPathsIntersection = Set(indexPathsForVisibleRows).intersection(indexPaths)
-        return Array(indexPathsIntersection)
+    @MainActor
+    private func didAddNewRows(withIndexPaths newIndexPaths: [IndexPath]) {
+        tableView.reloadRows(at: newIndexPaths, with: .automatic)
     }
 }

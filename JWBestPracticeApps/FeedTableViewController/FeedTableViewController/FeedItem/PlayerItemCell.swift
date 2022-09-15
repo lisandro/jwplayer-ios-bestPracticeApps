@@ -25,13 +25,6 @@ class PlayerItemCell: UITableViewCell {
         willSet { loadCellPlayer(with: newValue) }
     }
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Expensive player initialization via the `configurePlayer(with:)` API should be kept to a minimum.
-        let oneBlackScreen = Playlist.oneBlackScreen[0]
-        playerView.player.configurePlayer(with: getPlayerConfig(for: oneBlackScreen)!)
-    }
-    
     override func prepareForReuse() {
         super.prepareForReuse()
         playerView.player.stop()
@@ -39,12 +32,28 @@ class PlayerItemCell: UITableViewCell {
     
     /// Loads the cell's player using the relatively inexpensive `loadPlaylist` API.
     private func loadCellPlayer(with item: JWPlayerItem?) {
-        guard let item = item
+        guard
+            let item = item,
+            let config = getPlayerConfig(for: item)
         else { return }
 
         titleLabel.text = item.title
-        playerView.player.loadPlaylist([item])
         playerView.videoGravity = .resizeAspectFill
+    
+        if playerNeedsToBeConfigured() {
+            playerView.player.configurePlayer(with: config)
+        } else {
+            playerView.player.loadPlaylist([item])
+        }
+    }
+    
+    /// If the player has not been initialized yet, or is stuck in an unrecoverable error state,
+    /// then `configure` is needed. Otherwise, calling `loadPlaylist` is the performant way to play
+    /// a new asset without expensive player creation.
+    /// - Returns: Returns `true` if the player is in the `error` or `unknown` states.
+    private func playerNeedsToBeConfigured() -> Bool {
+        [.unknown, .error]
+            .contains(playerView.player.getState())
     }
     
     private func getPlayerConfig(for item: JWPlayerItem?) -> JWPlayerConfiguration? {

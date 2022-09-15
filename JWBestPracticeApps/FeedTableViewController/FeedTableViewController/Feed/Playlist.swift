@@ -40,16 +40,4 @@ struct Playlist {
         "Competitive Woman Playing Together With Other Gamers":
             "https://cdn.jwplayer.com/manifests/SPAgxFxi.m3u8",
     ]
-
-    /// A lightweight, locally-stored video for performant player initialization in cells.
-    static var oneBlackScreen: [JWPlayerItem] = {[
-        try! JWPlayerItemBuilder()
-            .title("Default")
-            .file(
-                URL(fileURLWithPath:
-                        Bundle.main.path( forResource: "3sOfBlack", ofType: "mp4")!
-                   )
-            )
-            .build()
-    ]}()
 }
