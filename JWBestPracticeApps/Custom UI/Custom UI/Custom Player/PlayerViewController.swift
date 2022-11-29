@@ -75,10 +75,17 @@ class PlayerViewController: ViewController {
         fullScreenViewController = FullScreenPlayerViewController()
         fullScreenViewController!.modalPresentationStyle = .fullScreen
         
+        let playerStateBeforeFullscreen = player.getState()
+        
         // Assign the full screen view controller as the new controller
         // so the video is put into its view hierarchy, and present it.
         viewManager.setController(fullScreenViewController!)
-        present(fullScreenViewController!, animated: true)
+        present(fullScreenViewController!, animated: true) { [weak self] in
+            // Resume playback if the player was playing before entering fullscreen
+            if playerStateBeforeFullscreen == .playing {
+                self?.player.play()
+            }
+        }
     }
     
     /// When called, the video returns to normal non-full screen size.
