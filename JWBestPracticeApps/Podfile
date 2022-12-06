@@ -89,6 +89,11 @@ target 'Captions' do
   common_JWPlayer
 end
 
+target 'Offline DRM' do
+  project 'Offline DRM/Offline DRM'
+  common_JWPlayer
+end
+
 ####################################
 #### JWPlayerTVKit tvOS targets ####
 ####################################
