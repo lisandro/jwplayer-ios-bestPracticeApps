@@ -8,9 +8,6 @@
       location = "container:"
       name = "JWPlayerKit">
       <FileRef
-         location = "group:Offline DRM/Offline DRM.xcodeproj">
-      </FileRef>
-      <FileRef
          location = "group:BasicPlayer/BasicPlayer.xcodeproj">
       </FileRef>
       <FileRef
@@ -29,6 +26,9 @@
          location = "group:DRM Fairplay/DRM Fairplay.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Offline DRM/Offline DRM.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Google DAI Ads/Google DAI Ads.xcodeproj">
       </FileRef>
       <FileRef
@@ -36,9 +36,6 @@
       </FileRef>
       <FileRef
          location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
-      </FileRef>
-      <FileRef
-         location = "group:Offline DRM/Offline DRM.xcodeproj">
       </FileRef>
       <FileRef
          location = "group:Recommendations/Recommendations.xcodeproj">

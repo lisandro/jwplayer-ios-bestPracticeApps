@@ -17,14 +17,18 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
    
     /// The key for requesting the data from UserDefaults
     private let savedDataKey = "localVideoFile"
+
     // MARK: - DRM management properties
+
     /// The content key loader.
     private var contentLoader: JWDRMContentLoader?
     private let keyManager: JWDRMContentKeyManager = DRMKeyManager()
     private let keyDataSource: DRMKeyDataSource = DRMKeyDataSource()
+
     // MARK: - Playlist properties
-    // The playlist signed URL for DRM protected content.
     private let playlistURL = "<#T##String#>"
+
+    /// The playlist signed URL for DRM protected content.
     /// The video file from the signed URL, this gets set after parsing the playlist.
     private var videoFile = ""
     /// The location in memory for the local video, this gets set when downloading the asset. Not directly used.
@@ -87,6 +91,13 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
         self.player = playerViewController.player
     }
     
+    /**
+     Creates a player configuration from the JW Player playlist URL.
+
+     The signed URL you generate for [content protection](https://docs.jwplayer.com/platform/reference/protect-your-content-with-signed-urls#create-a-signed-jwt-url)
+     returns a JSON playlist we can use to configure the player.
+     - parameter url: The signed URL for the content playlist.
+     */
     func getPlaylist(remote url: URL) -> JWPlayerConfiguration? {
         let sem = DispatchSemaphore(value: 0)
         let task = URLSession.shared.dataTask(with: url) { [weak self] data, response, err in
@@ -100,15 +111,18 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
                 fatalError("Playlist URL request failed: \(error.localizedDescription)")
             }
             do {
+                // We try to decode the playlist data into a playlist struct. [more info](https://docs.jwplayer.com/platform/reference/protect-your-content-with-signed-urls#create-a-signed-jwt-url)
                 let playlist = try JSONDecoder().decode(DRMPlaylist.self, from: data!)
+                // We are only interested in the source that is an m3u8 file.
+                // Other source will contains formats compatible with Widevine and PlayReady.
                 guard let source = playlist.playlist.first?.sources.first(where: { $0.type == "application/vnd.apple.mpegurl" }) else {
                     return
                 }
                 // After parsing the playlist, set the current video file
                 self.videoFile = source.file
-                // Set the certificate URL we will need for for the JWDRMKeyDataSource
+                // Set the certificate URL we will need for for the JWDRMKeyDataSource, this is part of the FairPlay property in the used source.
                 self.keyDataSource.certificateURLStr = source.drm.fairplay?.certificateURL
-                // Set the process SPC URL we will need for for the JWDRMKeyDataSource
+                // Set the process SPC URL we will need for for the JWDRMKeyDataSource, this is part of the FairPlay property in the used source.
                 self.keyDataSource.processSPCURLStr = source.drm.fairplay?.processSpcURL
             } catch {
                 print("Error decoding data from playlist URL", error.localizedDescription)
@@ -131,6 +145,12 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
         return config
     }
     
+    /**
+     Creates a player configuration from the locally saved video file.
+     
+     The URL is specified by the `AVAssetDownloadTask` or `AVAggregateAssetDownloadTask`, and received by the `willDownloadTo` delegate method.
+     - parameter url: A url for a video in the device file system.
+     */
     func getPlaylist(local url: URL) -> JWPlayerConfiguration? {
         var config: JWPlayerConfiguration? = nil
         do {
@@ -171,16 +191,17 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     }
     
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask, didCompleteFor mediaSelection: AVMediaSelection) {
-        DispatchQueue.main.async { [weak self] in
-            self?.stateLabel?.text = "Saved"
-        }
+        // An error if we failed to save the data bookmark
+        var bookmarkError: String? = nil
         do {
             let data = try localVideoFile?.bookmarkData()
             UserDefaults.standard.set(data, forKey: savedDataKey)
         } catch {
-            print("Error saving bookmark data")
+            bookmarkError = "Error saving, try again"
         }
-        
+        DispatchQueue.main.async { [weak self] in
+            self?.stateLabel?.text = bookmarkError ?? "Saved"
+        }
     }
     
     func urlSession(_ session: URLSession, aggregateAssetDownloadTask: AVAggregateAssetDownloadTask, willDownloadTo location: URL) {
@@ -190,9 +211,14 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
     func urlSession(_ session: URLSession, task: URLSessionTask, didCompleteWithError error: Error?) {
         if let error = error {
             print("Error while downloading the asset: ", error.localizedDescription)
+            DispatchQueue.main.async { [weak self] in
+                self?.stateLabel?.text = "Error donwloading, try again"
+            }
+
         }
     }
-    
+
+    /// Starts an download session for the provided AVURLAsset.
     @IBAction func downloadStream(_ sender: UIButton) {
         guard let video = URL(string: videoFile) else {
             return
@@ -201,6 +227,37 @@ class ViewController: UIViewController, AVAssetDownloadDelegate {
         let asset = AVURLAsset(url: video)
         downloadStream(for: asset)
         stateLabel?.text = "Downloading"
+    }
+
+    /**
+     If the keys have expired, or you wish to download this again.
+     
+     This removes any previous values and then configures the player with a JW Player playlist URL.
+     */
+    @IBAction func resetStream(_ sender: UIButton) {
+        // Delete downloaded file
+        if let localURL = localURL {
+            do {
+                try FileManager.default.removeItem(at: localURL)
+            } catch {
+                print("Could not delete local URL")
+            }
+        }
+        // Delete persisted keys
+        if let keyManager = keyManager as? DRMKeyManager {
+            do {
+                try FileManager.default.removeItem(atPath: keyManager.keyDirectory.relativePath)
+            } catch {
+                print("Could not delete local URL")
+            }
+        }
+        // Update UI
+        stateLabel?.text = ""
+        // Setup the player again, with the remote playlist.
+        let playlistURL = URL(string: playlistURL)!
+        if let config = self.getPlaylist(remote: playlistURL) {
+            self.player?.configurePlayer(with: config)
+        }
     }
 }
 

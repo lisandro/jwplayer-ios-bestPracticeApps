@@ -42,7 +42,7 @@ class DRMKeyManager: JWDRMContentKeyManager {
     }
     
     func contentLoader(_ contentLoader: JWPlayerKit.JWDRMContentLoader, didWritePersistableContentKey contentKeyIdentifier: String) {
-        // We can updated on client side if we were waiting for the keys to be saved on memory.
+        // We can update on client side if we were waiting for the keys to be saved on memory.
     }
     
     func contentLoader(_ contentLoader: JWPlayerKit.JWDRMContentLoader, deletePersistableContentKey contentKeyIdentifier: String) {
@@ -55,7 +55,8 @@ class DRMKeyManager: JWDRMContentKeyManager {
     }
     
     func contentLoader(_ contentLoader: JWPlayerKit.JWDRMContentLoader, contentKeyTypeFor contentKeyIdentifier: String) -> JWPlayerKit.JWContentKeyType {
-        // We return the type of content, if this is intended to be non persistable then return .nonPersistable to use online DRM.
+        // We return the type of content, if this is intended to be non-persistable then return .nonPersistable to use online DRM.
+        // If you wish to distinguish between your persistable and non-persistable content, this is where you would do so.
         return .persistable
     }
     

@@ -1,11 +1,10 @@
 
 ## Offline DRM - Best Practices App
 
-  
 
-The DRM Fairplay project illustrates how to use our DRM implementation to play a FairPlay encrypted streams. The stream should be a (signed URL)[https://docs.jwplayer.com/platform/reference/protect-your-content-with-signed-urls] that you generate for DRM protected content from JW Player StudioDRM.
+The DRM Fairplay project illustrates how to use our DRM implementation to play FairPlay encrypted streams. The stream should be a [signed URL](https://docs.jwplayer.com/platform/reference/protect-your-content-with-signed-urls) that you generate for DRM protected content from JW Player StudioDRM.
 
-Important: you need a Fairplay package from Apple to enable Fairplay for your content, more information (here)[https://docs.jwplayer.com/players/docs/ios-apply-studio-drm-with-jw-platform#enabling-apple-fairplay-streaming].
+Important: you need a Fairplay package from Apple to enable Fairplay for your content, more information [here](https://docs.jwplayer.com/players/docs/ios-apply-studio-drm-with-jw-platform#enabling-apple-fairplay-streaming).
 
 For `JWPlayerKit` to request your content keys we can do it in two ways:
 
