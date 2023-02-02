@@ -33,6 +33,7 @@ class CustomControls: UIView {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        playPauseButton.setTitle("", for: .normal)
         // Add targets to the progress bar to listen for touchDown and touchUpInside events
         progressBar.addTarget(self, action: #selector(progressBarTouchDown(_:)), for: .touchDown)
         progressBar.addTarget(self, action: #selector(progressBarTouchUp(_:)), for: .touchUpInside)

@@ -1,17 +1,21 @@
-platform :ios, '10.0'
-workspace 'JWBestPracticeApps-4x'
-use_frameworks!
+####################################
+####   JWPlayerKit iOS targets  ####
+####################################
+
+def common_JWPlayer
+  platform :ios, '12.0'
+  workspace 'JWBestPracticeApps-4x'
+  use_frameworks!
+  
+  pod 'JWPlayerKit', '~> 4'
+end
 
 def common_Cast
-    pod 'google-cast-sdk'
+  pod 'google-cast-sdk', '~> 4.5.3'
 end
 
 def common_Google_IMA
-    pod 'GoogleAds-IMA-iOS-SDK', '~> 3.14.3'
-end
-
-def common_JWPlayer
-    pod 'JWPlayerKit', '~> 4'
+  pod 'GoogleAds-IMA-iOS-SDK', '~> 3.14.3'
 end
 
 target 'AdvancedPlayer' do
@@ -78,4 +82,45 @@ end
 target 'Custom UI' do
   project 'Custom UI/Custom UI'
   common_JWPlayer
+end
+
+target 'Picture in Picture' do
+  project 'Picture in Picture/Picture in Picture'
+  common_JWPlayer
+end
+
+target 'Captions' do
+  project 'Captions/Captions'
+  common_JWPlayer
+end
+
+target 'Offline DRM' do
+  project 'Offline DRM/Offline DRM'
+  common_JWPlayer
+end
+
+####################################
+#### JWPlayerTVKit tvOS targets ####
+####################################
+
+def common_JWPlayerTVKit
+  platform :tvos, '14.0'
+  use_frameworks!
+  
+  pod 'JWPlayerTVKit', '~> 1'
+end
+
+target 'BasicTVPlayer' do
+  project 'BasicTVPlayer/BasicTVPlayer'
+  common_JWPlayerTVKit
+end
+
+post_install do |installer|
+  puts 'Setting ONLY_ACTIVE_ARCH = NO for all Pods in Project'
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      # The ONLY_ACTIVE_ARCH setting can be removed from here when Google frameworks get upgraded.
+      config.build_settings['ONLY_ACTIVE_ARCH'] = 'NO'
+    end
+  end
 end

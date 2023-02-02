@@ -48,6 +48,7 @@ class ViewController: JWPlayerViewController,
         customControls = UINib(nibName: "CustomControls", bundle: .main).instantiate(withOwner: nil, options: nil).first as? CustomControls
         customControls.translatesAutoresizingMaskIntoConstraints = false
         customControls.delegate = self
+        customControls.isHidden = true
         addCustomControls(toView: view)
 
         // Set up the player.
@@ -141,7 +142,12 @@ class ViewController: JWPlayerViewController,
         super.jwplayer(player, didPauseWithReason: reason)
         // Set the play/pause button image on the main thread
         DispatchQueue.main.async { [weak self] in
-            self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+            if #available(iOS 13.0, *) {
+                self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                self?.customControls.playPauseButton.setImage(UIImage(named: "play.fill"), for: .normal)
+            }
         }
     }
 
@@ -149,7 +155,12 @@ class ViewController: JWPlayerViewController,
         super.jwplayer(player, isPlayingWithReason: reason)
         // Set the play/pause button image on the main thread
         DispatchQueue.main.async { [weak self] in
-            self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+            if #available(iOS 13.0, *) {
+                self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+            } else {
+                // Fallback on earlier versions
+                self?.customControls.playPauseButton.setImage(UIImage(named: "pause.fill"), for: .normal)
+            }
         }
     }
 
@@ -212,11 +223,21 @@ class ViewController: JWPlayerViewController,
             }
         case .play:
             DispatchQueue.main.async { [weak self] in
-                self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+                if #available(iOS 13.0, *) {
+                    self?.customControls.playPauseButton.setImage(UIImage(systemName: "pause"), for: .normal)
+                } else {
+                    // Fallback on earlier versions
+                    self?.customControls.playPauseButton.setImage(UIImage(named: "pause"), for: .normal)
+                }
             }
         case .pause:
             DispatchQueue.main.async { [weak self] in
-                self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+                if #available(iOS 13.0, *) {
+                    self?.customControls.playPauseButton.setImage(UIImage(systemName: "play"), for: .normal)
+                } else {
+                    // Fallback on earlier versions
+                    self?.customControls.playPauseButton.setImage(UIImage(named: "play"), for: .normal)
+                }
             }
         case .skipped:
             DispatchQueue.main.async { [weak self] in
@@ -266,6 +287,29 @@ class ViewController: JWPlayerViewController,
             let timeRemaining = Int(ceil(self!.skipOffset! - time.position))
             self?.customControls.skipButton.setTitle("Skip Ad in \(timeRemaining)", for: .normal)
         }
+    }
+
+    // MARK: - Observe player setup events
+
+    override func jwplayerIsReady(_ player: JWPlayer) {
+        super.jwplayerIsReady(player)
+
+        // Show the custom controls up when the player is fully initialized.
+        customControls.isHidden = false
+    }
+
+    override func jwplayer(_ player: JWPlayer, failedWithSetupError code: UInt, message: String) {
+        super.jwplayer(player, failedWithSetupError: code, message: message)
+        
+        // Hide the custom controls when the player encounters an error during setup and initialization.
+        customControls.isHidden = true
+    }
+
+    override func jwplayer(_ player: JWPlayer, failedWithError code: UInt, message: String) {
+        super.jwplayer(player, failedWithError: code, message: message)
+
+        // Hide the custom controls when the player encounters an error with playback.
+        customControls.isHidden = true
     }
 
     // MARK: - JWPlayerViewControllerDelegate
