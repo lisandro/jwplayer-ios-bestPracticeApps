@@ -63,8 +63,10 @@ class FeedTableViewController: UITableViewController {
         cell.playerView.player.play()
 
         // Add more rows to the data source when we hit the end.
-        if indexPath.row == viewModel.count - 1 {
-            viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
+        Task {
+            if indexPath.row == viewModel.count - 1 {
+                viewModel.appendItems(fromPlaylist: Playlist.bpaManual)
+            }
         }
     }
     
@@ -84,6 +86,6 @@ extension FeedTableViewController: FeedViewModelDelegate {
     
     @MainActor
     private func didAddNewRows(withIndexPaths newIndexPaths: [IndexPath]) {
-        tableView.reloadRows(at: newIndexPaths, with: .automatic)
+        tableView.insertRows(at: newIndexPaths, with: .automatic)
     }
 }
