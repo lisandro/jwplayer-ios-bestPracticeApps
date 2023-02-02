@@ -26,18 +26,18 @@ struct Playlist {
     /// A dictionary of assets in portrait resolution.
     static let titledSources = [
         "Two Girls Having Fun In A Retro Restaurant":
-            "https://cdn.jwplayer.com/manifests/90gsMZTi.m3u8",
+            "https://cdn.jwplayer.com/manifests/fZcd504K.m3u8",
         
         "Computer Fan With Neon Lights":
-            "https://cdn.jwplayer.com/manifests/gUG7L7wS.m3u8",
+            "https://cdn.jwplayer.com/manifests/eUTsrVbB.m3u8",
         
         "Little Girl Dressed As An Astronaut Jumping On The Bed":
-            "https://cdn.jwplayer.com/manifests/I03KukI9.m3u8",
+            "https://cdn.jwplayer.com/manifests/ezBTdlUs.m3u8",
         
         "Lens Focus In Motion":
-            "https://cdn.jwplayer.com/manifests/pCoOm1XY.m3u8",
+            "https://cdn.jwplayer.com/manifests/O7oifTAY.m3u8",
         
         "Competitive Woman Playing Together With Other Gamers":
-            "https://cdn.jwplayer.com/manifests/SPAgxFxi.m3u8",
+            "https://cdn.jwplayer.com/manifests/ScxgEIPi.m3u8",
     ]
 }

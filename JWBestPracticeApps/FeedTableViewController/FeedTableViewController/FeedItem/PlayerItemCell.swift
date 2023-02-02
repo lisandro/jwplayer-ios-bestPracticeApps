@@ -32,10 +32,10 @@ class PlayerItemCell: UITableViewCell {
     
     /// Loads the cell's player using the relatively inexpensive `loadPlaylist` API.
     private func loadCellPlayer(with item: JWPlayerItem?) {
-        guard
-            let item = item,
-            let config = getPlayerConfig(for: item)
-        else { return }
+        guard let item,
+              let config = getPlayerConfig(for: item) else {
+            return
+        }
 
         titleLabel.text = item.title
         playerView.videoGravity = .resizeAspectFill
@@ -43,7 +43,7 @@ class PlayerItemCell: UITableViewCell {
         if playerNeedsToBeConfigured() {
             playerView.player.configurePlayer(with: config)
         } else {
-            playerView.player.loadPlaylist([item])
+            playerView.player.loadPlaylist(items: [item])
         }
     }
     
@@ -57,11 +57,12 @@ class PlayerItemCell: UITableViewCell {
     }
     
     private func getPlayerConfig(for item: JWPlayerItem?) -> JWPlayerConfiguration? {
-        guard let item = item
-        else { return nil }
+        guard let item else {
+            return nil
+        }
 
         return try? JWPlayerConfigurationBuilder()
-            .playlist([item])
+            .playlist(items: [item])
             .autostart(true)
             .repeatContent(true)
             .build()

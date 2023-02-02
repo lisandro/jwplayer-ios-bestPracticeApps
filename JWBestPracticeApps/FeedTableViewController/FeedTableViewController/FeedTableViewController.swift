@@ -35,11 +35,11 @@ class FeedTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath) as? PlayerItemCell
-        else { return UITableViewCell() }
-        
-        cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
-        cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
+        let cell = tableView.dequeueReusableCell(withIdentifier: viewModel.cellReuseIdentifier, for: indexPath)
+        if let cell = cell as? PlayerItemCell {
+            cell.item = viewModel.itemForVideoMetadata(at: indexPath.row)
+            cell.descriptionLabel.text = "video #\(indexPath.row + 1)"
+        }
         
         return cell
     }
@@ -48,16 +48,18 @@ class FeedTableViewController: UITableViewController {
     // MARK: UITableViewDelegate implementation
     
     override func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? PlayerItemCell
-        else { return }
+        guard let cell = cell as? PlayerItemCell else {
+            return
+        }
         
         // Pause a cell as it goes offscreen
         cell.playerView.player.pause()
     }
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
-        guard let cell = cell as? PlayerItemCell
-        else { return }
+        guard let cell = cell as? PlayerItemCell else {
+            return
+        }
         
         // Play a cell as it becomes visible
         cell.playerView.player.play()
@@ -86,6 +88,6 @@ extension FeedTableViewController: FeedViewModelDelegate {
     
     @MainActor
     private func didAddNewRows(withIndexPaths newIndexPaths: [IndexPath]) {
-        tableView.insertRows(at: newIndexPaths, with: .automatic)
+        tableView.insertRows(at: newIndexPaths, with: .none)
     }
 }
