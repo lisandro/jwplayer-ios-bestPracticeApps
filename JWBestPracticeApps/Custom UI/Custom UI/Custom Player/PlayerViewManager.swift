@@ -10,13 +10,16 @@ import UIKit
 import JWPlayerKit
 
 /// Constants representing our different interfaces.
-enum PlayerInterface {
+enum PlayerInterface: Equatable {
     /// No interface at all. If used, no interface is shown over the video.
     case none
     /// The video interface represented by `VideoControlsView` and `VideoControls.xib`.
     case video
     /// The video interface represented by `AdControlsView` and `AdControls.xib`.
     case ads
+    /// The video interface represented by `ErrorView` and `ErrorView.xib`
+    /// This takes an error code (`UInt`) and a message (`String`)
+    case error(UInt, String)
 }
 
 /// Constants denoting whether we are in full screen mode or not.
@@ -89,6 +92,11 @@ class PlayerViewManager {
             case .ads:
                 // If the advertising interface is desired, we create the interface.
                 currentInterface = AdControlsView(frame: container.bounds)
+            case .error(let code, let message):
+                // If the error interface is desired, we create the interface.
+                let errorView = ErrorView(frame: container.bounds)
+                errorView.setError(code: code, message: message)
+                currentInterface = errorView
             }
         }
     }
