@@ -38,17 +38,31 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
         
         /// Open a `do-catch` block to handle possible errors with the builders.
         do {
-            /// First, use the `JWPlayerItemBuilder` to create a `JWPlayerItem` that will be used by the player configuration.
+            var captions = [JWMediaTrack]()
+            
+            /// First, create a captions track. This example demonstrates using a local URL rather than a remote one.
+            if let path = Bundle.main.path(forResource: "sample", ofType: "vtt") {
+                let captionsTrack = try JWCaptionTrackBuilder()
+                    .file(URL(fileURLWithPath: path))
+                    .label("English")
+                    .defaultTrack(true)
+                    .build()
+                captions.append(captionsTrack)
+            }
+            
+            /// Second, use the `JWPlayerItemBuilder` to create a `JWPlayerItem` that will be used by the player configuration.
             let playerItem = try JWPlayerItemBuilder()
-                .file(URL(string: "https://wowzaec2demo.streamlock.net/vod-multitrack/_definst_/smil:ElephantsDream/elephantsdream2.smil/playlist.m3u8")!)
+                .file(URL(string: "http://content.bitsontherun.com/videos/3XnJSIm4-52qL9xLP.mp4")!)
+                .posterImage(URL(string: "http://content.bitsontherun.com/thumbs/3XnJSIm4-480.jpg")!)
+                .mediaTracks(captions)
                 .build()
             
-            /// Second, create a player config with the created `JWPlayerItem`.
+            /// Third, create a player config with the created `JWPlayerItem`.
             let configuration = try JWPlayerConfigurationBuilder()
                 .playlist(items: [playerItem])
                 .build()
             
-            /// Third, use the created `JWPlayerConfiguration` to set up the player.
+            /// Finally, use the created `JWPlayerConfiguration` to set up the player.
             player?.configurePlayer(with: configuration)
         } catch {
             print(error.localizedDescription)
