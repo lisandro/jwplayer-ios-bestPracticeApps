@@ -33,14 +33,14 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
         
         // MARK: 1. Listen for caption events
         
-        /// Assing this view controller to the `captionsDelegate` so it can be informed about captions events.
+        // Assign this view controller to the `captionsDelegate` so it can be informed about captions events.
         playerVC?.captionsDelegate = self
         
-        /// Open a `do-catch` block to handle possible errors with the builders.
+        // Open a `do-catch` block to handle possible errors with the builders.
         do {
             var captions = [JWMediaTrack]()
             
-            /// First, create a captions track. This example demonstrates using a local URL rather than a remote one.
+            // First, create a captions track. This example demonstrates using a local URL rather than a remote one.
             if let path = Bundle.main.path(forResource: "sample", ofType: "vtt") {
                 let captionsTrack = try JWCaptionTrackBuilder()
                     .file(URL(fileURLWithPath: path))
@@ -50,19 +50,19 @@ class ViewController: UIViewController, PlayerCaptionsDelegate {
                 captions.append(captionsTrack)
             }
             
-            /// Second, use the `JWPlayerItemBuilder` to create a `JWPlayerItem` that will be used by the player configuration.
+            // Second, use the `JWPlayerItemBuilder` to create a `JWPlayerItem` that will be used by the player configuration.
             let playerItem = try JWPlayerItemBuilder()
                 .file(URL(string: "http://content.bitsontherun.com/videos/3XnJSIm4-52qL9xLP.mp4")!)
                 .posterImage(URL(string: "http://content.bitsontherun.com/thumbs/3XnJSIm4-480.jpg")!)
                 .mediaTracks(captions)
                 .build()
             
-            /// Third, create a player config with the created `JWPlayerItem`.
+            // Third, create a player config with the created `JWPlayerItem`.
             let configuration = try JWPlayerConfigurationBuilder()
                 .playlist(items: [playerItem])
                 .build()
             
-            /// Finally, use the created `JWPlayerConfiguration` to set up the player.
+            // Finally, use the created `JWPlayerConfiguration` to set up the player.
             player?.configurePlayer(with: configuration)
         } catch {
             print(error.localizedDescription)
