@@ -55,6 +55,9 @@
       <FileRef
          location = "group:Captions/Captions.xcodeproj">
       </FileRef>
+      <FileRef
+         location = "group:SharedAssets.xcassets">
+      </FileRef>
    </Group>
    <Group
       location = "container:"
