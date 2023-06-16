@@ -44,6 +44,9 @@
          location = "group:JWPlayer Ads/JWPlayer Ads.xcodeproj">
       </FileRef>
       <FileRef
+         location = "group:Offline Playback/Offline Playback.xcodeproj">
+      </FileRef>
+      <FileRef
          location = "group:Recommendations/Recommendations.xcodeproj">
       </FileRef>
       <FileRef
@@ -51,6 +54,9 @@
       </FileRef>
       <FileRef
          location = "group:Captions/Captions.xcodeproj">
+      </FileRef>
+      <FileRef
+         location = "group:SharedAssets.xcassets">
       </FileRef>
    </Group>
    <Group
@@ -62,5 +68,8 @@
    </Group>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:ChromeCast-GCKUICastButton/ChromeCast-GCKUICastButton.xcodeproj">
    </FileRef>
 </Workspace>
