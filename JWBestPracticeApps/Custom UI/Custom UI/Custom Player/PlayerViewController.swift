@@ -41,7 +41,7 @@ class PlayerViewController: ViewController {
     /// It contains the `JWPlayerView` object.
     fileprivate var viewManager = PlayerViewManager()
     
-    /// A convenience property for accessing the player, via the `viewManager` and `JWPlayerView`
+    /// A convenience property for accessing the player, via the `viewManager` and `JWPlayerView`.
     fileprivate var player: JWPlayer {
         return viewManager.playerView.player
     }

@@ -43,7 +43,7 @@ class PlayerViewManager {
     /// It is embedded in the container behind all interfaces.
     let playerView = JWPlayerView()
     
-    /// The classes which listens for button taps. In this example, that is `PlayerViewController`.
+    /// The class which listens for button taps. In this example, that is `PlayerViewController`.
     weak var buttonListener: InterfaceButtonListener? {
         didSet {
             currentInterface?.buttonListener = buttonListener
@@ -112,7 +112,7 @@ class PlayerViewManager {
         }
     }
     
-    /// The current window state, e.g. whther or not we are in full screen mode.
+    /// The current window state, e.g. whether or not we are in full screen mode.
     var windowState: PlayerWindowState = .normal {
         didSet {
             guard oldValue != windowState else {
@@ -130,7 +130,7 @@ class PlayerViewManager {
         }
     }
     
-    /// We initialize this manager by adding the playerView to the container.
+    // We initialize this manager by adding the playerView to the container.
     init() {
         container.addSubview(playerView)
         playerView.fillSuperview()
