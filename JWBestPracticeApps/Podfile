@@ -11,7 +11,8 @@ def common_JWPlayer
 end
 
 def common_Cast
-  pod 'google-cast-sdk', '4.8.1'
+  pod 'google-cast-sdk', '>= 4.8.1'
+  pod 'Protobuf', '>= 3.13'
 end
 
 def common_Google_IMA
