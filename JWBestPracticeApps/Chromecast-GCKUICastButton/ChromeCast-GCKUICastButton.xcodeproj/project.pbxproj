@@ -8,9 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		798722CA2A311B080052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722C92A311B080052B204 /* SharedAssets.xcassets */; };
-		79BF317B2C2A323000737D41 /* MaterialDialogs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79BF317A2C2A322B00737D41 /* MaterialDialogs.bundle */; };
-		79BF317C2C2A323000737D41 /* GoogleCastCoreResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79BF31792C2A322B00737D41 /* GoogleCastCoreResources.bundle */; };
-		79BF317D2C2A323000737D41 /* GoogleCastUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79BF31782C2A322A00737D41 /* GoogleCastUIResources.bundle */; };
 		BF287F7E4C0972ABEC2CC406 /* Pods_ChromeCast_GCKUICastButton.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98E99570BEE1F8A92F8FC5DC /* Pods_ChromeCast_GCKUICastButton.framework */; };
 		D39A39C02706326C0061452C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A39BF2706326C0061452C /* AppDelegate.swift */; };
 		D39A39C22706326C0061452C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39A39C12706326C0061452C /* SceneDelegate.swift */; };
@@ -23,9 +20,6 @@
 /* Begin PBXFileReference section */
 		2128B192CA2907D8B736C35C /* Pods-ChromeCast-GCKUICastButton.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChromeCast-GCKUICastButton.debug.xcconfig"; path = "Target Support Files/Pods-ChromeCast-GCKUICastButton/Pods-ChromeCast-GCKUICastButton.debug.xcconfig"; sourceTree = "<group>"; };
 		798722C92A311B080052B204 /* SharedAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = SharedAssets.xcassets; path = ../../SharedAssets.xcassets; sourceTree = "<group>"; };
-		79BF31782C2A322A00737D41 /* GoogleCastUIResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleCastUIResources.bundle; path = "/Users/david.almaguer/repos/jwplayer-ios-bestPracticeApps/JWBestPracticeApps/ChromeCast/../Pods/google-cast-sdk/Resources/GoogleCastUIResources.bundle"; sourceTree = "<absolute>"; };
-		79BF31792C2A322B00737D41 /* GoogleCastCoreResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleCastCoreResources.bundle; path = "/Users/david.almaguer/repos/jwplayer-ios-bestPracticeApps/JWBestPracticeApps/ChromeCast/../Pods/google-cast-sdk/Resources/GoogleCastCoreResources.bundle"; sourceTree = "<absolute>"; };
-		79BF317A2C2A322B00737D41 /* MaterialDialogs.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MaterialDialogs.bundle; path = "/Users/david.almaguer/repos/jwplayer-ios-bestPracticeApps/JWBestPracticeApps/ChromeCast/../Pods/google-cast-sdk/Resources/MaterialDialogs.bundle"; sourceTree = "<absolute>"; };
 		98E99570BEE1F8A92F8FC5DC /* Pods_ChromeCast_GCKUICastButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChromeCast_GCKUICastButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39A39BC2706326C0061452C /* ChromeCast-GCKUICastButton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ChromeCast-GCKUICastButton.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D39A39BF2706326C0061452C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -53,9 +47,6 @@
 		795EB91C497A075AD2D30034 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				79BF31792C2A322B00737D41 /* GoogleCastCoreResources.bundle */,
-				79BF31782C2A322A00737D41 /* GoogleCastUIResources.bundle */,
-				79BF317A2C2A322B00737D41 /* MaterialDialogs.bundle */,
 				98E99570BEE1F8A92F8FC5DC /* Pods_ChromeCast_GCKUICastButton.framework */,
 			);
 			name = Frameworks;
@@ -167,9 +158,6 @@
 			files = (
 				D39A39CC2706326F0061452C /* LaunchScreen.storyboard in Resources */,
 				D39A39C92706326F0061452C /* Assets.xcassets in Resources */,
-				79BF317B2C2A323000737D41 /* MaterialDialogs.bundle in Resources */,
-				79BF317C2C2A323000737D41 /* GoogleCastCoreResources.bundle in Resources */,
-				79BF317D2C2A323000737D41 /* GoogleCastUIResources.bundle in Resources */,
 				D39A39C72706326C0061452C /* Main.storyboard in Resources */,
 				798722CA2A311B080052B204 /* SharedAssets.xcassets in Resources */,
 			);

@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		1BC740F3F63F48127F9FBF21 /* Pods_ChromeCast.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0DF1B2307DCBA65B858AE8D /* Pods_ChromeCast.framework */; };
 		798722C82A311AFD0052B204 /* SharedAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 798722C72A311AFD0052B204 /* SharedAssets.xcassets */; };
-		79BF31752C2A321300737D41 /* GoogleCastCoreResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79BF31742C2A31DA00737D41 /* GoogleCastCoreResources.bundle */; };
-		79BF31762C2A321300737D41 /* GoogleCastUIResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79BF31732C2A31DA00737D41 /* GoogleCastUIResources.bundle */; };
-		79BF31772C2A321300737D41 /* MaterialDialogs.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 79BF31722C2A31D400737D41 /* MaterialDialogs.bundle */; };
 		808A3EA726C353E1003F9CEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A3EA626C353E1003F9CEF /* AppDelegate.swift */; };
 		808A3EA926C353E1003F9CEF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A3EA826C353E1003F9CEF /* SceneDelegate.swift */; };
 		808A3EAB26C353E1003F9CEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808A3EAA26C353E1003F9CEF /* ViewController.swift */; };
@@ -167,9 +164,6 @@
 				808A3EB326C353E2003F9CEF /* LaunchScreen.storyboard in Resources */,
 				808A3EB026C353E2003F9CEF /* Assets.xcassets in Resources */,
 				808A3EAE26C353E1003F9CEF /* Main.storyboard in Resources */,
-				79BF31752C2A321300737D41 /* GoogleCastCoreResources.bundle in Resources */,
-				79BF31762C2A321300737D41 /* GoogleCastUIResources.bundle in Resources */,
-				79BF31772C2A321300737D41 /* MaterialDialogs.bundle in Resources */,
 				798722C82A311AFD0052B204 /* SharedAssets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
