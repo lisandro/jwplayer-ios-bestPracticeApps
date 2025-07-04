@@ -20,7 +20,17 @@ struct Playlist {
                     .build()
             }
     }()
-      
+
+    static var playlistManual: JWPlayerConfiguration? = {
+        try? JWPlayerConfigurationBuilder()
+            .playlist(url: URL(string: Self.playlistSource)!)
+            .autostart(true)
+            .build()
+    }()
+    
+    /// A dictionary of assets in portrait resolution.
+    static let playlistSource = "https://cdn.jwplayer.com/v2/playlists/ZoiZbsnT"
+    
     /// A dictionary of assets in portrait resolution.
     static let titledSources = [
         "Two Girls Having Fun In A Retro Restaurant":
