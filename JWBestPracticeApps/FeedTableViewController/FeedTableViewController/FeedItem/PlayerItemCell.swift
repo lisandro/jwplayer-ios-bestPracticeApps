@@ -1,5 +1,5 @@
 //
-//  FeedItemCell.swift
+//  PlayerItemCell.swift
 //  FeedTableViewController
 //
 //  Created by Amitai Blickstein on 6/26/22.
@@ -72,8 +72,24 @@ class PlayerItemCell: UITableViewCell {
             .build()
     }
 
+    func setPlayerView(_ view: JWPlayerView) {
+        // Remove any existing JWPlayerView subviews
+        removePlayerView()
+        view.frame = playerView.bounds
+        view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        playerView.addSubview(view)
+    }
+
+    func removePlayerView() {
+        for subview in playerView.subviews {
+            if subview is JWPlayerView {
+                subview.removeFromSuperview()
+            }
+        }
+    }
+
     override func prepareForReuse() {
         super.prepareForReuse()
-        playerView?.player.stop()
+        removePlayerView()
     }
 }
